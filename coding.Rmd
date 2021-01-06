@@ -1,0 +1,15 @@
+---
+title: "coding"
+description: |
+  a place for coding notes
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+
+
+
+
+

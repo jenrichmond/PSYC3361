@@ -1,0 +1,85 @@
+{
+  "articles": [
+    {
+      "path": "blog_posts.html",
+      "title": "welcome to our blog",
+      "author": [],
+      "contents": "\n\n\n\n",
+      "last_modified": "2020-12-07T18:09:18+11:00"
+    },
+    {
+      "path": "coding.html",
+      "title": "coding",
+      "description": "a place for coding notes",
+      "author": [],
+      "contents": "\n\n\n\n",
+      "last_modified": "2020-12-07T18:09:19+11:00"
+    },
+    {
+      "path": "create_content.html",
+      "title": "create content",
+      "description": "How to create blog posts and articles for your site\n",
+      "author": [
+        {
+          "name": "Jenny Richmond",
+          "url": {}
+        }
+      ],
+      "date": "`r Sys.Date()`",
+      "contents": "\nTo create a new post, use the create_post() function. In the console, type…\n\ncreate_post(\"whatever you want the title to be\")\n\nThis function will open a new folder within the _posts folder and a new .Rmd template for you to write in. You should edit the authors (it will default to those used last), write a description for your post, and add your text. To add a picture, save it into the img folder and insert a chunk with the following code inside.\n\nknitr::include_graphics(here::here(\"img\", \"whatever.png\"))\n\n\n\n\n\n\n\n",
+      "last_modified": "2020-12-07T18:09:20+11:00"
+    },
+    {
+      "path": "customise.html",
+      "title": "customise",
+      "description": "Some tips for customising your distill site\n",
+      "author": [
+        {
+          "name": "Jenny Richmond",
+          "url": {}
+        }
+      ],
+      "date": "`r Sys.Date()`",
+      "contents": "\nYou can customise the look and feel of your distill site pretty easily. See some examples of other sites made with distill here.\n1. Change the name of your site\nIn the top left corner, your site is currently called “internship blog”. You might want to change that to the name of your group. Open the _site.yml file and update the title.\nYou can also change the welcome message. Open the index.Rmd file and change the title.\n2. Change the theme\nYou can change the fonts and colour scheme by choosing a theme. I’ve imported several examples from other distill sites. Choose your favourite theme from the list below.\npiping.css\nhttps://www.pipinghotdata.com/\nsleep.css\nhttps://milesmcbain.xyz/\nmodels.css\nhttps://www.tidymodels.org/\nmock.css\nhttps://themockup.blog/\ntidy.css\nhttps://www.tidymodels.org/\nijemaka.css\nhttps://ijeamaka-anyene.netlify.app\nTo apply the theme, open your _site.yml and insert the name of the theme where it says theme:\n\n\n\n",
+      "last_modified": "2020-12-07T18:09:21+11:00"
+    },
+    {
+      "path": "howto.html",
+      "title": "How to...",
+      "description": "Some \"how to\" details about working with distill/RMarkdown",
+      "author": [],
+      "contents": "\nThis blog is created using a package called distill. It is an R-Markdown based platform specifically designed for science communication. The package website is a useful source of information about how to set up and maintain a distill site. You can see examples of other sites that have been created using distill here.\nHere are some tips for …\nworking in RMarkdown\ncustomising your site\ncreating new content\n\n\n\n",
+      "last_modified": "2020-12-07T18:09:22+11:00"
+    },
+    {
+      "path": "index.html",
+      "title": "Hey there!",
+      "author": [],
+      "contents": "\n\n\n\nAbout us\nInclude a profile picture by taking a selfie of your team and replacing the avatar.jpg file with your own.\nInsert a short paragraph here about each of the members of your group.\nBillie Eilish\nMy favourite food on campus is Guzmen & Gomez. I get to UNSW on the bus/train. When we are allowed to travel again, the first place I am going to go is Bali.\nTaylor Swift\nMy favourite food on campus is Stockmarket. To get to campus, I ride my bike. When we are allowed to travel again, the first place I am going to go is Thailand.\nLady Gaga\nMy favourite food on campus is Subway. I drive my car to get to UNSW campus. When we are allowed to travel again, the first place I am going to go is New Zealand.\n\n\n\n",
+      "last_modified": "2020-12-07T18:09:23+11:00"
+    },
+    {
+      "path": "markdown.html",
+      "title": "Rmarkdown",
+      "description": "How to work in RMarkdown \n",
+      "author": [
+        {
+          "name": "Jenny Richmond",
+          "url": {}
+        }
+      ],
+      "date": "`r Sys.Date()`",
+      "contents": "\nWriting in RMarkdown is different to writing in Word. What you see is not quite what you get.\nIf you want italics use one asterisk. For bold, use two asterisks. You can get levels of heading with hash.\nBIG HEADING\nSMALLER HEADING\nEVEN SMALLER HEADING\nYou can get bullet points using dash…\nfirst important point\nsecond point\nand third…\nYou can include code “chunks” by using the shortcut, option-command I or choosing Insert R from the top menu bar.\nCode chunks are useful for including code for plots with your text and also useful for inserting pictures\nSave your image file in the img folder and tell R where to find it using the include_graphics() function\n\n\nknitr::include_graphics(here::here(\"img\", \"band.jpg\"))\n\n\n\n\n\n\n\n\nThe [RMarkdown reference guide](https://rstudio.com/wp-content/uploads/2015/03/rmarkdown-reference.pdf?_ga=2.15167350.1148129883.1606704012-1288179797.1570929100) is helpful in learning how to create formatted text in R-Markdown. To preview what your formatted text will look like, use the \"Knit\" button on the top bar, or the keyboard shortcut *Shift-Command-K*. \n\n\n\n\n```{.r .distill-force-highlighting-css}\n\n\n",
+      "last_modified": "2020-12-07T18:09:24+11:00"
+    },
+    {
+      "path": "project.html",
+      "title": "project",
+      "description": "a place for group project design thoughts",
+      "author": [],
+      "contents": "\n\n\n\n",
+      "last_modified": "2020-12-07T18:09:25+11:00"
+    }
+  ],
+  "collections": ["posts/posts.json"]
+}

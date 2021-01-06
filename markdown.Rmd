@@ -1,0 +1,53 @@
+---
+title: "Rmarkdown"
+description: |
+ How to work in RMarkdown 
+author:
+  - name: Jenny Richmond
+    url: 
+    affiliation: 
+    affiliation_url:
+date: "`r Sys.Date()`"
+output: distill::distill_article
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+Writing in RMarkdown is different to writing in Word. What you see is not quite what you get. 
+
+If you want italics use *one asterisk*. For bold, use **two asterisks**. You can get levels of heading with hash. 
+
+# BIG HEADING
+## SMALLER HEADING
+### EVEN SMALLER HEADING
+
+You can get bullet points using dash...
+
+- first important point
+- second point
+- and third... 
+
+
+You can include code "chunks" by using the shortcut, option-command I or choosing Insert R from the top menu bar. 
+
+Code chunks are useful for including code for plots with your text and also useful for inserting pictures
+
+Save your image file in the `img` folder and tell R where to find it using the include_graphics() function
+
+```{r echo=TRUE}
+
+knitr::include_graphics(here::here("img", "band.jpg"))
+
+```
+```
+
+
+
+
+The [RMarkdown reference guide](https://rstudio.com/wp-content/uploads/2015/03/rmarkdown-reference.pdf?_ga=2.15167350.1148129883.1606704012-1288179797.1570929100) is helpful in learning how to create formatted text in R-Markdown. To preview what your formatted text will look like, use the "Knit" button on the top bar, or the keyboard shortcut *Shift-Command-K*. 
+
+
+
+

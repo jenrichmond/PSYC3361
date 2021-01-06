@@ -1,0 +1,102 @@
+---
+title: "babynames post"
+description: |
+  play with baby names data 
+author:
+  - name: Billie Eilish
+    url: https://example.com
+  - name: Taylor Swift
+    url: https://example.com
+  - name: Lady Gaga
+    url: https://example.com
+date: 11-30-2020
+output:
+  distill::distill_article:
+    self_contained: false
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+# data viz with ggplot
+
+
+### load packages 
+
+We can use the `library()` function to load the packages we need. The `tidyverse` package contains tons of useful functions for data wrangling and visualisation (including ggplot). The `ozbabynames` package contains data from birth records in Australia. 
+
+
+```{r}
+library(tidyverse)
+library(ozbabynames)
+
+```
+
+### read the babynames data
+
+```{r}
+ozbabynames <- ozbabynames
+
+glimpse(ozbabynames)
+
+```
+
+
+### define the names you want to compare
+
+btw Lady Gaga's real name is Stefani
+
+```{r}
+artist_names <- c("Billie", "Taylor", "Stefani")
+
+```
+
+### whose name is most popular?? 
+
+```{r}
+
+ozbabynames %>%
+  filter(name %in% artist_names) %>%
+  group_by(name, year) %>% 
+  summarise(count = sum(count)) %>%
+  ggplot(aes(x = year, 
+             y = count,
+             colour = name)) +
+  geom_line() +
+  theme_bw() +
+ facet_wrap(~name,
+             scales = "free_y") +
+  theme(legend.position = "none")
+```
+
+
+
+What does the `scales = "free y"` do? What happens if you delete it? Is the plot more meaningful with "free y" or without it?
+
+
+### Recreate the plot above with your names 
+
+```{r}
+your_names <- c("name1", "name2", "name3")
+```
+
+What do you need to change about the code below to make it plot your names?
+
+```{r}
+ozbabynames %>%
+  filter(name %in% artist_names) %>%
+  group_by(name, year) %>% 
+  summarise(count = sum(count)) %>%
+  ggplot(aes(x = year, 
+             y = count,
+             colour = name)) +
+  geom_line() +
+  theme_bw() +
+ facet_wrap(~name,
+             scales = "free_y") +
+  theme(legend.position = "none")
+```
+
+Do you need `scales = "free_y"`?

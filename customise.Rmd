@@ -1,0 +1,70 @@
+---
+title: "customise"
+description: |
+ Some tips for customising your distill site
+author:
+  - name: Jenny Richmond
+    url: 
+    affiliation: UNSW Psychology
+    affiliation_url: 
+date: "`r Sys.Date()`"
+output: distill::distill_article
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+You can customise the look and feel of your distill site pretty easily. See some examples of other sites made with distill [here](https://pkgs.rstudio.com/distill/articles/examples.html). 
+
+# 1. Change the name of your site
+
+In the top left corner, your site is currently called "internship blog". You might want to change that to the name of your group. Open the _site.yml file and update the title. 
+
+You can also change the welcome message. Open the index.Rmd file and change the title. 
+
+# 2. Change the theme
+
+You can change the fonts and colour scheme by choosing a theme. I've imported several examples from other distill sites. Choose your favourite theme from the list below. 
+
+1. piping.css
+
+* https://www.pipinghotdata.com/
+
+2. sleep.css
+
+* https://milesmcbain.xyz/
+
+
+3. models.css
+
+* https://www.tidymodels.org/
+
+
+4. mock.css
+
+* https://themockup.blog/
+
+5. tidy.css
+
+* https://www.tidymodels.org/
+
+6. ijemaka.css
+
+* https://ijeamaka-anyene.netlify.app
+
+
+To apply the theme, open your _site.yml and insert the name of the theme where it says theme: 
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,11 @@
+---
+title: "project"
+description: |
+ a place for group project design thoughts
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+

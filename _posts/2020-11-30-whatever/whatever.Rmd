@@ -1,0 +1,24 @@
+---
+title: "whatever"
+description: |
+  This is a placeholder. You can customise this Rmd when you want to write your first post. 
+author:
+  - name: Billie Eilish
+    url: https://example.com/
+  - name: Taylor Swift
+    url: https://example.com/
+  - name: Britney Spears
+    url: https://example.com/
+date: 11-30-2020
+output:
+  distill::distill_article:
+    self_contained: false
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+### start with a heading
+
+Insert your text here
