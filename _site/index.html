@@ -53,58 +53,58 @@ div.sourceCode
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-code span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code span.an { color: #545454; font-weight: bold; } /* Annotation */
-code span.at { color: #7d9029; } /* Attribute */
-code span.bn { color: #a1024a; } /* BaseN */
+code span.al { color: #ad0000; } /* Alert */
+code span.an { color: #5e5e5e; } /* Annotation */
+code span.at { color: #20794d; } /* Attribute */
+code span.bn { color: #ad0000; } /* BaseN */
 code span.bu { } /* BuiltIn */
-code span.cf { color: #007faa; font-weight: bold; } /* ControlFlow */
-code span.ch { color: #008000; } /* Char */
-code span.cn { color: #d91e18; } /* Constant */
-code span.co { color: #545454; } /* Comment */
-code span.cv { color: #545454; font-weight: bold; font-style: italic; } /* CommentVar */
-code span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code span.dt { color: #aa5d00; } /* DataType */
-code span.dv { color: #a1024a; } /* DecVal */
-code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.cf { color: #007ba5; } /* ControlFlow */
+code span.ch { color: #20794d; } /* Char */
+code span.cn { color: #8f5902; } /* Constant */
+code span.co { color: #5e5e5e; } /* Comment */
+code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+code span.dt { color: #ad0000; } /* DataType */
+code span.dv { color: #ad0000; } /* DecVal */
+code span.er { color: #ad0000; } /* Error */
 code span.ex { } /* Extension */
-code span.fl { color: #a1024a; } /* Float */
-code span.fu { color: #4254a7; } /* Function */
+code span.fl { color: #ad0000; } /* Float */
+code span.fu { color: #4758ab; } /* Function */
 code span.im { } /* Import */
-code span.in { color: #545454; font-weight: bold; } /* Information */
-code span.kw { color: #007faa; font-weight: bold; } /* Keyword */
-code span.op { color: #696969; } /* Operator */
-code span.ot { color: #007faa; } /* Other */
-code span.pp { color: #bc7a00; } /* Preprocessor */
-code span.sc { color: #008000; } /* SpecialChar */
-code span.ss { color: #bb6688; } /* SpecialString */
-code span.st { color: #008000; } /* String */
-code span.va { color: #19177c; } /* Variable */
-code span.vs { color: #008000; } /* VerbatimString */
-code span.wa { color: #545454; font-weight: bold; font-style: italic; } /* Warning */
+code span.in { color: #5e5e5e; } /* Information */
+code span.kw { color: #007ba5; } /* Keyword */
+code span.op { color: #5e5e5e; } /* Operator */
+code span.ot { color: #007ba5; } /* Other */
+code span.pp { color: #ad0000; } /* Preprocessor */
+code span.sc { color: #20794d; } /* SpecialChar */
+code span.ss { color: #20794d; } /* SpecialString */
+code span.st { color: #20794d; } /* String */
+code span.va { color: #111111; } /* Variable */
+code span.vs { color: #20794d; } /* VerbatimString */
+code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </style>
 
   <!--radix_placeholder_meta_tags-->
-  <title>internship blog: Hey there!</title>
+  <title>PSYC3361: Welcome to PSYC3361</title>
 
 
 
 
   <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
-  <meta property="og:title" content="internship blog: Hey there!"/>
+  <meta property="og:title" content="PSYC3361: Welcome to PSYC3361"/>
   <meta property="og:type" content="article"/>
   <meta property="og:locale" content="en_US"/>
-  <meta property="og:site_name" content="internship blog"/>
+  <meta property="og:site_name" content="PSYC3361"/>
 
   <!--  https://dev.twitter.com/cards/types/summary -->
   <meta property="twitter:card" content="summary"/>
-  <meta property="twitter:title" content="internship blog: Hey there!"/>
+  <meta property="twitter:title" content="PSYC3361: Welcome to PSYC3361"/>
 
   <!--/radix_placeholder_meta_tags-->
   <!--radix_placeholder_rmarkdown_metadata-->
 
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","site"]}},"value":[{"type":"character","attributes":{},"value":["Hey there!"]},{"type":"character","attributes":{},"value":["distill::distill_website"]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","site"]}},"value":[{"type":"character","attributes":{},"value":["Welcome to PSYC3361"]},{"type":"character","attributes":{},"value":["distill::distill_website"]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
   <!--radix_placeholder_navigation_in_header-->
@@ -120,6 +120,7 @@ code span.wa { color: #545454; font-weight: bold; font-style: italic; } /* Warni
       var header = $('header').get(0);
       var headerHeight = header.offsetHeight;
       var headroom = new Headroom(header, {
+        tolerance: 5,
         onPin : function() {
           if (window.headroom_prevent_pin) {
             window.headroom_prevent_pin = false;
@@ -442,8 +443,15 @@ code span.wa { color: #545454; font-weight: bold; font-style: italic; } /* Warni
     top: 0;
   }
 
+  /* adjust viewport for navbar height */
+  /* helps vertically center bootstrap (non-distill) content */
+  .min-vh-100 {
+    min-height: calc(100vh - 100px) !important;
+  }
+
   </style>
 
+  <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
   <link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet"/>
   <link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet"/>
   <script src="site_libs/headroom-0.9.4/headroom.min.js"></script>
@@ -467,22 +475,19 @@ code span.wa { color: #545454; font-weight: bold; font-style: italic; } /* Warni
     return offset ? offset + '/' + url : url;
   }
 
-  function createIndex() {
-    var options = {
-      keys: [
-        "title",
-        "categories",
-        "description",
-        "contents"
-      ]
-    };
-    return new window.Fuse([],options);
-  }
-
   function createFuseIndex() {
 
     // create fuse index
-    var options = { keys: ["title", "description", "contents"] };
+    var options = {
+      keys: [
+        { name: 'title', weight: 20 },
+        { name: 'categories', weight: 15 },
+        { name: 'description', weight: 10 },
+        { name: 'contents', weight: 5 },
+      ],
+      ignoreLocation: true,
+      threshold: 0
+    };
     var fuse = new window.Fuse([], options);
 
     // fetch the main search.json
@@ -550,29 +555,25 @@ code span.wa { color: #545454; font-weight: bold; font-style: italic; } /* Warni
               shouldSort: true,
               minMatchCharLength: 2,
               limit: 10,
-              keys: [
-                { name: 'title', weight: 20 },
-                { name: 'categories', weight: 15 },
-                { name: 'description', weight: 10 },
-                { name: 'contents', weight: 5 },
-              ],
             };
             var results = fuse.search(query, searchOptions);
             callback(results
               .map(function(result) { return result.item; })
-              .filter(function(item) { return !!item.description; })
             );
           },
           templates: {
             suggestion: function(suggestion) {
+              var img = suggestion.preview && Object.keys(suggestion.preview).length > 0
+                ? `<img src="${offsetURL(suggestion.preview)}"</img>`
+                : '';
               var html = `
                 <div class="search-item">
                   <h3>${suggestion.title}</h3>
                   <div class="search-item-description">
-                    ${suggestion.description}
+                    ${suggestion.description || ''}
                   </div>
                   <div class="search-item-preview">
-                    <img src="${suggestion.preview ? offsetURL(suggestion.preview) : ''}"</img>
+                    ${img}
                   </div>
                 </div>
               `;
@@ -595,6 +596,10 @@ code span.wa { color: #545454; font-weight: bold; font-style: italic; } /* Warni
   </script>
 
   <style type="text/css">
+
+  .nav-search {
+    font-size: x-small;
+  }
 
   /* Algolioa Autocomplete */
 
@@ -670,6 +675,7 @@ code span.wa { color: #545454; font-weight: bold; font-style: italic; } /* Warni
   }
 
   .algolia-autocomplete .aa-dropdown-menu .aa-suggestion .search-item h3 {
+    font-size: 1rem;
     margin-block-start: 0;
     margin-block-end: 5px;
   }
@@ -853,7 +859,7 @@ code span.wa { color: #545454; font-weight: bold; font-style: italic; } /* Warni
   d-article pre,
   d-article div.sourceCode,
   d-article div.sourceCode pre {
-    overflow: hidden;
+    overflow: auto;
   }
 
   d-article div.sourceCode {
@@ -895,6 +901,11 @@ code span.wa { color: #545454; font-weight: bold; font-style: italic; } /* Warni
   d-article pre a:hover {
     border-bottom: none;
     text-decoration: underline;
+  }
+
+  d-article details {
+    grid-column: text;
+    margin-bottom: 0.8em;
   }
 
   @media(min-width: 768px) {
@@ -1051,6 +1062,17 @@ code span.wa { color: #545454; font-weight: bold; font-style: italic; } /* Warni
 
   div.hanging-indent{
     margin-left: 1em; text-indent: -1em;
+  }
+
+  /* Citation hover box */
+
+  .tippy-box[data-theme~=light-border] {
+    background-color: rgba(250, 250, 250, 0.95);
+  }
+
+  .tippy-content > p {
+    margin-bottom: 0;
+    padding: 2px;
   }
 
 
@@ -1718,7 +1740,7 @@ code span.wa { color: #545454; font-weight: bold; font-style: italic; } /* Warni
       var layout = $(this).attr('data-layout');
 
       // apply layout to markdown level block elements
-      var elements = $(this).children().not('div.sourceCode, pre, script');
+      var elements = $(this).children().not('details, div.sourceCode, pre, script');
       elements.each(function(i, el) {
         var layout_div = $('<div class="' + layout + '"></div>');
         if (layout_div.hasClass('shaded')) {
@@ -1833,6 +1855,20 @@ code span.wa { color: #545454; font-weight: bold; font-style: italic; } /* Warni
       // move appendix-bottom entries to the bottom
       $('.appendix-bottom').appendTo('d-appendix').children().unwrap();
       $('.appendix-bottom').remove();
+
+      // hoverable references
+      $('span.citation[data-cites]').each(function() {
+        var refHtml = $('#ref-' + $(this).attr('data-cites')).html();
+        window.tippy(this, {
+          allowHTML: true,
+          content: refHtml,
+          maxWidth: 500,
+          interactive: true,
+          interactiveBorder: 10,
+          theme: 'light-border',
+          placement: 'bottom-start'
+        });
+      });
 
       // clear polling timer
       clearInterval(tid);
@@ -2205,7 +2241,7 @@ code span.wa { color: #545454; font-weight: bold; font-style: italic; } /* Warni
 
   d-article div.sourceCode code,
   d-article pre code {
-  	font-family: var(--mono-font), var(--mono-default);
+    font-family: var(--mono-font), var(--mono-default);
   }
 
 
@@ -2230,104 +2266,116 @@ code span.wa { color: #545454; font-weight: bold; font-style: italic; } /* Warni
   }
 
   /*-- BODY --*/
-  /* only text inside of <p> tags */
-  d-article > p {
+  d-article > p,  /* only text inside of <p> tags */
+  d-article > ul, /* lists */
+  d-article > ol {
     color: var(--body-color, rgba(0, 0, 0, 0.8));
     font-size: var(--body-size, 1.06rem);
   }
 
+
   /*-- CODE --*/
   d-article div.sourceCode code,
   d-article pre code {
-  	font-size: var(--code-size, 14px);
+    font-size: var(--code-size, 14px);
   }
 
   /*-- ASIDE --*/
   d-article aside {
-  	font-size: var(--aside-size, 12px);
-  	color: var(--aside-color, rgba(0, 0, 0, 0.6));
+    font-size: var(--aside-size, 12px);
+    color: var(--aside-color, rgba(0, 0, 0, 0.6));
   }
 
   /*-- FIGURE CAPTIONS --*/
   figure .caption,
   figure figcaption,
   .figure .caption {
-  	font-size: var(--fig-cap-size, 13px);
-  	color: var(--fig-cap-color, rgba(0, 0, 0, 0.6));
+    font-size: var(--fig-cap-size, 13px);
+    color: var(--fig-cap-color, rgba(0, 0, 0, 0.6));
   }
 
   /*-- METADATA --*/
   d-byline h3 {
-  	font-size: var(--heading-size, 0.6rem);
-  	color: var(--heading-color, rgba(0, 0, 0, 0.5));
+    font-size: var(--heading-size, 0.6rem);
+    color: var(--heading-color, rgba(0, 0, 0, 0.5));
   }
 
   d-byline {
-  	font-size: var(--body-size, 0.8rem);
-  	color: var(--body-color, rgba(0, 0, 0, 0.8));
+    font-size: var(--body-size, 0.8rem);
+    color: var(--body-color, rgba(0, 0, 0, 0.8));
   }
 
   d-byline a,
   d-article d-byline a {
-  	color: var(--body-color, rgba(0, 0, 0, 0.8));
+    color: var(--body-color, rgba(0, 0, 0, 0.8));
   }
 
   /*-- TABLE OF CONTENTS --*/
   .d-contents nav h3 {
-  	font-size: var(--heading-size, 18px);
+    font-size: var(--heading-size, 18px);
   }
 
   .d-contents nav a {
-  	font-size: var(--contents-size, 13px);
+    font-size: var(--contents-size, 13px);
   }
 
   /*-- APPENDIX --*/
   d-appendix h3 {
     font-size: var(--heading-size, 15px);
-  	color: var(--heading-color, rgba(0, 0, 0, 0.65));
+    color: var(--heading-color, rgba(0, 0, 0, 0.65));
   }
 
   d-appendix {
     font-size: var(--text-size, 0.8em);
-  	color: var(--text-color, rgba(0, 0, 0, 0.5));
+    color: var(--text-color, rgba(0, 0, 0, 0.5));
   }
 
   d-appendix d-footnote-list a.footnote-backlink {
-  	color: var(--text-color, rgba(0, 0, 0, 0.5));
+    color: var(--text-color, rgba(0, 0, 0, 0.5));
   }
 
   /*-- WEBSITE HEADER + FOOTER --*/
   .distill-site-header .title {
-  	font-size: var(--title-size, 18px);
-  	font-family: var(--navbar-font), var(--heading-default);
-  }
-
-  .distill-site-header a {
+    font-size: var(--title-size, 18px);
     font-family: var(--navbar-font), var(--heading-default);
   }
 
-  .distill-site-header a:hover {
-  	color: var(--hover-color, white);
+  .distill-site-header a,
+  .nav-dropdown .nav-dropbtn {
+    font-family: var(--navbar-font), var(--heading-default);
+  }
+
+  .nav-dropdown .nav-dropbtn {
+    color: var(--text-color, rgba(255, 255, 255, 0.8));
+    font-size: var(--text-size, 15px);
+  }
+
+  .distill-site-header a:hover,
+  .nav-dropdown:hover .nav-dropbtn {
+    color: var(--hover-color, white);
   }
 
   .distill-site-header {
-  	font-size: var(--text-size, 15px);
-  	color: var(--text-color, rgba(255, 255, 255, 0.8));
-  	background-color: var(--bkgd-color, #0F2E3D);
+    font-size: var(--text-size, 15px);
+    color: var(--text-color, rgba(255, 255, 255, 0.8));
+    background-color: var(--bkgd-color, #0F2E3D);
   }
 
   .distill-site-footer {
-  	font-size: var(--text-size, 15px);
-  	color: var(--text-color, rgba(255, 255, 255, 0.8));
-  	background-color: var(--bkgd-color, #0F2E3D);
+    font-size: var(--text-size, 15px);
+    color: var(--text-color, rgba(255, 255, 255, 0.8));
+    background-color: var(--bkgd-color, #0F2E3D);
   }
 
   .distill-site-footer a:hover {
-  	color: var(--hover-color, white);
+    color: var(--hover-color, white);
   }</style>
   <!--/radix_placeholder_distill-->
-  <script src="site_libs/header-attrs-2.5/header-attrs.js"></script>
-  <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+  <script src="site_libs/header-attrs-2.6/header-attrs.js"></script>
+  <script src="site_libs/popper-2.6.0/popper.min.js"></script>
+  <link href="site_libs/tippy-6.2.7/tippy.css" rel="stylesheet" />
+  <link href="site_libs/tippy-6.2.7/tippy-light-border.css" rel="stylesheet" />
+  <script src="site_libs/tippy-6.2.7/tippy.umd.min.js"></script>
   <script src="site_libs/anchor-4.2.2/anchor.min.js"></script>
   <script src="site_libs/bowser-1.9.3/bowser.min.js"></script>
   <script src="site_libs/webcomponents-2.0.0/webcomponents.js"></script>
@@ -2343,7 +2391,7 @@ code span.wa { color: #545454; font-weight: bold; font-style: italic; } /* Warni
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"Hey there!","authors":[]}
+{"title":"Welcome to PSYC3361","authors":[]}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -2351,15 +2399,31 @@ code span.wa { color: #545454; font-weight: bold; font-style: italic; } /* Warni
 <header class="header header--fixed" role="banner">
 <nav class="distill-site-nav distill-site-header">
 <div class="nav-left">
-<a href="index.html" class="title">internship blog</a>
+<a href="index.html" class="title">PSYC3361</a>
 <input id="distill-search" class="nav-search hidden" type="text" placeholder="Search..."/>
 </div>
 <div class="nav-right">
-<a href="index.html">Home</a>
-<a href="howto.html">How to</a>
-<a href="blog_posts.html">Blog</a>
-<a href="project.html">Project</a>
-<a href="coding.html">Coding</a>
+<a href="index.html">home</a>
+<a href="howto.html">how to</a>
+<a href="blog_posts.html">blog</a>
+<a href="assessment.html">assessment</a>
+<a href="outline.html">outline</a>
+<div class="nav-dropdown">
+<button class="nav-dropbtn">
+WORKSHOPS
+ 
+<span class="down-arrow">&#x25BE;</span>
+</button>
+<div class="nav-dropdown-content">
+<a href="week1.html">week1</a>
+<a href="week2.html">week2</a>
+<a href="week3.html">week3</a>
+<a href="week5.html">week5</a>
+<a href="week8.html">week8</a>
+<a href="week9.html">week9</a>
+<a href="week10.html">week10</a>
+</div>
+</div>
 <a href="javascript:void(0);" class="nav-toggle">&#9776;</a>
 </div>
 </nav>
@@ -2369,7 +2433,7 @@ code span.wa { color: #545454; font-weight: bold; font-style: italic; } /* Warni
 <!--/radix_placeholder_site_before_body-->
 
 <div class="d-title">
-<h1>Hey there!</h1>
+<h1>Welcome to PSYC3361</h1>
 <!--radix_placeholder_categories-->
 <!--/radix_placeholder_categories-->
 
@@ -2378,17 +2442,465 @@ code span.wa { color: #545454; font-weight: bold; font-style: italic; } /* Warni
 
 <div class="d-article">
 <div class="layout-chunk" data-layout="l-body">
-<p><img src="avatar.jpg" width="40%" style="float:left; padding:5px" /></p>
+<p><img src="avatar.jpg" width="80%" /></p>
 </div>
-<h1 id="about-us">About us</h1>
-<p>Include a profile picture by taking a selfie of your team and replacing the avatar.jpg file with your own.</p>
-<p>Insert a short paragraph here about each of the members of your group.</p>
-<h2 id="billie-eilish">Billie Eilish</h2>
-<p>My favourite food on campus is Guzmen &amp; Gomez. I get to UNSW on the bus/train. When we are allowed to travel again, the first place I am going to go is Bali.</p>
-<h2 id="taylor-swift">Taylor Swift</h2>
-<p>My favourite food on campus is Stockmarket. To get to campus, I ride my bike. When we are allowed to travel again, the first place I am going to go is Thailand.</p>
-<h2 id="lady-gaga">Lady Gaga</h2>
-<p>My favourite food on campus is Subway. I drive my car to get to UNSW campus. When we are allowed to travel again, the first place I am going to go is New Zealand.</p>
+<p><span>Photo by <a href="https://unsplash.com/@jessemartini?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Jesse Martini</a> on <a href="https://unsplash.com/s/photos/brain?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span></p>
+<h1 id="about-the-course">About the course</h1>
+<p>The Psychology Research Internship is different from other courses you have taken thus far in your university career. There are no lectures, no tutorials, and no exam. There is no “content” for you to know by the end of the session. You are entirely responsible for your own learning; the more you put in, the more you will get out of this experience. It is a unique opportunity to really <em>use your brain</em>.</p>
+<p>PSYC3361 is designed to be a hands-on research experience, but this year we are not going to do that in the lab. We are going to build the course around open data, giving you the opportunity to learn skills that are critical for conducting reproducible research.</p>
+<h1 id="by-the-end-of-the-course-you-will">By the end of the course you will…</h1>
+<ol type="1">
+<li>be able to explain why it is important that scientists are transparent about their research practices</li>
+<li>be able to use your understanding of structural, ethical and practical barriers to explain describe why some researchers share their data and others don’t</li>
+<li>be able to make describe the factors make research analyses more or less difficult to reproduce</li>
+<li>be able to apply workflow practices to your own projects in a way that will make transparency and data sharing easy</li>
+<li>know enough R to produce descriptive statistics and visualisations in your honours project</li>
+</ol>
+<p>It is a bit of a an experiment so we want you to let us know how it is going as we go along. Use this <a href="https://docs.google.com/document/d/1m8-lfQ7qabHaV6fpdodEaZLgtAE-oqwoGs-ERPv2olE/edit?usp=sharing">anonymous/editable document</a> at any time to let us know what is working and what is not working.</p>
+<h3 id="there-will-be-lots-of-feedback-but-no-marks-until-the-end">There will be lots of feedback but no marks (until the end)</h3>
+<p>The assessment for this course is designed to allow you to engage in activities that research students and academics consider part of their “job” (reading critically, writing code, dealing with data, presenting their work, writing reports, giving feedback to peers, reflecting on their research process). We will give you all Ds and HDs (provided you complete all components and give your best effort), so the numbers don’t actually matter. You can read more about the grading philosophy for the course in this <a href="">blog post</a>.</p>
+<h3 id="please-come-prepared-it-doesnt-work-if-you-dont">Please come prepared… it doesn’t work if you don’t</h3>
+<p>The workshops run in flipped mode, much like elective classes in honours. In the first workshop of the term, Kate and I will do most of the talking, but after that the rest of the workshops will be run by you. There will be prep work to do (something to read, watch and/or write) before you arrive. If you do the work, you will be able to contribute to the discussion and engage in the activities. If you haven’t done what has been assigned for that week, you will let your classmates down.</p>
+<h3 id="the-schedule">The Schedule</h3>
+<p>This is the plan.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>week</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>1</span><span class='op'>:</span><span class='fl'>10</span><span class='op'>)</span>
+<span class='va'>coding</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>'code1'</span>,<span class='st'>'code2'</span>,<span class='st'>'code3'</span>,<span class='st'>'code4'</span>,<span class='st'>'code5'</span>, <span class='st'>'flexibility week'</span>, <span class='st'>'code6'</span>, <span class='st'>'NA'</span>, <span class='st'>'NA'</span>, <span class='st'>'NA'</span><span class='op'>)</span>
+<span class='va'>workshop</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>'what is the problem? \n why should we care?'</span>,<span class='st'>'how hard can it be?'</span>,<span class='st'>'project planning'</span>, <span class='st'>'NA'</span>, <span class='st'>'why doesnt everyone do it?'</span>, <span class='st'>'flexibility week'</span>, <span class='st'>'NA'</span>, <span class='st'>'group gresentations'</span>, <span class='st'>'best practices: reproducible research'</span>, <span class='st'>'best practices: workflow'</span><span class='op'>)</span>
+<span class='va'>assessment</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>''</span>,<span class='st'>''</span>,<span class='st'>'vr part1 draft'</span>, <span class='st'>'peer feedback'</span>,<span class='st'>'vr part2 draft'</span>, <span class='st'>'flexibility week'</span>, <span class='st'>'peer feedback'</span>, <span class='st'>'group presentations'</span>,<span class='st'>''</span>,<span class='st'>'vr final revision part 1-4'</span><span class='op'>)</span>
+
+<span class='va'>schedule</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/data.frame.html'>data.frame</a></span><span class='op'>(</span><span class='va'>week</span>,<span class='va'>coding</span>,<span class='va'>workshop</span>,<span class='va'>assessment</span><span class='op'>)</span>
+
+<span class='va'>schedule</span> <span class='op'>%&gt;%</span>
+  <span class='fu'>gt</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/gt/man/gt.html'>gt</a></span><span class='op'>(</span><span class='op'>)</span>
+</code></pre>
+</div>
+<style>html {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
+}
+
+#siuxcrftdd .gt_table {
+  display: table;
+  border-collapse: collapse;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#siuxcrftdd .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#siuxcrftdd .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#siuxcrftdd .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 0;
+  padding-bottom: 4px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#siuxcrftdd .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#siuxcrftdd .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#siuxcrftdd .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#siuxcrftdd .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#siuxcrftdd .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#siuxcrftdd .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#siuxcrftdd .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#siuxcrftdd .gt_group_heading {
+  padding: 8px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#siuxcrftdd .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#siuxcrftdd .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#siuxcrftdd .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#siuxcrftdd .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#siuxcrftdd .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 12px;
+}
+
+#siuxcrftdd .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#siuxcrftdd .gt_first_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+}
+
+#siuxcrftdd .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#siuxcrftdd .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#siuxcrftdd .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#siuxcrftdd .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#siuxcrftdd .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#siuxcrftdd .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding: 4px;
+}
+
+#siuxcrftdd .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#siuxcrftdd .gt_sourcenote {
+  font-size: 90%;
+  padding: 4px;
+}
+
+#siuxcrftdd .gt_left {
+  text-align: left;
+}
+
+#siuxcrftdd .gt_center {
+  text-align: center;
+}
+
+#siuxcrftdd .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#siuxcrftdd .gt_font_normal {
+  font-weight: normal;
+}
+
+#siuxcrftdd .gt_font_bold {
+  font-weight: bold;
+}
+
+#siuxcrftdd .gt_font_italic {
+  font-style: italic;
+}
+
+#siuxcrftdd .gt_super {
+  font-size: 65%;
+}
+
+#siuxcrftdd .gt_footnote_marks {
+  font-style: italic;
+  font-size: 65%;
+}
+</style>
+<div id="siuxcrftdd" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;"><table class="gt_table">
+  
+  <thead class="gt_col_headings">
+    <tr>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1">week</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1">coding</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1">workshop</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1">assessment</th>
+    </tr>
+  </thead>
+  <tbody class="gt_table_body">
+    <tr>
+      <td class="gt_row gt_center">1</td>
+      <td class="gt_row gt_left">code1</td>
+      <td class="gt_row gt_left">what is the problem? 
+ why should we care?</td>
+      <td class="gt_row gt_left"></td>
+    </tr>
+    <tr>
+      <td class="gt_row gt_center">2</td>
+      <td class="gt_row gt_left">code2</td>
+      <td class="gt_row gt_left">how hard can it be?</td>
+      <td class="gt_row gt_left"></td>
+    </tr>
+    <tr>
+      <td class="gt_row gt_center">3</td>
+      <td class="gt_row gt_left">code3</td>
+      <td class="gt_row gt_left">project planning</td>
+      <td class="gt_row gt_left">vr part1 draft</td>
+    </tr>
+    <tr>
+      <td class="gt_row gt_center">4</td>
+      <td class="gt_row gt_left">code4</td>
+      <td class="gt_row gt_left">NA</td>
+      <td class="gt_row gt_left">peer feedback</td>
+    </tr>
+    <tr>
+      <td class="gt_row gt_center">5</td>
+      <td class="gt_row gt_left">code5</td>
+      <td class="gt_row gt_left">why doesnt everyone do it?</td>
+      <td class="gt_row gt_left">vr part2 draft</td>
+    </tr>
+    <tr>
+      <td class="gt_row gt_center">6</td>
+      <td class="gt_row gt_left">flexibility week</td>
+      <td class="gt_row gt_left">flexibility week</td>
+      <td class="gt_row gt_left">flexibility week</td>
+    </tr>
+    <tr>
+      <td class="gt_row gt_center">7</td>
+      <td class="gt_row gt_left">code6</td>
+      <td class="gt_row gt_left">NA</td>
+      <td class="gt_row gt_left">peer feedback</td>
+    </tr>
+    <tr>
+      <td class="gt_row gt_center">8</td>
+      <td class="gt_row gt_left">NA</td>
+      <td class="gt_row gt_left">group gresentations</td>
+      <td class="gt_row gt_left">group presentations</td>
+    </tr>
+    <tr>
+      <td class="gt_row gt_center">9</td>
+      <td class="gt_row gt_left">NA</td>
+      <td class="gt_row gt_left">best practices: reproducible research</td>
+      <td class="gt_row gt_left"></td>
+    </tr>
+    <tr>
+      <td class="gt_row gt_center">10</td>
+      <td class="gt_row gt_left">NA</td>
+      <td class="gt_row gt_left">best practices: workflow</td>
+      <td class="gt_row gt_left">vr final revision part 1-4</td>
+    </tr>
+  </tbody>
+  
+  
+</table></div>
+</div>
+<p>Of course plans can change. We don’t know how long group projects will take and the timeframe might change as we go along. The nice thing about this course is that we have ultimate flexibility; we can push deadlines back if we need more time than we thought.</p>
+<p>At this stage workshops will run in person but we may have to switch to online only at any moment. Either way, the workshops will streamed on zoom for those who are unable to make it to class.</p>
+<p>There are two reasons not to come to class.</p>
+<ol type="1">
+<li>if you are overseas and studying remotely</li>
+<li>if attending class in person would pose a health risk to everyone</li>
+</ol>
+<ul>
+<li>if you have been identified as a contact of someone with COVID</li>
+<li>OR if you have the slightest sniffle, please don’t come (go get a test instead).</li>
+</ul>
+<p>Let us know and we will make sure you don’t miss out on the content.</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->

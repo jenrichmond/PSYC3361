@@ -15,38 +15,95 @@ output: distill::distill_article
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-Writing in RMarkdown is different to writing in Word. What you see is not quite what you get. 
+Writing in RMarkdown is different to writing in Word. What you see is not quite what you get. To preview what your formatted text will look like, use the "Knit" button on the top bar, or the keyboard shortcut *Shift-Command-K*. 
 
-If you want italics use *one asterisk*. For bold, use **two asterisks**. You can get levels of heading with hash. 
+
+# 1. Italics and Bold 
+
+If you want italics or bold use asterisks. 
+
+### Raw Rmd 
+
+```
+*one asterisk* 
+
+**two asterisks**
+
+```
+
+### Knitted Rmd 
+
+*one asterisk* 
+
+**two asterisks**
+
+
+## 2. Levels of heading
+
+You can get levels of heading with hash. 
+
+### Raw Rmd 
+
+```
+# BIG HEADING
+## Smaller Heading
+### even smaller heading
+
+```
+### Knitted Rmd
 
 # BIG HEADING
 ## SMALLER HEADING
 ### EVEN SMALLER HEADING
 
+
+# 3. Bullets
+
 You can get bullet points using dash...
 
+### Raw Rmd
+
+```
+- first important point
+- second point
+- and third... 
+
+```
+
+### Knitted Rmd
 - first important point
 - second point
 - and third... 
 
 
-You can include code "chunks" by using the shortcut, option-command I or choosing Insert R from the top menu bar. 
+# 4. Code Chunks
 
-Code chunks are useful for including code for plots with your text and also useful for inserting pictures
+You can insert code "chunks" by using the shortcut, *Option-Command-I* or choosing Insert R from the top menu bar. 
 
-Save your image file in the `img` folder and tell R where to find it using the include_graphics() function
+The power of RMarkdown comes from being able to intersperse code chunks, output, and explanation in the same document. 
+
+### this is a code chunk
+```{r echo=TRUE}
+
+print("hello world")
+```
+
+
+# 5. Images
+
+Save your image file in the `img` folder and tell R where to find it using the `include_graphics()` and `here::here()` functions
 
 ```{r echo=TRUE}
 
 knitr::include_graphics(here::here("img", "band.jpg"))
 
 ```
-```
 
 
+# Need help?
 
+The [RMarkdown reference guide](https://rstudio.com/wp-content/uploads/2015/03/rmarkdown-reference.pdf?_ga=2.15167350.1148129883.1606704012-1288179797.1570929100) is helpful in learning how to create formatted text in R-Markdown. 
 
-The [RMarkdown reference guide](https://rstudio.com/wp-content/uploads/2015/03/rmarkdown-reference.pdf?_ga=2.15167350.1148129883.1606704012-1288179797.1570929100) is helpful in learning how to create formatted text in R-Markdown. To preview what your formatted text will look like, use the "Knit" button on the top bar, or the keyboard shortcut *Shift-Command-K*. 
 
 
 

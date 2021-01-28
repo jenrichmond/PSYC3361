@@ -17,3 +17,4 @@ Here are some tips for ...
 1. [working in RMarkdown](markdown.html)
 2. [customising your site](customise.html)
 3. [creating new content](create_content.html)
+4. [avoid git drama](git_tips.html)

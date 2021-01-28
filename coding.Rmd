@@ -9,7 +9,20 @@ knitr::opts_chunk$set(echo = FALSE)
 ```
 
 
+Each week keep track of what you are learning in coding workshop with a learning log.  Following each session, please add an entry here that answers the following questions. 
 
+## Week_____ 
+## Name_________
+
+My goal for today's session was...
+
+I spent the session.....
+
+The things that went well were....
+
+The things that were challenging were....
+
+Next time I want to....
 
 
 

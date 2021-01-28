@@ -1,0 +1,24 @@
+---
+title: "Week 9"
+description: |
+ best practice I: reproducible research
+author:
+  - name: Jenny Richmond
+date: "`r Sys.Date()`"
+output:
+  distill::distill_article:
+    toc: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+Distill is a publication format for scientific and technical writing, native to the web. 
+
+Learn more about using Distill for R Markdown at <https://rstudio.github.io/distill>.
+
+
+
+
+

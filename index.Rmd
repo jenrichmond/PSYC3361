@@ -1,33 +1,73 @@
 ---
-title: "Hey there!"
+title: "Welcome to PSYC3361"
 site: distill::distill_website
 ---
 
+```{r include=FALSE}
+library(tidyverse)
+library(gt)
+```
 
-```{r, echo = FALSE, eval = TRUE, out.width="40%", out.extra='style="float:left; padding:5px"'}
+```{r eval=TRUE, echo=FALSE, out.width="80%"}
 
 knitr::include_graphics(here::here("avatar.jpg"))
+
+
 ```
      
-# About us
+<span>Photo by <a href="https://unsplash.com/@jessemartini?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Jesse Martini</a> on <a href="https://unsplash.com/s/photos/brain?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>
 
-The index.Rmd file contains your home page. Update the profile picture by taking a selfie of your team and replacing the avatar.jpg file with your own. 
+# About the course
 
-Insert a short paragraph here about each of the members of your group. 
+The Psychology Research Internship is different from other courses you have taken thus far in your university career. There are no lectures, no tutorials, and no exam. There is no “content” for you to know by the end of the session.  You are entirely responsible for your own learning; the more you put in, the more you will get out of this experience. It is a unique opportunity to really *use your brain*. 
 
-## Billie Eilish
+PSYC3361 is designed to be a hands-on research experience, but this year we are not going to do that in the lab. We are going to build the course around open data, giving you the opportunity to learn skills that are critical for conducting reproducible research. 
 
-My favourite food on campus is Guzmen & Gomez. I get to UNSW on the bus/train. When we are allowed to travel again, the first place I am going to go is Bali. 
+# By the end of the course you will...
+
+1. be able to explain why it is important that scientists are transparent about their research practices 
+2. be able to use your understanding of structural, ethical and practical barriers to explain describe why some researchers share their data and others don't 
+3. be able to make describe the factors make research analyses more or less difficult to reproduce 
+4. be able to apply workflow practices to your own projects in a way that will make transparency and data sharing easy 
+5. know enough R to produce descriptive statistics and visualisations in your honours project
+
+It is a bit of a an experiment so we want you to let us know how it is going as we go along. Use this [anonymous/editable document](https://docs.google.com/document/d/1m8-lfQ7qabHaV6fpdodEaZLgtAE-oqwoGs-ERPv2olE/edit?usp=sharing) at any time to let us know what is working and what is not working. 
+
+### There will be lots of feedback but no marks (until the end)
+
+The assessment for this course is designed to allow you to engage in activities that research students and academics consider part of their “job” (reading critically, writing code, dealing with data, presenting their work, writing reports, giving feedback to peers, reflecting on their research process). We will give you all Ds and HDs (provided you complete all components and give your best effort), so the numbers don't actually matter. You can read more about the grading philosophy for the course in this [blog post](). 
+
+### Please come prepared... it doesn't work if you don't
+
+The workshops run in flipped mode, much like elective classes in honours. In the first workshop of the term, Kate and I will do most of the talking, but after that the rest of the workshops will be run by you. There will be prep work to do (something to read, watch and/or write) before you arrive. If you do the work, you will be able to contribute to the discussion and engage in the activities. If you haven't done what has been assigned for that week, you will let your classmates down. 
+
+### The Schedule
+
+This is the plan. 
+
+```{r}
+
+week <- c(1:10)
+coding <- c('code1','code2','code3','code4','code5', 'flexibility week', 'code6', 'NA', 'NA', 'NA')
+workshop <- c('what is the problem? \n why should we care?','how hard can it be?','project planning', 'NA', 'why doesnt everyone do it?', 'flexibility week', 'NA', 'group gresentations', 'best practices: reproducible research', 'best practices: workflow')
+assessment <- c('','','vr part1 draft', 'peer feedback','vr part2 draft', 'flexibility week', 'peer feedback', 'group presentations','','vr final revision part 1-4')
+
+schedule <- data.frame(week,coding,workshop,assessment)
+
+schedule %>%
+  gt::gt()
+```
 
 
-## Taylor Swift
+Of course plans can change. We don't know how long group projects will take and the timeframe might change as we go along. The nice thing about this course is that we have ultimate flexibility; we can push deadlines back if we need more time than we thought. 
 
-My favourite food on campus is Stockmarket. To get to campus, I ride my bike. When we are allowed to travel again, the first place I am going to go is Thailand. 
+At this stage workshops will run in person but we may have to switch to online only at any moment. Either way, the workshops will streamed on zoom for those who are unable to make it to class. 
 
+There are two reasons not to come to class. 
 
-## Lady Gaga
-
-My favourite food on campus is Subway. I drive my car to get to UNSW campus. When we are allowed to travel again, the first place I am going to go is New Zealand. 
-
-
+1. if you are overseas and studying remotely
+2. if attending class in person would pose a health risk to everyone 
+  + if you have been identified as a contact of someone with COVID 
+  + OR if you have the slightest sniffle, please don't come (go get a test instead). 
   
+Let us know and we will make sure you don't miss out on the content. 

@@ -1,0 +1,58 @@
+---
+title: "What do you mean no numbers?"
+author:
+  - name: Jenny Richmond
+date: 01-06-2021
+output:
+  distill::distill_article:
+    self_contained: false
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+
+In this course, there are no lectures, no tutorials, no exam, and no numbers. Woah, woah, woah you say… I *get* the no lectures, no tutorials, no exam, but what do you mean no numbers?? 
+
+I mean that you will get more feedback in this course than you have received in your entire university career thus far, but we are not going to put a mark on anything.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/c3yzHbDT_rQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+Why? Richard Buckland has some inspiring ideas about this.
+
+
+> “I think marks are a bit like sugar, if you add it to things people eat it. But if you take away the sugar, what’s going to make people eat things?” Richard Buckland
+
+Richard Buckland talks about when there are no marks, students are motivated by different things. Students like….
+
+- things that are interesting
+- things that are fun
+- things that are pleasurable
+- things that foster curiosity
+- the joy of learning
+- helping each other
+- being part of a community
+- creating things
+- solving problems
+- doing puzzles
+- competition
+- challenging themselves
+- collaborative learning
+
+
+The internship is designed to tap into lots of the motivators on Richard’s list and to give you a go at the kinds of activities that researchers consider part of their job (thinking, writing, reflecting, presenting). By engaging in these activities, we want you to develop skills that will be relevant to you as an honours student and in your postgraduate career. 
+
+Responding to feedback and striving to improve our performance is a big part of being a psychologist and you will receive detailed feedback on every piece of written work that you submit. But research has shown that feedback does not necessary promote learning, unless there is an opportunity to integrate that feedback to improve a piece of work. In this course, you will have the opportunity to write like academics do.
+
+> How writing works in the real world: Write a draft, get feedback, revise, submit, get feedback, revise, resubmit, get more feedback, revise again, resubmit again etc etc.
+
+Given that you will have the opportunity to revise your work to improve it, marks are irrelevant in this course as we go along. Detailed (and critical) feedback will be given on each piece of writing, but numeric grades will not be released until final revisions are marked prior to exams.
+
+But how do I know how I’m going?
+
+Don’t worry. You will always know where you are and what you need to do to improve. The feedback will highlights both the strengths and weaknesses of your work and will be detailed enough that you will be able to judge the quality of your performance; we are just not going put a number or letter grade on it.
+
+Try and let go of the grade-driven mindset, for this course at least, and embrace feedback as an opportunity to develop your academic skills.

@@ -85,40 +85,35 @@ code span.wa { color: #545454; font-weight: bold; font-style: italic; } /* Warni
 </style>
 
   <!--radix_placeholder_meta_tags-->
-<title>internship blog: whatever</title>
+<title>PSYC3361: What do you mean no numbers?</title>
 
-<meta property="description" itemprop="description" content="This is a placeholder. You can customise this Rmd when you want to write your first post."/>
 
 
 <!--  https://schema.org/Article -->
-<meta property="article:published" itemprop="datePublished" content="2020-11-30"/>
-<meta property="article:created" itemprop="dateCreated" content="2020-11-30"/>
-<meta name="article:author" content="Billie Eilish"/>
-<meta name="article:author" content="Taylor Swift"/>
-<meta name="article:author" content="Britney Spears"/>
+<meta property="article:published" itemprop="datePublished" content="2021-01-06"/>
+<meta property="article:created" itemprop="dateCreated" content="2021-01-06"/>
+<meta name="article:author" content="Jenny Richmond"/>
 
 <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
-<meta property="og:title" content="internship blog: whatever"/>
+<meta property="og:title" content="PSYC3361: What do you mean no numbers?"/>
 <meta property="og:type" content="article"/>
-<meta property="og:description" content="This is a placeholder. You can customise this Rmd when you want to write your first post."/>
 <meta property="og:locale" content="en_US"/>
-<meta property="og:site_name" content="internship blog"/>
+<meta property="og:site_name" content="PSYC3361"/>
 
 <!--  https://dev.twitter.com/cards/types/summary -->
 <meta property="twitter:card" content="summary"/>
-<meta property="twitter:title" content="internship blog: whatever"/>
-<meta property="twitter:description" content="This is a placeholder. You can customise this Rmd when you want to write your first post."/>
+<meta property="twitter:title" content="PSYC3361: What do you mean no numbers?"/>
 
 <!--/radix_placeholder_meta_tags-->
   <!--radix_placeholder_rmarkdown_metadata-->
 
 <script type="text/json" id="radix-rmarkdown-metadata">
-{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output"]}},"value":[{"type":"character","attributes":{},"value":["whatever"]},{"type":"character","attributes":{},"value":["This is a placeholder. You can customise this Rmd when you want to write your first post."]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url"]}},"value":[{"type":"character","attributes":{},"value":["Billie Eilish"]},{"type":"character","attributes":{},"value":["https://example.com/"]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url"]}},"value":[{"type":"character","attributes":{},"value":["Taylor Swift"]},{"type":"character","attributes":{},"value":["https://example.com/"]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url"]}},"value":[{"type":"character","attributes":{},"value":["Britney Spears"]},{"type":"character","attributes":{},"value":["https://example.com/"]}]}]},{"type":"character","attributes":{},"value":["11-30-2020"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]}]}]}]}
+{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","author","date","output"]}},"value":[{"type":"character","attributes":{},"value":["What do you mean no numbers?"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name"]}},"value":[{"type":"character","attributes":{},"value":["Jenny Richmond"]}]}]},{"type":"character","attributes":{},"value":["01-06-2021"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]}]}]}]}
 </script>
 <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["whatever_files/bowser-1.9.3/bowser.min.js","whatever_files/distill-2.2.21/template.v2.js","whatever_files/header-attrs-2.5/header-attrs.js","whatever_files/jquery-1.11.3/jquery.min.js","whatever_files/webcomponents-2.0.0/webcomponents.js"]}
+  {"type":"character","attributes":{},"value":["no-numbers_files/anchor-4.2.2/anchor.min.js","no-numbers_files/bowser-1.9.3/bowser.min.js","no-numbers_files/distill-2.2.21/template.v2.js","no-numbers_files/header-attrs-2.5/header-attrs.js","no-numbers_files/jquery-1.11.3/jquery.min.js","no-numbers_files/webcomponents-2.0.0/webcomponents.js"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
 <meta name="distill:offset" content="../.."/>
@@ -133,6 +128,7 @@ code span.wa { color: #545454; font-weight: bold; font-style: italic; } /* Warni
     var header = $('header').get(0);
     var headerHeight = header.offsetHeight;
     var headroom = new Headroom(header, {
+      tolerance: 5,
       onPin : function() {
         if (window.headroom_prevent_pin) {
           window.headroom_prevent_pin = false;
@@ -455,8 +451,15 @@ d-title {
   top: 0;
 }
 
+/* adjust viewport for navbar height */
+/* helps vertically center bootstrap (non-distill) content */
+.min-vh-100 {
+  min-height: calc(100vh - 100px) !important;
+}
+
 </style>
 
+<script src="../../site_libs/jquery-1.11.3/jquery.min.js"></script>
 <link href="../../site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet"/>
 <link href="../../site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet"/>
 <script src="../../site_libs/headroom-0.9.4/headroom.min.js"></script>
@@ -480,22 +483,19 @@ function offsetURL(url) {
   return offset ? offset + '/' + url : url;
 }
 
-function createIndex() {
-  var options = {
-    keys: [
-      "title",
-      "categories",
-      "description",
-      "contents"
-    ]
-  };
-  return new window.Fuse([],options);
-}
-
 function createFuseIndex() {
 
   // create fuse index
-  var options = { keys: ["title", "description", "contents"] };
+  var options = {
+    keys: [
+      { name: 'title', weight: 20 },
+      { name: 'categories', weight: 15 },
+      { name: 'description', weight: 10 },
+      { name: 'contents', weight: 5 },
+    ],
+    ignoreLocation: true,
+    threshold: 0
+  };
   var fuse = new window.Fuse([], options);
 
   // fetch the main search.json
@@ -563,29 +563,25 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             shouldSort: true,
             minMatchCharLength: 2,
             limit: 10,
-            keys: [
-              { name: 'title', weight: 20 },
-              { name: 'categories', weight: 15 },
-              { name: 'description', weight: 10 },
-              { name: 'contents', weight: 5 },
-            ],
           };
           var results = fuse.search(query, searchOptions);
           callback(results
             .map(function(result) { return result.item; })
-            .filter(function(item) { return !!item.description; })
           );
         },
         templates: {
           suggestion: function(suggestion) {
+            var img = suggestion.preview && Object.keys(suggestion.preview).length > 0
+              ? `<img src="${offsetURL(suggestion.preview)}"</img>`
+              : '';
             var html = `
               <div class="search-item">
                 <h3>${suggestion.title}</h3>
                 <div class="search-item-description">
-                  ${suggestion.description}
+                  ${suggestion.description || ''}
                 </div>
                 <div class="search-item-preview">
-                  <img src="${suggestion.preview ? offsetURL(suggestion.preview) : ''}"</img>
+                  ${img}
                 </div>
               </div>
             `;
@@ -608,6 +604,10 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 
 <style type="text/css">
+
+.nav-search {
+  font-size: x-small;
+}
 
 /* Algolioa Autocomplete */
 
@@ -683,6 +683,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 }
 
 .algolia-autocomplete .aa-dropdown-menu .aa-suggestion .search-item h3 {
+  font-size: 1rem;
   margin-block-start: 0;
   margin-block-end: 5px;
 }
@@ -866,7 +867,7 @@ d-article pre code {
 d-article pre,
 d-article div.sourceCode,
 d-article div.sourceCode pre {
-  overflow: hidden;
+  overflow: auto;
 }
 
 d-article div.sourceCode {
@@ -908,6 +909,11 @@ d-article pre a {
 d-article pre a:hover {
   border-bottom: none;
   text-decoration: underline;
+}
+
+d-article details {
+  grid-column: text;
+  margin-bottom: 0.8em;
 }
 
 @media(min-width: 768px) {
@@ -1064,6 +1070,17 @@ d-article .citation {
 
 div.hanging-indent{
   margin-left: 1em; text-indent: -1em;
+}
+
+/* Citation hover box */
+
+.tippy-box[data-theme~=light-border] {
+  background-color: rgba(250, 250, 250, 0.95);
+}
+
+.tippy-content > p {
+  margin-bottom: 0;
+  padding: 2px;
 }
 
 
@@ -1731,7 +1748,7 @@ function init_distill() {
     var layout = $(this).attr('data-layout');
 
     // apply layout to markdown level block elements
-    var elements = $(this).children().not('div.sourceCode, pre, script');
+    var elements = $(this).children().not('details, div.sourceCode, pre, script');
     elements.each(function(i, el) {
       var layout_div = $('<div class="' + layout + '"></div>');
       if (layout_div.hasClass('shaded')) {
@@ -1846,6 +1863,20 @@ function init_distill() {
     // move appendix-bottom entries to the bottom
     $('.appendix-bottom').appendTo('d-appendix').children().unwrap();
     $('.appendix-bottom').remove();
+
+    // hoverable references
+    $('span.citation[data-cites]').each(function() {
+      var refHtml = $('#ref-' + $(this).attr('data-cites')).html();
+      window.tippy(this, {
+        allowHTML: true,
+        content: refHtml,
+        maxWidth: 500,
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'light-border',
+        placement: 'bottom-start'
+      });
+    });
 
     // clear polling timer
     clearInterval(tid);
@@ -2218,7 +2249,7 @@ h1, h2, h3, h4, h5, h6,
 
 d-article div.sourceCode code,
 d-article pre code {
-	font-family: var(--mono-font), var(--mono-default);
+  font-family: var(--mono-font), var(--mono-default);
 }
 
 
@@ -2243,100 +2274,109 @@ d-article h6 {
 }
 
 /*-- BODY --*/
-/* only text inside of <p> tags */
-d-article > p {
+d-article > p,  /* only text inside of <p> tags */
+d-article > ul, /* lists */
+d-article > ol {
   color: var(--body-color, rgba(0, 0, 0, 0.8));
   font-size: var(--body-size, 1.06rem);
 }
 
+
 /*-- CODE --*/
 d-article div.sourceCode code,
 d-article pre code {
-	font-size: var(--code-size, 14px);
+  font-size: var(--code-size, 14px);
 }
 
 /*-- ASIDE --*/
 d-article aside {
-	font-size: var(--aside-size, 12px);
-	color: var(--aside-color, rgba(0, 0, 0, 0.6));
+  font-size: var(--aside-size, 12px);
+  color: var(--aside-color, rgba(0, 0, 0, 0.6));
 }
 
 /*-- FIGURE CAPTIONS --*/
 figure .caption,
 figure figcaption,
 .figure .caption {
-	font-size: var(--fig-cap-size, 13px);
-	color: var(--fig-cap-color, rgba(0, 0, 0, 0.6));
+  font-size: var(--fig-cap-size, 13px);
+  color: var(--fig-cap-color, rgba(0, 0, 0, 0.6));
 }
 
 /*-- METADATA --*/
 d-byline h3 {
-	font-size: var(--heading-size, 0.6rem);
-	color: var(--heading-color, rgba(0, 0, 0, 0.5));
+  font-size: var(--heading-size, 0.6rem);
+  color: var(--heading-color, rgba(0, 0, 0, 0.5));
 }
 
 d-byline {
-	font-size: var(--body-size, 0.8rem);
-	color: var(--body-color, rgba(0, 0, 0, 0.8));
+  font-size: var(--body-size, 0.8rem);
+  color: var(--body-color, rgba(0, 0, 0, 0.8));
 }
 
 d-byline a,
 d-article d-byline a {
-	color: var(--body-color, rgba(0, 0, 0, 0.8));
+  color: var(--body-color, rgba(0, 0, 0, 0.8));
 }
 
 /*-- TABLE OF CONTENTS --*/
 .d-contents nav h3 {
-	font-size: var(--heading-size, 18px);
+  font-size: var(--heading-size, 18px);
 }
 
 .d-contents nav a {
-	font-size: var(--contents-size, 13px);
+  font-size: var(--contents-size, 13px);
 }
 
 /*-- APPENDIX --*/
 d-appendix h3 {
   font-size: var(--heading-size, 15px);
-	color: var(--heading-color, rgba(0, 0, 0, 0.65));
+  color: var(--heading-color, rgba(0, 0, 0, 0.65));
 }
 
 d-appendix {
   font-size: var(--text-size, 0.8em);
-	color: var(--text-color, rgba(0, 0, 0, 0.5));
+  color: var(--text-color, rgba(0, 0, 0, 0.5));
 }
 
 d-appendix d-footnote-list a.footnote-backlink {
-	color: var(--text-color, rgba(0, 0, 0, 0.5));
+  color: var(--text-color, rgba(0, 0, 0, 0.5));
 }
 
 /*-- WEBSITE HEADER + FOOTER --*/
 .distill-site-header .title {
-	font-size: var(--title-size, 18px);
-	font-family: var(--navbar-font), var(--heading-default);
-}
-
-.distill-site-header a {
+  font-size: var(--title-size, 18px);
   font-family: var(--navbar-font), var(--heading-default);
 }
 
-.distill-site-header a:hover {
-	color: var(--hover-color, white);
+.distill-site-header a,
+.nav-dropdown .nav-dropbtn {
+  font-family: var(--navbar-font), var(--heading-default);
+}
+
+.nav-dropdown .nav-dropbtn {
+  color: var(--text-color, rgba(255, 255, 255, 0.8));
+  font-size: var(--text-size, 15px);
+}
+
+.distill-site-header a:hover,
+.nav-dropdown:hover .nav-dropbtn {
+  color: var(--hover-color, white);
 }
 
 .distill-site-header {
-	font-size: var(--text-size, 15px);
-	color: var(--text-color, rgba(255, 255, 255, 0.8));
-	background-color: var(--bkgd-color, #0F2E3D);
+  font-size: var(--text-size, 15px);
+  color: var(--text-color, rgba(255, 255, 255, 0.8));
+  background-color: var(--bkgd-color, #0F2E3D);
 }
 
 .distill-site-footer {
-	font-size: var(--text-size, 15px);
-	color: var(--text-color, rgba(255, 255, 255, 0.8));
-	background-color: var(--bkgd-color, #0F2E3D);
+  font-size: var(--text-size, 15px);
+  color: var(--text-color, rgba(255, 255, 255, 0.8));
+  background-color: var(--bkgd-color, #0F2E3D);
 }
 
 .distill-site-footer a:hover {
-	color: var(--hover-color, white);
+  color: var(--hover-color, white);
 }</style>
 <!--/radix_placeholder_distill-->
   <script src="../../site_libs/header-attrs-2.5/header-attrs.js"></script>
@@ -2356,7 +2396,7 @@ d-appendix d-footnote-list a.footnote-backlink {
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"whatever","description":"This is a placeholder. You can customise this Rmd when you want to write your first post.","authors":[{"author":"Billie Eilish","authorURL":"https://example.com/","affiliation":"&nbsp;","affiliationURL":"#","orcidID":""},{"author":"Taylor Swift","authorURL":"https://example.com/","affiliation":"&nbsp;","affiliationURL":"#","orcidID":""},{"author":"Britney Spears","authorURL":"https://example.com/","affiliation":"&nbsp;","affiliationURL":"#","orcidID":""}],"publishedDate":"2020-11-30T00:00:00.000+11:00","citationText":"Eilish, et al., 2020"}
+{"title":"What do you mean no numbers?","authors":[{"author":"Jenny Richmond","authorURL":"#","affiliation":"&nbsp;","affiliationURL":"#","orcidID":""}],"publishedDate":"2021-01-06T00:00:00.000+00:00","citationText":"Richmond, 2021"}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -2364,15 +2404,31 @@ d-appendix d-footnote-list a.footnote-backlink {
 <header class="header header--fixed" role="banner">
 <nav class="distill-site-nav distill-site-header">
 <div class="nav-left">
-<a href="../../index.html" class="title">internship blog</a>
+<a href="../../index.html" class="title">PSYC3361</a>
 <input id="distill-search" class="nav-search hidden" type="text" placeholder="Search..."/>
 </div>
 <div class="nav-right">
-<a href="../../index.html">Home</a>
-<a href="../../howto.html">How to</a>
-<a href="../../blog_posts.html">Blog</a>
-<a href="../../project.html">Project</a>
-<a href="../../coding.html">Coding</a>
+<a href="../../index.html">home</a>
+<a href="../../howto.html">how to</a>
+<a href="../../blog_posts.html">blog</a>
+<a href="../../assessment.html">assessment</a>
+<a href="../../outline.html">outline</a>
+<div class="nav-dropdown">
+<button class="nav-dropbtn">
+WORKSHOPS
+ 
+<span class="down-arrow">&#x25BE;</span>
+</button>
+<div class="nav-dropdown-content">
+<a href="../../week1.html">week1</a>
+<a href="../../week2.html">week2</a>
+<a href="../../week3.html">week3</a>
+<a href="../../week5.html">week5</a>
+<a href="../../week8.html">week8</a>
+<a href="../../week9.html">week9</a>
+<a href="../../week10.html">week10</a>
+</div>
+</div>
 <a href="javascript:void(0);" class="nav-toggle">&#9776;</a>
 </div>
 </nav>
@@ -2382,25 +2438,52 @@ d-appendix d-footnote-list a.footnote-backlink {
 <!--/radix_placeholder_site_before_body-->
 
 <div class="d-title">
-<h1>whatever</h1>
+<h1>What do you mean no numbers?</h1>
 <!--radix_placeholder_categories-->
 <!--/radix_placeholder_categories-->
-<p><p>This is a placeholder. You can customise this Rmd when you want to write your first post.</p></p>
+
 </div>
 
 <div class="d-byline">
-  Billie Eilish <a href="https://example.com/" class="uri">https://example.com/</a> 
+  Jenny Richmond  
   
-,   Taylor Swift <a href="https://example.com/" class="uri">https://example.com/</a> 
-  
-,   Britney Spears <a href="https://example.com/" class="uri">https://example.com/</a> 
-  
-<br/>11-30-2020
+<br/>01-06-2021
 </div>
 
 <div class="d-article">
-<h3 id="start-with-a-heading">start with a heading</h3>
-<p>Insert your text here</p>
+<p>The Psychology Research Internship is different from other courses you have taken thus far in your university career. There are no lectures, no tutorials, no exam, and no numbers. There is no “content” for you to know by the end of the session. You are entirely responsible for your own learning; the more you put in, the more you will get out of this experience.</p>
+<p>Woah, woah, woah you say… I get the no lectures, no tutorials, no exam, but what do you mean no numbers?? I mean that you will get more feedback in this course than you have received in your entire university career thus far, but we are not going to put a mark on anything.</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/c3yzHbDT_rQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+</iframe>
+<p>Why? Richard Buckland has some inspiring ideas about this.</p>
+<blockquote>
+<p>“I think marks are a bit like sugar, if you add it to things people eat it. But if you take away the sugar, what’s going to make people eat things?” Richard Buckland</p>
+</blockquote>
+<p>Richard Buckland talks about when there are no marks, students are motivated by different things. Students like….</p>
+<ul>
+<li>things that are interesting</li>
+<li>things that are fun</li>
+<li>things that are pleasurable</li>
+<li>things that foster curiosity</li>
+<li>the joy of learning</li>
+<li>helping each other</li>
+<li>being part of a community</li>
+<li>creating things</li>
+<li>solving problems</li>
+<li>doing puzzles</li>
+<li>competition</li>
+<li>challenging themselves</li>
+<li>collaborative learning</li>
+</ul>
+<p>The internship is designed to tap into lots of the motivators on Richard’s list and to give you a go at the kinds of activities that researchers consider part of their job (thinking, writing, reflecting, presenting). By engaging in these activities, we want you to develop skills that will be relevant to you as an honours student and in your postgraduate career.</p>
+<p>Responding to feedback and striving to improve our performance is a big part of being a psychologist and you will receive detailed feedback on every piece of written work that you submit. But research has shown that feedback does not necessary promote learning, unless there is an opportunity to integrate that feedback to improve a piece of work. In this course, you will have the opportunity to write like academics do.</p>
+<blockquote>
+<p>How writing works in the real world: Write a draft, get feedback, revise, submit, get feedback, revise, resubmit, get more feedback, revise again, resubmit again etc etc.</p>
+</blockquote>
+<p>Given that you will have the opportunity to revise your work to improve it, marks are irrelevant in this course. Detailed (and critical) feedback will be given on each piece of writing, but numeric grades will not be released until final revisions are marked prior to exams.</p>
+<p>But how do I know how I’m going?</p>
+<p>Don’t worry. You will always know where you are and what you need to do to improve. The head tutor will give feedback that highlights both the strengths and weaknesses of your work and is detailed enough that you will be able to judge the quality of your performance; we are just not going put a number or letter grade on it.</p>
+<p>Try and let go of the grade-driven mindset, for this course at least, and embrace feedback as an opportunity to develop your academic skills.</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
