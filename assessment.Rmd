@@ -11,9 +11,42 @@ output: distill::distill_article
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-Distill is a publication format for scientific and technical writing, native to the web. 
+# 1. Group work (10%)
 
-Learn more about using Distill for R Markdown at <https://rstudio.github.io/distill>.
+This term you will work in teams to reproduce the descriptive statistics and plots from a paper published about COVID19 in 2020. This is an opportunity to apply your new found R skills and to learn about the challenges of open data and reproducible analysis. You will set your own challenge and then work together to complete it. You might not learn the exact functions that you will need to deal with your data problem in coding, so there will be a lot of TROUBLESHOOTING. But many hands make light work. 
+
+We will talk about what makes a team work well in class and this component of the course will be graded by peer and self assessment. 
+
+# 2. Research Skills (10%)
+
+There are 6 weeks of online coding lessons that will set you up well to complete your reproducibility challenge. Danielle will post videos online each week. It will be your responsibility to watch them, follow along with the exercises and think hard about how the code you are learning about might be useful in your project because from Week 4 you will start applying the code you are learning to your reproducibility challenge. 
+
+For this component of the course, you need to share a learning log to RPubs each week. The learning log should include a reflection of...
+
+- What coding you planned to do this week?
+- How that went (challenges/successes?)
+- What the next steps are in your coding journey?
+
+You should include example code/plots in your learning log as a way of sharing your progress with your team and Jenny/Kate/Danielle. 
+
+
+# 3. Presentation
+
+In Week 8, your group will present the outcome of your verification challenge to the class. Your 10 min talk should include...
+
+- some background (what the research was about, what they found)
+- an overview of your plan (what did you intend to reproduce)
+- a discussion of how you went (what were the challenges/triumphs)
+- a take away message (what did you learn about reproducibility, what recommendations would you make to the authors of this paper for next time)
+
+There will be time for Q&A after each talk. 
+
+
+
+# 3. Verification report
+
+
+
 
 
 

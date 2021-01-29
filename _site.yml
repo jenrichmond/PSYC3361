@@ -8,14 +8,10 @@ navbar:
   right:
     - text: "home"
       href: index.html
-    - text: "how to"
-      href: howto.html
     - text: "blog"
       href: blog_posts.html 
     - text: "assessment"
       href: assessment.html
-    - text: "outline"
-      href: outline.html
     - text: "WORKSHOPS"
       menu: 
         - text: "week1"

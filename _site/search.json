@@ -151,13 +151,13 @@
         }
       ],
       "date": "`r Sys.Date()`",
-      "contents": "\nDistill is a publication format for scientific and technical writing, native to the web.\nLearn more about using Distill for R Markdown at https://rstudio.github.io/distill.\n\n\n\n",
-      "last_modified": "2021-01-28T21:08:36+11:00"
+      "contents": "\n\nContents\nGroup 1: Data availability\nGroup 2: Cognition\nGroup 3: Registered Reports\nGroup 4: Science\nGroup 5: Psychological Science\n\nThis week we are going to look critically at recent attempts to assess the the “openness” of psychological science. There are 6 papers on our reading list this week. You will be assigned to read 1 of them and to write a summary and reaction. Bring your S&R to workshop to share with the group who were assigned the same paper as you.\nIn class, you will discuss the paper you have read in groups and then report back to the class.\nGroup 1: Data availability\nVanpaemel, W et al 2015 Are We Wasting a Good Crisis? The Availability of Psychological Research Data after the Storm. Collabra, 1(1): 3, pp. 1–5, DOI: http://dx.doi.org/10.1525/collabra.13\nGroup 2: Cognition\nHardwicke, T. E., Mathur, M. B., MacDonald, K., Nilsonne, G., Banks, G. C., Kidwell, M. C., … & Frank, M. C. (2018). Data availability, reusability, and analytic reproducibility: Evaluating the impact of a mandatory open data policy at the journal Cognition. Royal Society open science, 5(8), 180448.\nGroup 3: Registered Reports\nObels, P., Lakens, D., Coles, N. A., Gottfried, J., & Green, S. A. (2020). Analysis of open data and computational reproducibility in registered reports in psychology. Advances in Methods and Practices in Psychological Science, 3(2), 229-237.\nGroup 4: Science\nStodden, V., Seiler, J., & Ma, Z. (2018). An empirical analysis of journal policy effectiveness for computational reproducibility. Proceedings of the National Academy of Sciences, 115(11), 2584-2589.\nGroup 5: Psychological Science\nHardwicke, T. E., Bohn, M., MacDonald, K., Hembacher, E., Nuijten, M. B., Peloquin, B., … & Frank, M. C. (2020). Analytic reproducibility in articles receiving open data badges at Psychological Science: an observational study.\n\n\n\n",
+      "last_modified": "2021-01-29T16:38:39+11:00"
     },
     {
       "path": "week3.html",
       "title": "Week 3",
-      "description": "reproducibility projects\n",
+      "description": "reproducibility project planning\n",
       "author": [
         {
           "name": "Jenny Richmond",
@@ -165,8 +165,8 @@
         }
       ],
       "date": "`r Sys.Date()`",
-      "contents": "\nDistill is a publication format for scientific and technical writing, native to the web.\nLearn more about using Distill for R Markdown at https://rstudio.github.io/distill.\n\n\n\n",
-      "last_modified": "2021-01-28T21:08:37+11:00"
+      "contents": "\n\nContents\nYour task\n\nYour task\nChoose a paper from the option list below and work as a team to reproduce the descriptive statistics and plots. For each of the papers we have checked that the task is possible and that the data are interesting. The task is NOT EASY though. You will probably not learn all the functions you need from Danielle so get comfortable with googling and asking for help when you need it.\nIf you want to look at an example of what is possible re open data/code, check out this paper by Wahlheim, OSF. It is an A+ example of how to make it easy for other people to work with your data, so is a good exemplar to look at when you are thinking about what your authors could have done differently.\nThe options are…\nCarstensen, L. L., Shavit, Y. Z., & Barnes, J. T. (2020). Age Advantages in Emotional Experience Persist Even Under Threat From the COVID-19 Pandemic. Psychological Science, 31(11), 1374–1385. https://doi.org/10.1177/0956797620967261\npaper\nOSF\nPfattheicher, S., Nockur, L., Böhm, R., Sassenrath, C., & Petersen, M. B. (2020). The Emotional Path to Action: Empathy Promotes Physical Distancing and Wearing of Face Masks During the COVID-19 Pandemic. Psychological Science, 31(11), 1363–1373. https://doi.org/10.1177/0956797620964422\npaper\nOSF\nTybur, J. M., Lieberman, D., Fan, L., Kupfer, T. R., & de Vries, R. E. (2020). Behavioral Immune Trade-Offs: Interpersonal Value Relaxes Social Pathogen Avoidance. Psychological Science, 31(10), 1211–1221. https://doi.org/10.1177/0956797620960011\npaper\nOSF)\nSmith LE, Mottershaw AL, Egan M, Waller J, Marteau TM, Rubin GJ (2020) The impact of believing you have had COVID-19 on self-reported behaviour: Cross-sectional survey. PLoS ONE 15(11): e0240399.\npaper\nOSF\nFolk, D., Okabe-Miyamoto, K., Dunn, E., Lyubomirsky, S., & Donnellan, B. (2020). Did social connection decline during the first wave of COVID-19?: the role of extraversion. Collabra: Psychology, 6(1).\npaper\nOSF\n\n\n\n",
+      "last_modified": "2021-01-29T16:20:25+11:00"
     },
     {
       "path": "week5.html",
