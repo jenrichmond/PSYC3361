@@ -29,5 +29,12 @@ navbar:
         - text: "week9"
           href:  week9.html
         - text: "week10"
-          href:  week10.html
+    - text: "CODING"
+      menu:
+        - text: "R markdown"
+          href: r-markdown.html
+        - text: "Data visualisation"
+          href: data-visualisation.html
+        - text: "Data wrangling"
+          href: data-wrangling.html
 output: distill::distill_article
