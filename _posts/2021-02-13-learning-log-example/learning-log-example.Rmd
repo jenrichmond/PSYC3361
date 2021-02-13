@@ -64,8 +64,8 @@ debt %>%
   geom_line() +
   theme_classic() +
   scale_y_continuous(limits = c(0,15000)) +
-  labs(title = "Average family student load debt by race and year", 
-       y = "Load debt ($2016)", 
+  labs(title = "Average family student loan debt by race and year", 
+       y = "Loan debt ($2016)", 
        x = "Year")
   
 ```
