@@ -1,0 +1,128 @@
+---
+title: "create content"
+description: |
+ How to create blog posts and articles for your site
+author:
+  - name: Jenny Richmond
+    url: 
+    affiliation: 
+    affiliation_url:
+date: "`r Sys.Date()`"
+output:
+  distill::distill_article:
+    toc: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+# Blog posts
+
+There are a couple of blog posts in the template that you can edit to get started with your blog. 
+
+1. intro_babynames.Rmd
+- in the _posts/2020-11-30-intro-babynames folder, you will find an Rmd file called intro_babynames.Rmd. It is set up to plot the popularity of some famous musicians names, but you can customise the code to make it plot your names. Don't forget to update the author details in the top section of the post too. 
+
+2. whatever.Rmd
+- this is a placeholder for your first real post. You can use it, or follow the instructions below to create a post from scratch. 
+
+### how to create a new blog post
+
+To create a new post, use the `create_post()` function. In the console, type...
+
+```
+
+create_post("whatever you want the title to be")
+
+```
+
+This function will open a new folder within the `_posts` folder and a new .Rmd template for you to write in. You should edit the authors (it will default to those used last), write a description for your post, and add your text. To add a picture, save it into the `img` folder and insert a chunk with the following code inside. 
+
+```
+
+knitr::include_graphics(here::here("img", "nameofyourimage.png"))
+
+```
+
+```{r}
+
+knitr::include_graphics(here::here("img", "whatever.png"))
+
+```
+
+
+
+# Articles
+
+You can make other pages/articles appear in your site too. The template includes the following "articles", which are all editable by you. 
+
+1. coding.Rmd
+This would be a good file to edit to keep notes on what you are learning in coding sessions. 
+
+2. project.Rmd
+
+This would be a good file to edit as you make progress on your group project. 
+
+### how to create a new article 
+
+
+To create a new post, use the `create_article()` function. In the console, type...
+
+```
+
+create_article("whatever you want the title to be")
+
+```
+
+
+
+This function will open a new .Rmd file in the main directory of your site folder. You should edit the authors (it will default to those used last), write a description for your article, and add your text. Remember that Rmd files can include text, pictures, code and output. 
+
+
+### how to create links
+
+Once you are happy with the content, you should link to your article from somewhere else in your site. 
+
+You could add a link to it...
+
+- on the home page by editing the index.Rmd file
+- on the navigation bar by editing the _site.yml file
+- on the how to page by editing the howto.Rmd file
+
+You want to create a link using a combination of round and square brackets. Put the text that you want to be the link within square brackets and the html file that you want to link to in round brackets. 
+
+Here is what the links on the how to page look like...
+
+```{r}
+knitr::include_graphics(here::here("img", "links.png"))
+```
+
+
+# Fancy things
+
+## Table of contents
+
+You can include a table of contents by including a `toc` in the top section of your blog/article. Note this top section is called the YAML and it is VERY finickity about spacing. Make sure your toc command looks like this. 
+
+
+```{r}
+knitr::include_graphics(here::here("img", "toc.png"))
+```
+
+
+
+## Asides
+
+You can put notes in the side bar using an aside...
+
+```
+<aside>
+This content will appear in the gutter of the article.
+</aside>
+```
+
+
+<aside>
+This content will appear in the gutter of the article.
+</aside>

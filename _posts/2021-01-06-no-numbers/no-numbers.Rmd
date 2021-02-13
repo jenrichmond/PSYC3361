@@ -1,8 +1,11 @@
 ---
-title: "What do you mean no numbers?"
+title: "what do you mean no numbers?"
+description: |
+  why marks are like sugar and we don't really need them
 author:
   - name: Jenny Richmond
 date: 01-06-2021
+preview: richard.png
 output:
   distill::distill_article:
     self_contained: false

@@ -1,0 +1,84 @@
+---
+title: "customise"
+description: |
+ Some tips for customising your distill site
+author:
+  - name: Jenny Richmond
+    url: 
+    affiliation: UNSW Psychology
+    affiliation_url: 
+date: "`r Sys.Date()`"
+output: distill::distill_article
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+You can customise the look and feel of your distill site pretty easily. See some examples of other sites made with distill [here](https://pkgs.rstudio.com/distill/articles/examples.html). 
+
+# how to change the name of your site
+
+In the top left corner, your site is currently called "internship blog". You might want to change that to the name of your group. Open the **_site.yml** file and update the title. 
+
+You can also change the welcome message. Open the **index.Rmd** file and change the title. 
+
+# how to change the theme
+
+You can change the fonts and colour scheme by choosing a theme. I've imported several examples from other distill sites. Choose your favourite theme from the list below. 
+
+1. piping.css
+
+* https://www.pipinghotdata.com/
+
+2. sleep.css
+
+* https://milesmcbain.xyz/
+
+
+3. models.css
+
+* https://www.tidymodels.org/
+
+
+4. mock.css
+
+* https://themockup.blog/
+
+5. tidy.css
+
+* https://www.tidymodels.org/
+
+6. ijemaka.css
+
+* https://ijeamaka-anyene.netlify.app
+
+7. lendaway.css
+
+* https://lisalendway.netlify.app/posts/2020-12-09-buildingdistill/
+
+
+To apply the theme, open your **_site.yml** and insert the name of the theme where it says theme: 
+
+
+# how to change the layout of the navigation bar
+
+In the template, the top bar has links for Home, How to, Blog, Coding and Project. You can change the arrangement of these navigation links by editing the _site.yml file. 
+
+```{r}
+knitr::include_graphics(here::here("img", "navbar.png"))
+```
+
+
+You can add links or change the order by editing the navbar code here. Make sure each text is linking to an .html file. 
+
+
+
+
+
+
+
+
+
+
+
