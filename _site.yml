@@ -1,6 +1,6 @@
 name: "internship"
 title: "PSYC3361"
-theme: /theme_css/tidy.css
+theme: /theme_css/tidy_chunks.css
 description: |
   blog
 output_dir: "_site"
