@@ -1,0 +1,151 @@
+---
+title: "learning log example"
+description: |
+  This week I have been playing with tables
+author:
+  - name: Jenny Richmond
+    url: {}
+date: 02-13-2021
+output:
+  distill::distill_article:
+    self_contained: false
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+```
+
+
+
+This post is an example of the kind of log that you should post to RPubs each week. The learning log is an opportunity to reflect on what you have learned each week and to think about what the next steps in your coding journey are. It should answer the following questions...
+
+1. What were your coding goals this week?
+2. How did you go achieving your goals (challenges/successes)?
+3. What the next steps are in your coding journey?
+
+... include examples of plots/code that you have been working on. 
+
+# Jenny's learning log I
+
+
+```{r message=FALSE, warning=FALSE}
+
+library(tidyverse)
+library(kableExtra)
+library(gt)
+library(DT)
+
+```
+
+
+This week the [Tidy Tuesday dataset](https://github.com/rfordatascience/tidytuesday) is about income disparities in the US. The student debt dataset looks particularly interesting. 
+
+```{r message=FALSE, warning=FALSE}
+debt <- read_csv("debt.csv")
+
+glimpse(debt)
+
+```
+
+Looks like year is numeric, make it a factor so that it works better in the plot.  
+
+```{r}
+debt$year <- as_factor(debt$year)
+```
+
+Looks like this df average family student loan debt for aged 25-55, by race and year normalized to 2016 dollars. Lets plot debt over time by race. 
+
+```{r plot}
+debt %>%
+  ggplot(aes(x = year, y = loan_debt, colour = race, group = race)) +
+  geom_point() +
+  geom_line() +
+  theme_classic() +
+  scale_y_continuous(limits = c(0,15000)) +
+  labs(title = "Average family student load debt by race and year", 
+       y = "Load debt ($2016)", 
+       x = "Year")
+  
+```
+
+# The goal
+
+OK plotting is great, but I am trying to learn about tables this week. My goal is to practice making tables, so lets start by averaging this data into something that might be table worthy. 
+
+This chunk groups the debt data by year (averaging across race) and summarising the mean debt levels. 
+
+```{r summary}
+summary <- debt %>%
+  group_by(year) %>%
+  summarise(meandebt = mean(loan_debt))
+
+summary
+```
+
+I know that there are several packages that are useful for making tables in R. My goal is to try them out and work out what the pros/cons are
+
+1. [kableExtra](https://cran.r-project.org/web/packages/kableExtra/vignettes/awesome_table_in_html.html)
+
+2. [gt](https://gt.rstudio.com/)
+
+3. [DT](https://rstudio.github.io/DT/)
+
+
+## Option 1 kableExtra
+
+Pipe your dataframe into the kbl() function and you get a basic html table. Add kable styling to get a bootstrap theme.
+
+```{r kbl}
+summary %>%
+  kbl()
+
+```
+
+
+```{r style}
+summary %>%
+  kbl() %>%
+  kable_styling()
+```
+
+It is weird that in each of these options, when I run the Rmd chunk it doesn't display the contents of the table. I just get a white box. But... when I knit the document, they render just fine. Not sure what is going on with that. I also don't really know what kable_styling() does; the only difference in the knitting document is that it appears centred on the page. There must be more to it....
+
+
+
+## Option 2 gt 
+
+The gt package makes great tables (apparently). 
+
+```{r gt}
+summary %>%
+  gt()
+```
+
+oooo that is.... minimalistic. It appears when I run the chunk and only takes up the necessary space. It is perhaps a little skinny though...
+
+## Option 3 DT 
+
+The DT package is an interface for the javascript DataTables library. 
+
+```{r DT}
+summary %>%
+  DT::datatable()
+```
+
+OK that one seems nice. I don't love the default font (huh the font that displays in the Rmd is different to how it renders... why is that?). Its not too big (or too skinny) though and the search function could be useful if you were dealing with big tables. The decimal places are a bit of a problem though. 
+
+# Challenges/Successes
+
+- I got the data summary to display as a table using 3 different packages (yay!), but each one as its own problems that I will need to dig into a little more. I like the kableExtra one (except it is annoying that it won't display when I run the chunk). I like gt(), but I need to work out how to make it take up a little more room on the page. DT() is also nice, but it would be good if it would deal with those decimal places a bit more consistently. 
+
+# Next steps
+
+- So far I have piped my data into the main table making function for each of these packages and ended up with the default settings. Next I need to look at the documentation a little more closely and work out whether there are arguments I can use to "style" the kableExtra table, customise the width of the gt() one, and fix the decimal places and font in the DT() table. 
+
+
+
+
+
+

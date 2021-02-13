@@ -30,7 +30,7 @@ For this component of the course, you need to share a learning log to RPubs each
 - How did you go achieving your goals (challenges/successes)?
 - What the next steps are in your coding journey?
 
-You should include example code/plots in your learning log as a way of sharing your progress with your team and Jenny/Kate/Danielle. Post a link to your RPubs learning to the slack channel by 11:59pm Sunday each week. 
+You can see an example learning log in this blog post. You should include example code/plots in your learning log as a way of sharing your progress with your team and Jenny/Kate/Danielle. Post a link to your RPubs learning to the slack channel by 11:59pm Sunday each week. 
 
 # 3. Presentation (30%)
 

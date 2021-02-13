@@ -85,635 +85,39 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </style>
 
   <!--radix_placeholder_meta_tags-->
-  <title>PSYC3361: Welcome to PSYC3361</title>
+  <title>learning log example</title>
+
+  <meta property="description" itemprop="description" content="This week I have been playing with tables"/>
 
 
-
+  <!--  https://schema.org/Article -->
+  <meta property="article:published" itemprop="datePublished" content="2021-02-13"/>
+  <meta property="article:created" itemprop="dateCreated" content="2021-02-13"/>
+  <meta name="article:author" content="Jenny Richmond"/>
 
   <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
-  <meta property="og:title" content="PSYC3361: Welcome to PSYC3361"/>
+  <meta property="og:title" content="learning log example"/>
   <meta property="og:type" content="article"/>
+  <meta property="og:description" content="This week I have been playing with tables"/>
   <meta property="og:locale" content="en_US"/>
-  <meta property="og:site_name" content="PSYC3361"/>
 
   <!--  https://dev.twitter.com/cards/types/summary -->
   <meta property="twitter:card" content="summary"/>
-  <meta property="twitter:title" content="PSYC3361: Welcome to PSYC3361"/>
+  <meta property="twitter:title" content="learning log example"/>
+  <meta property="twitter:description" content="This week I have been playing with tables"/>
 
   <!--/radix_placeholder_meta_tags-->
   <!--radix_placeholder_rmarkdown_metadata-->
 
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","site"]}},"value":[{"type":"character","attributes":{},"value":["Welcome to PSYC3361"]},{"type":"character","attributes":{},"value":["distill::distill_website"]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output"]}},"value":[{"type":"character","attributes":{},"value":["learning log example"]},{"type":"character","attributes":{},"value":["This week I have been playing with tables\n"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url"]}},"value":[{"type":"character","attributes":{},"value":["Jenny Richmond"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":[]}},"value":[]}]}]},{"type":"character","attributes":{},"value":["02-13-2021"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]}]}]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
+  
+  <script type="text/json" id="radix-resource-manifest">
+  {"type":"character","attributes":{},"value":["debt.csv","learning-log-example_files/anchor-4.2.2/anchor.min.js","learning-log-example_files/bowser-1.9.3/bowser.min.js","learning-log-example_files/clipboard-1.7.1/clipboard.min.js","learning-log-example_files/crosstalk-1.1.1/css/crosstalk.css","learning-log-example_files/crosstalk-1.1.1/js/crosstalk.js","learning-log-example_files/crosstalk-1.1.1/js/crosstalk.js.map","learning-log-example_files/crosstalk-1.1.1/js/crosstalk.min.js","learning-log-example_files/crosstalk-1.1.1/js/crosstalk.min.js.map","learning-log-example_files/datatables-binding-0.17/datatables.js","learning-log-example_files/datatables-css-0.0.0/datatables-crosstalk.css","learning-log-example_files/distill-2.2.21/template.v2.js","learning-log-example_files/dt-core-1.10.20/css/jquery.dataTables.extra.css","learning-log-example_files/dt-core-1.10.20/css/jquery.dataTables.min.css","learning-log-example_files/dt-core-1.10.20/js/jquery.dataTables.min.js","learning-log-example_files/figure-html5/plot-1.png","learning-log-example_files/figure-html5/unnamed-chunk-4-1.png","learning-log-example_files/header-attrs-2.6/header-attrs.js","learning-log-example_files/htmlwidgets-1.5.3/htmlwidgets.js","learning-log-example_files/jquery-3.5.1/jquery-AUTHORS.txt","learning-log-example_files/jquery-3.5.1/jquery.js","learning-log-example_files/jquery-3.5.1/jquery.min.js","learning-log-example_files/jquery-3.5.1/jquery.min.map","learning-log-example_files/kePrint-0.0.1/kePrint.js","learning-log-example_files/klippy-0.0.0.9500/css/klippy.min.css","learning-log-example_files/klippy-0.0.0.9500/js/klippy.min.js","learning-log-example_files/lightable-0.0.1/lightable.css","learning-log-example_files/popper-2.6.0/popper.min.js","learning-log-example_files/primer-tooltips-1.4.0/build.css","learning-log-example_files/tippy-6.2.7/tippy-bundle.umd.min.js","learning-log-example_files/tippy-6.2.7/tippy-light-border.css","learning-log-example_files/tippy-6.2.7/tippy.css","learning-log-example_files/tippy-6.2.7/tippy.umd.min.js","learning-log-example_files/webcomponents-2.0.0/webcomponents.js"]}
+  </script>
   <!--radix_placeholder_navigation_in_header-->
-  <meta name="distill:offset" content=""/>
-
-  <script type="application/javascript">
-
-    window.headroom_prevent_pin = false;
-
-    window.document.addEventListener("DOMContentLoaded", function (event) {
-
-      // initialize headroom for banner
-      var header = $('header').get(0);
-      var headerHeight = header.offsetHeight;
-      var headroom = new Headroom(header, {
-        tolerance: 5,
-        onPin : function() {
-          if (window.headroom_prevent_pin) {
-            window.headroom_prevent_pin = false;
-            headroom.unpin();
-          }
-        }
-      });
-      headroom.init();
-      if(window.location.hash)
-        headroom.unpin();
-      $(header).addClass('headroom--transition');
-
-      // offset scroll location for banner on hash change
-      // (see: https://github.com/WickyNilliams/headroom.js/issues/38)
-      window.addEventListener("hashchange", function(event) {
-        window.scrollTo(0, window.pageYOffset - (headerHeight + 25));
-      });
-
-      // responsive menu
-      $('.distill-site-header').each(function(i, val) {
-        var topnav = $(this);
-        var toggle = topnav.find('.nav-toggle');
-        toggle.on('click', function() {
-          topnav.toggleClass('responsive');
-        });
-      });
-
-      // nav dropdowns
-      $('.nav-dropbtn').click(function(e) {
-        $(this).next('.nav-dropdown-content').toggleClass('nav-dropdown-active');
-        $(this).parent().siblings('.nav-dropdown')
-           .children('.nav-dropdown-content').removeClass('nav-dropdown-active');
-      });
-      $("body").click(function(e){
-        $('.nav-dropdown-content').removeClass('nav-dropdown-active');
-      });
-      $(".nav-dropdown").click(function(e){
-        e.stopPropagation();
-      });
-    });
-  </script>
-
-  <style type="text/css">
-
-  /* Theme (user-documented overrideables for nav appearance) */
-
-  .distill-site-nav {
-    color: rgba(255, 255, 255, 0.8);
-    background-color: #0F2E3D;
-    font-size: 15px;
-    font-weight: 300;
-  }
-
-  .distill-site-nav a {
-    color: inherit;
-    text-decoration: none;
-  }
-
-  .distill-site-nav a:hover {
-    color: white;
-  }
-
-  @media print {
-    .distill-site-nav {
-      display: none;
-    }
-  }
-
-  .distill-site-header {
-
-  }
-
-  .distill-site-footer {
-
-  }
-
-
-  /* Site Header */
-
-  .distill-site-header {
-    width: 100%;
-    box-sizing: border-box;
-    z-index: 3;
-  }
-
-  .distill-site-header .nav-left {
-    display: inline-block;
-    margin-left: 8px;
-  }
-
-  @media screen and (max-width: 768px) {
-    .distill-site-header .nav-left {
-      margin-left: 0;
-    }
-  }
-
-
-  .distill-site-header .nav-right {
-    float: right;
-    margin-right: 8px;
-  }
-
-  .distill-site-header a,
-  .distill-site-header .title {
-    display: inline-block;
-    text-align: center;
-    padding: 14px 10px 14px 10px;
-  }
-
-  .distill-site-header .title {
-    font-size: 18px;
-    min-width: 150px;
-  }
-
-  .distill-site-header .logo {
-    padding: 0;
-  }
-
-  .distill-site-header .logo img {
-    display: none;
-    max-height: 20px;
-    width: auto;
-    margin-bottom: -4px;
-  }
-
-  .distill-site-header .nav-image img {
-    max-height: 18px;
-    width: auto;
-    display: inline-block;
-    margin-bottom: -3px;
-  }
-
-
-
-  @media screen and (min-width: 1000px) {
-    .distill-site-header .logo img {
-      display: inline-block;
-    }
-    .distill-site-header .nav-left {
-      margin-left: 20px;
-    }
-    .distill-site-header .nav-right {
-      margin-right: 20px;
-    }
-    .distill-site-header .title {
-      padding-left: 12px;
-    }
-  }
-
-
-  .distill-site-header .nav-toggle {
-    display: none;
-  }
-
-  .nav-dropdown {
-    display: inline-block;
-    position: relative;
-  }
-
-  .nav-dropdown .nav-dropbtn {
-    border: none;
-    outline: none;
-    color: rgba(255, 255, 255, 0.8);
-    padding: 16px 10px;
-    background-color: transparent;
-    font-family: inherit;
-    font-size: inherit;
-    font-weight: inherit;
-    margin: 0;
-    margin-top: 1px;
-    z-index: 2;
-  }
-
-  .nav-dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: white;
-    min-width: 200px;
-    border: 1px solid rgba(0,0,0,0.15);
-    border-radius: 4px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.1);
-    z-index: 1;
-    margin-top: 2px;
-    white-space: nowrap;
-    padding-top: 4px;
-    padding-bottom: 4px;
-  }
-
-  .nav-dropdown-content hr {
-    margin-top: 4px;
-    margin-bottom: 4px;
-    border: none;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  }
-
-  .nav-dropdown-active {
-    display: block;
-  }
-
-  .nav-dropdown-content a, .nav-dropdown-content .nav-dropdown-header {
-    color: black;
-    padding: 6px 24px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
-  }
-
-  .nav-dropdown-content .nav-dropdown-header {
-    display: block;
-    padding: 5px 24px;
-    padding-bottom: 0;
-    text-transform: uppercase;
-    font-size: 14px;
-    color: #999999;
-    white-space: nowrap;
-  }
-
-  .nav-dropdown:hover .nav-dropbtn {
-    color: white;
-  }
-
-  .nav-dropdown-content a:hover {
-    background-color: #ddd;
-    color: black;
-  }
-
-  .nav-right .nav-dropdown-content {
-    margin-left: -45%;
-    right: 0;
-  }
-
-  @media screen and (max-width: 768px) {
-    .distill-site-header a, .distill-site-header .nav-dropdown  {display: none;}
-    .distill-site-header a.nav-toggle {
-      float: right;
-      display: block;
-    }
-    .distill-site-header .title {
-      margin-left: 0;
-    }
-    .distill-site-header .nav-right {
-      margin-right: 0;
-    }
-    .distill-site-header {
-      overflow: hidden;
-    }
-    .nav-right .nav-dropdown-content {
-      margin-left: 0;
-    }
-  }
-
-
-  @media screen and (max-width: 768px) {
-    .distill-site-header.responsive {position: relative; min-height: 500px; }
-    .distill-site-header.responsive a.nav-toggle {
-      position: absolute;
-      right: 0;
-      top: 0;
-    }
-    .distill-site-header.responsive a,
-    .distill-site-header.responsive .nav-dropdown {
-      display: block;
-      text-align: left;
-    }
-    .distill-site-header.responsive .nav-left,
-    .distill-site-header.responsive .nav-right {
-      width: 100%;
-    }
-    .distill-site-header.responsive .nav-dropdown {float: none;}
-    .distill-site-header.responsive .nav-dropdown-content {position: relative;}
-    .distill-site-header.responsive .nav-dropdown .nav-dropbtn {
-      display: block;
-      width: 100%;
-      text-align: left;
-    }
-  }
-
-  /* Site Footer */
-
-  .distill-site-footer {
-    width: 100%;
-    overflow: hidden;
-    box-sizing: border-box;
-    z-index: 3;
-    margin-top: 30px;
-    padding-top: 30px;
-    padding-bottom: 30px;
-    text-align: center;
-  }
-
-  /* Headroom */
-
-  d-title {
-    padding-top: 6rem;
-  }
-
-  @media print {
-    d-title {
-      padding-top: 4rem;
-    }
-  }
-
-  .headroom {
-    z-index: 1000;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-  }
-
-  .headroom--transition {
-    transition: all .4s ease-in-out;
-  }
-
-  .headroom--unpinned {
-    top: -100px;
-  }
-
-  .headroom--pinned {
-    top: 0;
-  }
-
-  /* adjust viewport for navbar height */
-  /* helps vertically center bootstrap (non-distill) content */
-  .min-vh-100 {
-    min-height: calc(100vh - 100px) !important;
-  }
-
-  </style>
-
-  <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
-  <link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet"/>
-  <link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet"/>
-  <script src="site_libs/headroom-0.9.4/headroom.min.js"></script>
-  <script src="site_libs/autocomplete-0.37.1/autocomplete.min.js"></script>
-  <script src="site_libs/fuse-6.4.1/fuse.min.js"></script>
-
-  <script type="application/javascript">
-
-  function getMeta(metaName) {
-    var metas = document.getElementsByTagName('meta');
-    for (let i = 0; i < metas.length; i++) {
-      if (metas[i].getAttribute('name') === metaName) {
-        return metas[i].getAttribute('content');
-      }
-    }
-    return '';
-  }
-
-  function offsetURL(url) {
-    var offset = getMeta('distill:offset');
-    return offset ? offset + '/' + url : url;
-  }
-
-  function createFuseIndex() {
-
-    // create fuse index
-    var options = {
-      keys: [
-        { name: 'title', weight: 20 },
-        { name: 'categories', weight: 15 },
-        { name: 'description', weight: 10 },
-        { name: 'contents', weight: 5 },
-      ],
-      ignoreLocation: true,
-      threshold: 0
-    };
-    var fuse = new window.Fuse([], options);
-
-    // fetch the main search.json
-    return fetch(offsetURL('search.json'))
-      .then(function(response) {
-        if (response.status == 200) {
-          return response.json().then(function(json) {
-            // index main articles
-            json.articles.forEach(function(article) {
-              fuse.add(article);
-            });
-            // download collections and index their articles
-            return Promise.all(json.collections.map(function(collection) {
-              return fetch(offsetURL(collection)).then(function(response) {
-                if (response.status === 200) {
-                  return response.json().then(function(articles) {
-                    articles.forEach(function(article) {
-                      fuse.add(article);
-                    });
-                  })
-                } else {
-                  return Promise.reject(
-                    new Error('Unexpected status from search index request: ' +
-                              response.status)
-                  );
-                }
-              });
-            })).then(function() {
-              return fuse;
-            });
-          });
-
-        } else {
-          return Promise.reject(
-            new Error('Unexpected status from search index request: ' +
-                        response.status)
-          );
-        }
-      });
-  }
-
-  window.document.addEventListener("DOMContentLoaded", function (event) {
-
-    // get search element (bail if we don't have one)
-    var searchEl = window.document.getElementById('distill-search');
-    if (!searchEl)
-      return;
-
-    createFuseIndex()
-      .then(function(fuse) {
-
-        // make search box visible
-        searchEl.classList.remove('hidden');
-
-        // initialize autocomplete
-        var options = {
-          autoselect: true,
-          hint: false,
-          minLength: 2,
-        };
-        window.autocomplete(searchEl, options, [{
-          source: function(query, callback) {
-            const searchOptions = {
-              isCaseSensitive: false,
-              shouldSort: true,
-              minMatchCharLength: 2,
-              limit: 10,
-            };
-            var results = fuse.search(query, searchOptions);
-            callback(results
-              .map(function(result) { return result.item; })
-            );
-          },
-          templates: {
-            suggestion: function(suggestion) {
-              var img = suggestion.preview && Object.keys(suggestion.preview).length > 0
-                ? `<img src="${offsetURL(suggestion.preview)}"</img>`
-                : '';
-              var html = `
-                <div class="search-item">
-                  <h3>${suggestion.title}</h3>
-                  <div class="search-item-description">
-                    ${suggestion.description || ''}
-                  </div>
-                  <div class="search-item-preview">
-                    ${img}
-                  </div>
-                </div>
-              `;
-              return html;
-            }
-          }
-        }]).on('autocomplete:selected', function(event, suggestion) {
-          window.location.href = offsetURL(suggestion.path);
-        });
-        // remove inline display style on autocompleter (we want to
-        // manage responsive display via css)
-        $('.algolia-autocomplete').css("display", "");
-      })
-      .catch(function(error) {
-        console.log(error);
-      });
-
-  });
-
-  </script>
-
-  <style type="text/css">
-
-  .nav-search {
-    font-size: x-small;
-  }
-
-  /* Algolioa Autocomplete */
-
-  .algolia-autocomplete {
-    display: inline-block;
-    margin-left: 10px;
-    vertical-align: sub;
-    background-color: white;
-    color: black;
-    padding: 6px;
-    padding-top: 8px;
-    padding-bottom: 0;
-    border-radius: 6px;
-    border: 1px #0F2E3D solid;
-    width: 180px;
-  }
-
-
-  @media screen and (max-width: 768px) {
-    .distill-site-nav .algolia-autocomplete {
-      display: none;
-      visibility: hidden;
-    }
-    .distill-site-nav.responsive .algolia-autocomplete {
-      display: inline-block;
-      visibility: visible;
-    }
-    .distill-site-nav.responsive .algolia-autocomplete .aa-dropdown-menu {
-      margin-left: 0;
-      width: 400px;
-      max-height: 400px;
-    }
-  }
-
-  .algolia-autocomplete .aa-input, .algolia-autocomplete .aa-hint {
-    width: 90%;
-    outline: none;
-    border: none;
-  }
-
-  .algolia-autocomplete .aa-hint {
-    color: #999;
-  }
-  .algolia-autocomplete .aa-dropdown-menu {
-    width: 550px;
-    max-height: 70vh;
-    overflow-x: visible;
-    overflow-y: scroll;
-    padding: 5px;
-    margin-top: 3px;
-    margin-left: -150px;
-    background-color: #fff;
-    border-radius: 5px;
-    border: 1px solid #999;
-    border-top: none;
-  }
-
-  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion {
-    cursor: pointer;
-    padding: 5px 4px;
-    border-bottom: 1px solid #eee;
-  }
-
-  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion:last-of-type {
-    border-bottom: none;
-    margin-bottom: 2px;
-  }
-
-  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion .search-item {
-    overflow: hidden;
-    font-size: 0.8em;
-    line-height: 1.4em;
-  }
-
-  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion .search-item h3 {
-    font-size: 1rem;
-    margin-block-start: 0;
-    margin-block-end: 5px;
-  }
-
-  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion .search-item-description {
-    display: inline-block;
-    overflow: hidden;
-    height: 2.8em;
-    width: 80%;
-    margin-right: 4%;
-  }
-
-  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion .search-item-preview {
-    display: inline-block;
-    width: 15%;
-  }
-
-  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion .search-item-preview img {
-    height: 3em;
-    width: auto;
-    display: none;
-  }
-
-  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion .search-item-preview img[src] {
-    display: initial;
-  }
-
-  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion.aa-cursor {
-    background-color: #eee;
-  }
-  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion em {
-    font-weight: bold;
-    font-style: normal;
-  }
-
-  </style>
-
-
   <!--/radix_placeholder_navigation_in_header-->
   <!--radix_placeholder_distill-->
 
@@ -2028,358 +1432,27 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
   </script>
 
-  <style type="text/css">
-  /* base variables */
-
-  /* Edit the CSS properties in this file to create a custom
-     Distill theme. Only edit values in the right column
-     for each row; values shown are the CSS defaults.
-     To return any property to the default,
-     you may set its value to: unset
-     All rows must end with a semi-colon.                      */
-
-  /* Optional: embed custom fonts here with `@import`          */
-  /* This must remain at the top of this file.                 */
-
-
-
-  html {
-    /*-- Main font sizes --*/
-    --title-size:      50px;
-    --body-size:       1.06rem;
-    --code-size:       14px;
-    --aside-size:      12px;
-    --fig-cap-size:    13px;
-    /*-- Main font colors --*/
-    --title-color:     #000000;
-    --header-color:    rgba(0, 0, 0, 0.8);
-    --body-color:      rgba(0, 0, 0, 0.8);
-    --aside-color:     rgba(0, 0, 0, 0.6);
-    --fig-cap-color:   rgba(0, 0, 0, 0.6);
-    /*-- Specify custom fonts ~~~ must be imported above   --*/
-    --heading-font:    sans-serif;
-    --mono-font:       monospace;
-    --body-font:       sans-serif;
-    --navbar-font:     sans-serif;  /* websites + blogs only */
-  }
-
-  /*-- ARTICLE METADATA --*/
-  d-byline {
-    --heading-size:    0.6rem;
-    --heading-color:   rgba(0, 0, 0, 0.5);
-    --body-size:       0.8rem;
-    --body-color:      rgba(0, 0, 0, 0.8);
-  }
-
-  /*-- ARTICLE TABLE OF CONTENTS --*/
-  .d-contents {
-    --heading-size:    18px;
-    --contents-size:   13px;
-  }
-
-  /*-- ARTICLE APPENDIX --*/
-  d-appendix {
-    --heading-size:    15px;
-    --heading-color:   rgba(0, 0, 0, 0.65);
-    --text-size:       0.8em;
-    --text-color:      rgba(0, 0, 0, 0.5);
-  }
-
-  /*-- WEBSITE HEADER + FOOTER --*/
-  /* These properties only apply to Distill sites and blogs  */
-
-  .distill-site-header {
-    --title-size:       18px;
-    --text-color:       rgba(255, 255, 255, 0.8);
-    --text-size:        15px;
-    --hover-color:      white;
-    --bkgd-color:       #0F2E3D;
-  }
-
-  .distill-site-footer {
-    --text-color:       rgba(255, 255, 255, 0.8);
-    --text-size:        15px;
-    --hover-color:      white;
-    --bkgd-color:       #0F2E3D;
-  }
-
-  /*-- Additional custom styles --*/
-  /* Add any additional CSS rules below                      */
-  </style>
-  <style type="text/css">/* base variables */
-
-  /* Edit the CSS properties in this file to create a custom
-     Distill theme. Only edit values in the right column
-     for each row; values shown are the CSS defaults.
-     To return any property to the default,
-     you may set its value to: unset
-     All rows must end with a semi-colon.                      */
-
-  /* Optional: embed custom fonts here with `@import`          */
-  /* This must remain at the top of this file.                 */
-  @import url('https://fonts.googleapis.com/css?family=Noto+Serif+JP:300, 300i&display=swap');
-  @import url('https://fonts.googleapis.com/css?family=Lato:400,400i,700&display=swap');
-  @import url('https://fonts.googleapis.com/css?family=IBM+Plex+Mono&display=swap');
-
-  html {
-    /*-- Main font sizes --*/
-    --title-size:      50px;
-    --body-size:       1.06rem;
-    --code-size:       14px;
-    --aside-size:      12px;
-    --fig-cap-size:    13px;
-    /*-- Main font colors --*/
-    --title-color:     #ca225e;
-    --header-color:    #ca225e;                    /* edited */
-    --body-color:      #404040;                    /* edited */
-    --aside-color:     rgba(0, 0, 0, 0.6);
-    --fig-cap-color:   rgba(0, 0, 0, 0.6);
-    /*-- Specify custom fonts ~~~ must be imported above   --*/
-    --heading-font:    "Noto Serif JP", sans-serif; /* edited */
-    --mono-font:       "IBM Plex Mono", monospace;  /* edited */
-    --body-font:       "Lato", sans-serif;          /* edited */
-    --navbar-font:     "Lato", sans-serif;          /* edited */
-  }
-
-  /*-- ARTICLE METADATA --*/
-  d-byline {
-    --heading-size:    0.9rem;                      /* edited */
-    --heading-color:   rgba(0, 0, 0, 0.5);
-    --body-size:       0.95rem;                     /* edited */
-    --body-color:      rgba(0, 0, 0, 0.8);
-  }
-
-  /*-- ARTICLE TABLE OF CONTENTS --*/
-  .d-contents {
-    --heading-size:    18px;
-    --contents-size:   13px;
-  }
-
-  /*-- ARTICLE APPENDIX --*/
-  d-appendix {
-    --heading-size:    15px;
-    --heading-color:   rgba(0, 0, 0, 0.65);      
-    --text-size:       0.9rem;                    /* edited */
-    --text-color:      #1a162d;                   /* edited */
-  }
-
-  /*-- WEBSITE HEADER + FOOTER --*/
-  /* These properties only apply to Distill sites and blogs  */
-
-  .distill-site-header {
-    --title-size:       18px;
-    --text-color:       #1f1f1f;                   /* edited */
-    --text-size:        15px;
-    --hover-color:      #787878;                   /* edited */
-    --bkgd-color:       #fff;                      /* edited */
-  }
-
-  .distill-site-footer {
-    --text-color:       #7e7b88;                   /* edited */
-    --text-size:        15px;
-    --hover-color:      white;
-    --bkgd-color:       #ca225e3d;                 /* edited */
-  }
-
-  /*-- Additional custom styles --*/
-
-  ul > li::marker {
-    color: #ca225e;
-  }
-
-  .distill-site-header { 
-    letter-spacing: 2px;
-    text-transform: uppercase;
-  }
-
-  h1, h2, h3, h4, h5, h6 {
-    letter-spacing: 2px;
-    font-weight: 300;
-  }
-
-  .distill-site-header .logo img{
-    max-height: 40px; /* Makes logo bigger, default was 20px */
-  }
-
-  .distill-site-header {
-    padding-top: 1rem;
-  }
-
-  d-title h1,
-  d-article h2,
-  .posts-list .description h2,
-  .posts-list > h1 {
-      font-weight: 300;
-  }
-
-  d-appendix {
-    background-color: #fdf7f9;
-    border-top: none;
-  }</style>
-  <style type="text/css">
-  /* base style */
-
-  /* FONT FAMILIES */
-
-  :root {
-    --heading-default: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
-    --mono-default: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
-    --body-default: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
-  }
-
-  body,
-  .posts-list .post-preview p,
-  .posts-list .description p {
-    font-family: var(--body-font), var(--body-default);
-  }
-
-  h1, h2, h3, h4, h5, h6,
-  .posts-list .post-preview h2,
-  .posts-list .description h2 {
-    font-family: var(--heading-font), var(--heading-default);
-  }
-
-  d-article div.sourceCode code,
-  d-article pre code {
-    font-family: var(--mono-font), var(--mono-default);
-  }
-
-
-  /*-- TITLE --*/
-  d-title h1,
-  .posts-list > h1 {
-    color: var(--title-color, black);
-  }
-
-  d-title h1 {
-    font-size: var(--title-size, 50px);
-  }
-
-  /*-- HEADERS --*/
-  d-article h1,
-  d-article h2,
-  d-article h3,
-  d-article h4,
-  d-article h5,
-  d-article h6 {
-    color: var(--header-color, rgba(0, 0, 0, 0.8));
-  }
-
-  /*-- BODY --*/
-  d-article > p,  /* only text inside of <p> tags */
-  d-article > ul, /* lists */
-  d-article > ol {
-    color: var(--body-color, rgba(0, 0, 0, 0.8));
-    font-size: var(--body-size, 1.06rem);
-  }
-
-
-  /*-- CODE --*/
-  d-article div.sourceCode code,
-  d-article pre code {
-    font-size: var(--code-size, 14px);
-  }
-
-  /*-- ASIDE --*/
-  d-article aside {
-    font-size: var(--aside-size, 12px);
-    color: var(--aside-color, rgba(0, 0, 0, 0.6));
-  }
-
-  /*-- FIGURE CAPTIONS --*/
-  figure .caption,
-  figure figcaption,
-  .figure .caption {
-    font-size: var(--fig-cap-size, 13px);
-    color: var(--fig-cap-color, rgba(0, 0, 0, 0.6));
-  }
-
-  /*-- METADATA --*/
-  d-byline h3 {
-    font-size: var(--heading-size, 0.6rem);
-    color: var(--heading-color, rgba(0, 0, 0, 0.5));
-  }
-
-  d-byline {
-    font-size: var(--body-size, 0.8rem);
-    color: var(--body-color, rgba(0, 0, 0, 0.8));
-  }
-
-  d-byline a,
-  d-article d-byline a {
-    color: var(--body-color, rgba(0, 0, 0, 0.8));
-  }
-
-  /*-- TABLE OF CONTENTS --*/
-  .d-contents nav h3 {
-    font-size: var(--heading-size, 18px);
-  }
-
-  .d-contents nav a {
-    font-size: var(--contents-size, 13px);
-  }
-
-  /*-- APPENDIX --*/
-  d-appendix h3 {
-    font-size: var(--heading-size, 15px);
-    color: var(--heading-color, rgba(0, 0, 0, 0.65));
-  }
-
-  d-appendix {
-    font-size: var(--text-size, 0.8em);
-    color: var(--text-color, rgba(0, 0, 0, 0.5));
-  }
-
-  d-appendix d-footnote-list a.footnote-backlink {
-    color: var(--text-color, rgba(0, 0, 0, 0.5));
-  }
-
-  /*-- WEBSITE HEADER + FOOTER --*/
-  .distill-site-header .title {
-    font-size: var(--title-size, 18px);
-    font-family: var(--navbar-font), var(--heading-default);
-  }
-
-  .distill-site-header a,
-  .nav-dropdown .nav-dropbtn {
-    font-family: var(--navbar-font), var(--heading-default);
-  }
-
-  .nav-dropdown .nav-dropbtn {
-    color: var(--text-color, rgba(255, 255, 255, 0.8));
-    font-size: var(--text-size, 15px);
-  }
-
-  .distill-site-header a:hover,
-  .nav-dropdown:hover .nav-dropbtn {
-    color: var(--hover-color, white);
-  }
-
-  .distill-site-header {
-    font-size: var(--text-size, 15px);
-    color: var(--text-color, rgba(255, 255, 255, 0.8));
-    background-color: var(--bkgd-color, #0F2E3D);
-  }
-
-  .distill-site-footer {
-    font-size: var(--text-size, 15px);
-    color: var(--text-color, rgba(255, 255, 255, 0.8));
-    background-color: var(--bkgd-color, #0F2E3D);
-  }
-
-  .distill-site-footer a:hover {
-    color: var(--hover-color, white);
-  }</style>
   <!--/radix_placeholder_distill-->
-  <script src="site_libs/header-attrs-2.6/header-attrs.js"></script>
-  <script src="site_libs/popper-2.6.0/popper.min.js"></script>
-  <link href="site_libs/tippy-6.2.7/tippy.css" rel="stylesheet" />
-  <link href="site_libs/tippy-6.2.7/tippy-light-border.css" rel="stylesheet" />
-  <script src="site_libs/tippy-6.2.7/tippy.umd.min.js"></script>
-  <script src="site_libs/anchor-4.2.2/anchor.min.js"></script>
-  <script src="site_libs/bowser-1.9.3/bowser.min.js"></script>
-  <script src="site_libs/webcomponents-2.0.0/webcomponents.js"></script>
-  <script src="site_libs/distill-2.2.21/template.v2.js"></script>
+  <script src="learning-log-example_files/header-attrs-2.6/header-attrs.js"></script>
+  <script src="learning-log-example_files/kePrint-0.0.1/kePrint.js"></script>
+  <link href="learning-log-example_files/lightable-0.0.1/lightable.css" rel="stylesheet" />
+  <script src="learning-log-example_files/htmlwidgets-1.5.3/htmlwidgets.js"></script>
+  <script src="learning-log-example_files/jquery-3.5.1/jquery.min.js"></script>
+  <link href="learning-log-example_files/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet" />
+  <script src="learning-log-example_files/datatables-binding-0.17/datatables.js"></script>
+  <link href="learning-log-example_files/dt-core-1.10.20/css/jquery.dataTables.min.css" rel="stylesheet" />
+  <link href="learning-log-example_files/dt-core-1.10.20/css/jquery.dataTables.extra.css" rel="stylesheet" />
+  <script src="learning-log-example_files/dt-core-1.10.20/js/jquery.dataTables.min.js"></script>
+  <link href="learning-log-example_files/crosstalk-1.1.1/css/crosstalk.css" rel="stylesheet" />
+  <script src="learning-log-example_files/crosstalk-1.1.1/js/crosstalk.min.js"></script>
+  <script src="learning-log-example_files/popper-2.6.0/popper.min.js"></script>
+  <link href="learning-log-example_files/tippy-6.2.7/tippy.css" rel="stylesheet" />
+  <link href="learning-log-example_files/tippy-6.2.7/tippy-light-border.css" rel="stylesheet" />
+  <script src="learning-log-example_files/tippy-6.2.7/tippy.umd.min.js"></script>
+  <script src="learning-log-example_files/anchor-4.2.2/anchor.min.js"></script>
+  <script src="learning-log-example_files/bowser-1.9.3/bowser.min.js"></script>
+  <script src="learning-log-example_files/webcomponents-2.0.0/webcomponents.js"></script>
+  <script src="learning-log-example_files/distill-2.2.21/template.v2.js"></script>
   <!--radix_placeholder_site_in_header-->
   <!--/radix_placeholder_site_in_header-->
 
@@ -2391,95 +1464,335 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"Welcome to PSYC3361","authors":[]}
+{"title":"learning log example","description":"This week I have been playing with tables","authors":[{"author":"Jenny Richmond","authorURL":{},"affiliation":"&nbsp;","affiliationURL":"#","orcidID":""}],"publishedDate":"2021-02-13T00:00:00.000+00:00","citationText":"Richmond, 2021"}
 </script>
 
 <!--/radix_placeholder_front_matter-->
 <!--radix_placeholder_navigation_before_body-->
-<header class="header header--fixed" role="banner">
-<nav class="distill-site-nav distill-site-header">
-<div class="nav-left">
-<a href="index.html" class="title">PSYC3361</a>
-<input id="distill-search" class="nav-search hidden" type="text" placeholder="Search..."/>
-</div>
-<div class="nav-right">
-<a href="index.html">home</a>
-<a href="blog_posts.html">blog</a>
-<a href="./scripts/PSYC3361_T1_2021_final.pdf">outline</a>
-<a href="assessment.html">assessment</a>
-<div class="nav-dropdown">
-<button class="nav-dropbtn">
-WORKSHOPS
- 
-<span class="down-arrow">&#x25BE;</span>
-</button>
-<div class="nav-dropdown-content">
-<a href="week1.html">week1</a>
-<a href="week2.html">week2</a>
-<a href="week3.html">week3</a>
-<a href="week5.html">week5</a>
-<a href="week8.html">week8</a>
-<a href="week9.html">week9</a>
-<a href="week10.html">week10</a>
-</div>
-</div>
-<a href="javascript:void(0);" class="nav-toggle">&#9776;</a>
-</div>
-</nav>
-</header>
 <!--/radix_placeholder_navigation_before_body-->
 <!--radix_placeholder_site_before_body-->
 <!--/radix_placeholder_site_before_body-->
 
 <div class="d-title">
-<h1>Welcome to PSYC3361</h1>
+<h1>learning log example</h1>
 <!--radix_placeholder_categories-->
 <!--/radix_placeholder_categories-->
-
+<p><p>This week I have been playing with tables</p></p>
 </div>
 
+<div class="d-byline">
+  Jenny Richmond true 
+  
+<br/>02-13-2021
+</div>
 
 <div class="d-article">
-<div class="layout-chunk" data-layout="l-body">
-<p><img src="avatar.jpg" width="80%" /></p>
-</div>
-<p><span>Photo by <a href="https://unsplash.com/@jessemartini?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Jesse Martini</a> on <a href="https://unsplash.com/s/photos/brain?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span></p>
-<h1 id="about-the-course">About the course</h1>
-<p>The Psychology Research Internship is different from other courses you have taken thus far in your university career. There are no lectures, no tutorials, and no exam. There is no “content” for you to know by the end of the session. You are entirely responsible for your own learning; the more you put in, the more you will get out of this experience. It is a unique opportunity to really <em>use your brain</em>.</p>
-<p>PSYC3361 is designed to be a hands-on research experience, but this year we are not going to do that in the lab. We are going to build the course around open data, giving you the opportunity to learn skills that are critical for conducting reproducible research.</p>
-<h1 id="by-the-end-of-the-course-you-will">By the end of the course you will…</h1>
+<p>This post is an example of the kind of log that you should post to RPubs each week. The learning log is an opportunity to reflect on what you have learned each week and to think about what the next steps in your coding journey are. It should answer the following questions…</p>
 <ol type="1">
-<li>be able to explain why it is important that scientists are transparent about their research practices</li>
-<li>be able to use your understanding of structural, ethical and practical barriers to explain describe why some researchers share their data and others don’t</li>
-<li>be able to describe the factors make research analyses more or less difficult to reproduce</li>
-<li>be able to apply workflow practices to your own projects in a way that will make transparency and data sharing easy</li>
-<li>know enough R to produce descriptive statistics and visualisations in your honours project</li>
+<li>What were your coding goals this week?</li>
+<li>How did you go achieving your goals (challenges/successes)?</li>
+<li>What the next steps are in your coding journey?</li>
 </ol>
-<p>It is a bit of a an experiment so we want you to let us know how it is going as we go along. Use this <a href="https://docs.google.com/document/d/1m8-lfQ7qabHaV6fpdodEaZLgtAE-oqwoGs-ERPv2olE/edit?usp=sharing">anonymous/editable document</a> at any time to let us know what is working and what is not working.</p>
-<h3 id="there-will-be-lots-of-feedback-but-no-marks-until-the-end">There will be lots of feedback but no marks (until the end)</h3>
-<p>The assessment for this course is designed to allow you to engage in activities that research students and academics consider part of their “job” (reading critically, writing code, dealing with data, presenting their work, writing reports, giving feedback to peers, reflecting on their research process). We will give you all Ds and HDs (provided you complete all components and give your best effort), so the numbers don’t actually matter. You can read more about the grading philosophy for the course in this <a href="">blog post</a>.</p>
-<h3 id="please-come-prepared-it-doesnt-work-if-you-dont">Please come prepared… it doesn’t work if you don’t</h3>
-<p>The workshops run in flipped mode, much like elective classes in honours. In the first workshop of the term, Kate and I will do most of the talking, but after that the rest of the workshops will be run by you. There will be prep work to do (something to read, watch and/or write) before you arrive. If you do the work, you will be able to contribute to the discussion and engage in the activities. If you haven’t done what has been assigned for that week, you will let your classmates down.</p>
-<h3 id="the-schedule">The Schedule</h3>
-<p>This is the plan.</p>
+<p>… include examples of plots/code that you have been working on.</p>
+<h1 id="jennys-learning-log-i">Jenny’s learning log I</h1>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>week</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>1</span><span class='op'>:</span><span class='fl'>10</span><span class='op'>)</span>
-<span class='va'>coding</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>'code1'</span>,<span class='st'>'code2'</span>,<span class='st'>'code3'</span>,<span class='st'>'code4'</span>,<span class='st'>'code5'</span>, <span class='st'>'flexibility week'</span>, <span class='st'>'code6'</span>, <span class='st'>'NA'</span>, <span class='st'>'NA'</span>, <span class='st'>'NA'</span><span class='op'>)</span>
-<span class='va'>workshop</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>'what is the problem? \n why should we care?'</span>,<span class='st'>'how hard can it be?'</span>,<span class='st'>'project planning'</span>, <span class='st'>'NA'</span>, <span class='st'>'why doesnt everyone do it?'</span>, <span class='st'>'flexibility week'</span>, <span class='st'>'NA'</span>, <span class='st'>'group presentations'</span>, <span class='st'>'best practices: reproducible research'</span>, <span class='st'>'best practices: workflow'</span><span class='op'>)</span>
-<span class='va'>assessment</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>''</span>,<span class='st'>''</span>,<span class='st'>'vr part1 draft'</span>, <span class='st'>''</span>,<span class='st'>'vr part2 draft'</span>, <span class='st'>'flexibility week'</span>, <span class='st'>''</span>, <span class='st'>'group presentations'</span>,<span class='st'>''</span>,<span class='st'>'vr final revision part 1-4'</span><span class='op'>)</span>
+<pre class="sourceCode r"><code class="sourceCode r"><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='http://tidyverse.tidyverse.org'>tidyverse</a></span><span class='op'>)</span>
+<span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='http://haozhu233.github.io/kableExtra/'>kableExtra</a></span><span class='op'>)</span>
+<span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://github.com/rstudio/gt'>gt</a></span><span class='op'>)</span>
+<span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://github.com/rstudio/DT'>DT</a></span><span class='op'>)</span>
+</code></pre>
+</div>
+</div>
+<p>This week the <a href="https://github.com/rfordatascience/tidytuesday">Tidy Tuesday dataset</a> is about income disparities in the US. The student debt dataset looks particularly interesting.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>debt</span> <span class='op'>&lt;-</span> <span class='fu'>read_csv</span><span class='op'>(</span><span class='st'>"debt.csv"</span><span class='op'>)</span>
 
-<span class='va'>schedule</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/data.frame.html'>data.frame</a></span><span class='op'>(</span><span class='va'>week</span>,<span class='va'>coding</span>,<span class='va'>workshop</span>,<span class='va'>assessment</span><span class='op'>)</span>
+<span class='fu'>glimpse</span><span class='op'>(</span><span class='va'>debt</span><span class='op'>)</span>
+</code></pre>
+</div>
+<pre><code>Rows: 30
+Columns: 4
+$ year          &lt;dbl&gt; 2016, 2016, 2016, 2013, 2013, 2013, 2010, 201…
+$ race          &lt;chr&gt; &quot;White&quot;, &quot;Black&quot;, &quot;Hispanic&quot;, &quot;White&quot;, &quot;Black…
+$ loan_debt     &lt;dbl&gt; 11108.410, 14224.770, 7493.999, 8363.605, 103…
+$ loan_debt_pct &lt;dbl&gt; 0.3367511, 0.4183588, 0.2189689, 0.2845555, 0…</code></pre>
+</div>
+<p>Looks like year is numeric, make it a factor so that it works better in the plot.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>debt</span><span class='op'>$</span><span class='va'>year</span> <span class='op'>&lt;-</span> <span class='fu'>as_factor</span><span class='op'>(</span><span class='va'>debt</span><span class='op'>$</span><span class='va'>year</span><span class='op'>)</span>
+</code></pre>
+</div>
+</div>
+<p>Looks like this df average family student loan debt for aged 25-55, by race and year normalized to 2016 dollars. Lets plot debt over time by race.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>debt</span> <span class='op'>%&gt;%</span>
+  <span class='fu'>ggplot</span><span class='op'>(</span><span class='fu'>aes</span><span class='op'>(</span>x <span class='op'>=</span> <span class='va'>year</span>, y <span class='op'>=</span> <span class='va'>loan_debt</span>, colour <span class='op'>=</span> <span class='va'>race</span>, group <span class='op'>=</span> <span class='va'>race</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span>
+  <span class='fu'>geom_point</span><span class='op'>(</span><span class='op'>)</span> <span class='op'>+</span>
+  <span class='fu'>geom_line</span><span class='op'>(</span><span class='op'>)</span> <span class='op'>+</span>
+  <span class='fu'>theme_classic</span><span class='op'>(</span><span class='op'>)</span> <span class='op'>+</span>
+  <span class='fu'>scale_y_continuous</span><span class='op'>(</span>limits <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>0</span>,<span class='fl'>15000</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span>
+  <span class='fu'>labs</span><span class='op'>(</span>title <span class='op'>=</span> <span class='st'>"Average family student load debt by race and year"</span>, 
+       y <span class='op'>=</span> <span class='st'>"Load debt ($2016)"</span>, 
+       x <span class='op'>=</span> <span class='st'>"Year"</span><span class='op'>)</span>
+</code></pre>
+</div>
+<p><img src="learning-log-example_files/figure-html5/plot-1.png" width="624" /></p>
+</div>
+<h1 id="the-goal">The goal</h1>
+<p>OK plotting is great, but I am trying to learn about tables this week. My goal is to practice making tables, so lets start by averaging this data into something that might be table worthy.</p>
+<p>This chunk groups the debt data by year (averaging across race) and summarising the mean debt levels.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>summary</span> <span class='op'>&lt;-</span> <span class='va'>debt</span> <span class='op'>%&gt;%</span>
+  <span class='fu'>group_by</span><span class='op'>(</span><span class='va'>year</span><span class='op'>)</span> <span class='op'>%&gt;%</span>
+  <span class='fu'>summarise</span><span class='op'>(</span>meandebt <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/mean.html'>mean</a></span><span class='op'>(</span><span class='va'>loan_debt</span><span class='op'>)</span><span class='op'>)</span>
 
-<span class='va'>schedule</span> <span class='op'>%&gt;%</span>
-  <span class='fu'>gt</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/gt/man/gt.html'>gt</a></span><span class='op'>(</span><span class='op'>)</span>
+<span class='va'>summary</span>
+</code></pre>
+</div>
+<pre><code># A tibble: 10 x 2
+   year  meandebt
+ * &lt;fct&gt;    &lt;dbl&gt;
+ 1 1989     1053.
+ 2 1992     1014.
+ 3 1995     1735.
+ 4 1998     1959.
+ 5 2001     2311.
+ 6 2004     3225.
+ 7 2007     4793.
+ 8 2010     6880.
+ 9 2013     7281.
+10 2016    10942.</code></pre>
+</div>
+<p>I know that there are several packages that are useful for making tables in R. My goal is to try them out and work out what the pros/cons are</p>
+<ol type="1">
+<li><p><a href="https://cran.r-project.org/web/packages/kableExtra/vignettes/awesome_table_in_html.html">kableExtra</a></p></li>
+<li><p><a href="https://gt.rstudio.com/">gt</a></p></li>
+<li><p><a href="https://rstudio.github.io/DT/">DT</a></p></li>
+</ol>
+<h2 id="option-1-kableextra">Option 1 kableExtra</h2>
+<p>Pipe your dataframe into the kbl() function and you get a basic html table. Add kable styling to get a bootstrap theme.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>summary</span> <span class='op'>%&gt;%</span>
+  <span class='fu'><a href='https://rdrr.io/pkg/kableExtra/man/kbl.html'>kbl</a></span><span class='op'>(</span><span class='op'>)</span>
+</code></pre>
+</div>
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+year
+</th>
+<th style="text-align:right;">
+meandebt
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+1989
+</td>
+<td style="text-align:right;">
+1052.853
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+1992
+</td>
+<td style="text-align:right;">
+1013.949
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+1995
+</td>
+<td style="text-align:right;">
+1735.111
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+1998
+</td>
+<td style="text-align:right;">
+1959.001
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2001
+</td>
+<td style="text-align:right;">
+2311.100
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2004
+</td>
+<td style="text-align:right;">
+3224.881
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2007
+</td>
+<td style="text-align:right;">
+4793.357
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2010
+</td>
+<td style="text-align:right;">
+6880.418
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2013
+</td>
+<td style="text-align:right;">
+7281.225
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2016
+</td>
+<td style="text-align:right;">
+10942.393
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>summary</span> <span class='op'>%&gt;%</span>
+  <span class='fu'><a href='https://rdrr.io/pkg/kableExtra/man/kbl.html'>kbl</a></span><span class='op'>(</span><span class='op'>)</span> <span class='op'>%&gt;%</span>
+  <span class='fu'><a href='https://rdrr.io/pkg/kableExtra/man/kable_styling.html'>kable_styling</a></span><span class='op'>(</span><span class='op'>)</span>
+</code></pre>
+</div>
+<table class="table" style="margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+year
+</th>
+<th style="text-align:right;">
+meandebt
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+1989
+</td>
+<td style="text-align:right;">
+1052.853
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+1992
+</td>
+<td style="text-align:right;">
+1013.949
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+1995
+</td>
+<td style="text-align:right;">
+1735.111
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+1998
+</td>
+<td style="text-align:right;">
+1959.001
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2001
+</td>
+<td style="text-align:right;">
+2311.100
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2004
+</td>
+<td style="text-align:right;">
+3224.881
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2007
+</td>
+<td style="text-align:right;">
+4793.357
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2010
+</td>
+<td style="text-align:right;">
+6880.418
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2013
+</td>
+<td style="text-align:right;">
+7281.225
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2016
+</td>
+<td style="text-align:right;">
+10942.393
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>It is weird that in each of these options, when I run the Rmd chunk it doesn’t display the contents of the table. I just get a white box. But… when I knit the document, they render just fine. Not sure what is going on with that. I also don’t really know what kable_styling() does; the only difference in the knitting document is that it appears centred on the page. There must be more to it….</p>
+<h2 id="option-2-gt">Option 2 gt</h2>
+<p>The gt package makes great tables (apparently).</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>summary</span> <span class='op'>%&gt;%</span>
+  <span class='fu'><a href='https://rdrr.io/pkg/gt/man/gt.html'>gt</a></span><span class='op'>(</span><span class='op'>)</span>
 </code></pre>
 </div>
 <style>html {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
 
-#zecppywjse .gt_table {
+#ibirwdlmve .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -2504,7 +1817,7 @@ WORKSHOPS
   border-left-color: #D3D3D3;
 }
 
-#zecppywjse .gt_heading {
+#ibirwdlmve .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -2516,7 +1829,7 @@ WORKSHOPS
   border-right-color: #D3D3D3;
 }
 
-#zecppywjse .gt_title {
+#ibirwdlmve .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -2526,7 +1839,7 @@ WORKSHOPS
   border-bottom-width: 0;
 }
 
-#zecppywjse .gt_subtitle {
+#ibirwdlmve .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -2536,13 +1849,13 @@ WORKSHOPS
   border-top-width: 0;
 }
 
-#zecppywjse .gt_bottom_border {
+#ibirwdlmve .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#zecppywjse .gt_col_headings {
+#ibirwdlmve .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -2557,7 +1870,7 @@ WORKSHOPS
   border-right-color: #D3D3D3;
 }
 
-#zecppywjse .gt_col_heading {
+#ibirwdlmve .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2577,7 +1890,7 @@ WORKSHOPS
   overflow-x: hidden;
 }
 
-#zecppywjse .gt_column_spanner_outer {
+#ibirwdlmve .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2589,15 +1902,15 @@ WORKSHOPS
   padding-right: 4px;
 }
 
-#zecppywjse .gt_column_spanner_outer:first-child {
+#ibirwdlmve .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#zecppywjse .gt_column_spanner_outer:last-child {
+#ibirwdlmve .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#zecppywjse .gt_column_spanner {
+#ibirwdlmve .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -2609,7 +1922,7 @@ WORKSHOPS
   width: 100%;
 }
 
-#zecppywjse .gt_group_heading {
+#ibirwdlmve .gt_group_heading {
   padding: 8px;
   color: #333333;
   background-color: #FFFFFF;
@@ -2631,7 +1944,7 @@ WORKSHOPS
   vertical-align: middle;
 }
 
-#zecppywjse .gt_empty_group_heading {
+#ibirwdlmve .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -2646,15 +1959,15 @@ WORKSHOPS
   vertical-align: middle;
 }
 
-#zecppywjse .gt_from_md > :first-child {
+#ibirwdlmve .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#zecppywjse .gt_from_md > :last-child {
+#ibirwdlmve .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#zecppywjse .gt_row {
+#ibirwdlmve .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2673,7 +1986,7 @@ WORKSHOPS
   overflow-x: hidden;
 }
 
-#zecppywjse .gt_stub {
+#ibirwdlmve .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2685,7 +1998,7 @@ WORKSHOPS
   padding-left: 12px;
 }
 
-#zecppywjse .gt_summary_row {
+#ibirwdlmve .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -2695,7 +2008,7 @@ WORKSHOPS
   padding-right: 5px;
 }
 
-#zecppywjse .gt_first_summary_row {
+#ibirwdlmve .gt_first_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2705,7 +2018,7 @@ WORKSHOPS
   border-top-color: #D3D3D3;
 }
 
-#zecppywjse .gt_grand_summary_row {
+#ibirwdlmve .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -2715,7 +2028,7 @@ WORKSHOPS
   padding-right: 5px;
 }
 
-#zecppywjse .gt_first_grand_summary_row {
+#ibirwdlmve .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2725,11 +2038,11 @@ WORKSHOPS
   border-top-color: #D3D3D3;
 }
 
-#zecppywjse .gt_striped {
+#ibirwdlmve .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#zecppywjse .gt_table_body {
+#ibirwdlmve .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -2738,7 +2051,7 @@ WORKSHOPS
   border-bottom-color: #D3D3D3;
 }
 
-#zecppywjse .gt_footnotes {
+#ibirwdlmve .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -2752,13 +2065,13 @@ WORKSHOPS
   border-right-color: #D3D3D3;
 }
 
-#zecppywjse .gt_footnote {
+#ibirwdlmve .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding: 4px;
 }
 
-#zecppywjse .gt_sourcenotes {
+#ibirwdlmve .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -2772,135 +2085,121 @@ WORKSHOPS
   border-right-color: #D3D3D3;
 }
 
-#zecppywjse .gt_sourcenote {
+#ibirwdlmve .gt_sourcenote {
   font-size: 90%;
   padding: 4px;
 }
 
-#zecppywjse .gt_left {
+#ibirwdlmve .gt_left {
   text-align: left;
 }
 
-#zecppywjse .gt_center {
+#ibirwdlmve .gt_center {
   text-align: center;
 }
 
-#zecppywjse .gt_right {
+#ibirwdlmve .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#zecppywjse .gt_font_normal {
+#ibirwdlmve .gt_font_normal {
   font-weight: normal;
 }
 
-#zecppywjse .gt_font_bold {
+#ibirwdlmve .gt_font_bold {
   font-weight: bold;
 }
 
-#zecppywjse .gt_font_italic {
+#ibirwdlmve .gt_font_italic {
   font-style: italic;
 }
 
-#zecppywjse .gt_super {
+#ibirwdlmve .gt_super {
   font-size: 65%;
 }
 
-#zecppywjse .gt_footnote_marks {
+#ibirwdlmve .gt_footnote_marks {
   font-style: italic;
   font-size: 65%;
 }
 </style>
-<div id="zecppywjse" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;"><table class="gt_table">
+<div id="ibirwdlmve" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;"><table class="gt_table">
   
   <thead class="gt_col_headings">
     <tr>
-      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1">week</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1">coding</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1">workshop</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1">assessment</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1">year</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1">meandebt</th>
     </tr>
   </thead>
   <tbody class="gt_table_body">
     <tr>
-      <td class="gt_row gt_center">1</td>
-      <td class="gt_row gt_left">code1</td>
-      <td class="gt_row gt_left">what is the problem? 
- why should we care?</td>
-      <td class="gt_row gt_left"></td>
+      <td class="gt_row gt_center">1989</td>
+      <td class="gt_row gt_right">1052.853</td>
     </tr>
     <tr>
-      <td class="gt_row gt_center">2</td>
-      <td class="gt_row gt_left">code2</td>
-      <td class="gt_row gt_left">how hard can it be?</td>
-      <td class="gt_row gt_left"></td>
+      <td class="gt_row gt_center">1992</td>
+      <td class="gt_row gt_right">1013.949</td>
     </tr>
     <tr>
-      <td class="gt_row gt_center">3</td>
-      <td class="gt_row gt_left">code3</td>
-      <td class="gt_row gt_left">project planning</td>
-      <td class="gt_row gt_left">vr part1 draft</td>
+      <td class="gt_row gt_center">1995</td>
+      <td class="gt_row gt_right">1735.111</td>
     </tr>
     <tr>
-      <td class="gt_row gt_center">4</td>
-      <td class="gt_row gt_left">code4</td>
-      <td class="gt_row gt_left">NA</td>
-      <td class="gt_row gt_left"></td>
+      <td class="gt_row gt_center">1998</td>
+      <td class="gt_row gt_right">1959.001</td>
     </tr>
     <tr>
-      <td class="gt_row gt_center">5</td>
-      <td class="gt_row gt_left">code5</td>
-      <td class="gt_row gt_left">why doesnt everyone do it?</td>
-      <td class="gt_row gt_left">vr part2 draft</td>
+      <td class="gt_row gt_center">2001</td>
+      <td class="gt_row gt_right">2311.100</td>
     </tr>
     <tr>
-      <td class="gt_row gt_center">6</td>
-      <td class="gt_row gt_left">flexibility week</td>
-      <td class="gt_row gt_left">flexibility week</td>
-      <td class="gt_row gt_left">flexibility week</td>
+      <td class="gt_row gt_center">2004</td>
+      <td class="gt_row gt_right">3224.881</td>
     </tr>
     <tr>
-      <td class="gt_row gt_center">7</td>
-      <td class="gt_row gt_left">code6</td>
-      <td class="gt_row gt_left">NA</td>
-      <td class="gt_row gt_left"></td>
+      <td class="gt_row gt_center">2007</td>
+      <td class="gt_row gt_right">4793.357</td>
     </tr>
     <tr>
-      <td class="gt_row gt_center">8</td>
-      <td class="gt_row gt_left">NA</td>
-      <td class="gt_row gt_left">group presentations</td>
-      <td class="gt_row gt_left">group presentations</td>
+      <td class="gt_row gt_center">2010</td>
+      <td class="gt_row gt_right">6880.418</td>
     </tr>
     <tr>
-      <td class="gt_row gt_center">9</td>
-      <td class="gt_row gt_left">NA</td>
-      <td class="gt_row gt_left">best practices: reproducible research</td>
-      <td class="gt_row gt_left"></td>
+      <td class="gt_row gt_center">2013</td>
+      <td class="gt_row gt_right">7281.225</td>
     </tr>
     <tr>
-      <td class="gt_row gt_center">10</td>
-      <td class="gt_row gt_left">NA</td>
-      <td class="gt_row gt_left">best practices: workflow</td>
-      <td class="gt_row gt_left">vr final revision part 1-4</td>
+      <td class="gt_row gt_center">2016</td>
+      <td class="gt_row gt_right">10942.393</td>
     </tr>
   </tbody>
   
   
 </table></div>
 </div>
-<p>Of course plans can change. We don’t know how long group projects will take and the timeframe might change as we go along. The nice thing about this course is that we have ultimate flexibility; we can push deadlines back if we need more time than we thought.</p>
-<p>At this stage workshops will run in person but we may have to switch to online only at any moment. Either way, the workshops will streamed on zoom for those who are unable to make it to class.</p>
-<p>There are two reasons not to come to class.</p>
-<ol type="1">
-<li>if you are overseas and studying remotely</li>
-<li>if attending class in person would pose a health risk to everyone</li>
-</ol>
+<p>oooo that is…. minimalistic. It appears when I run the chunk and only takes up the necessary space. It is perhaps a little skinny though…</p>
+<h2 id="option-3-dt">Option 3 DT</h2>
+<p>The DT package is an interface for the javascript DataTables library.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>summary</span> <span class='op'>%&gt;%</span>
+  <span class='fu'>DT</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/DT/man/datatable.html'>datatable</a></span><span class='op'>(</span><span class='op'>)</span>
+</code></pre>
+</div>
+<div id="htmlwidget-e18807f8880257a0e36d" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-e18807f8880257a0e36d">{"x":{"filter":"none","data":[["1","2","3","4","5","6","7","8","9","10"],["1989","1992","1995","1998","2001","2004","2007","2010","2013","2016"],[1052.85253333333,1013.9488,1735.111,1959.00133333333,2311.1,3224.88066666667,4793.35733333333,6880.41833333333,7281.225,10942.393]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>year<\/th>\n      <th>meandebt<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"className":"dt-right","targets":2},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
+</div>
+<p>OK that one seems nice. I don’t love the default font (huh the font that displays in the Rmd is different to how it renders… why is that?). Its not too big (or too skinny) though and the search function could be useful if you were dealing with big tables. The decimal places are a bit of a problem though.</p>
+<h1 id="challengessuccesses">Challenges/Successes</h1>
 <ul>
-<li>if you have been identified as a contact of someone with COVID</li>
-<li>OR if you have the slightest sniffle, please don’t come (go get a test instead).</li>
+<li>I got the data summary to display as a table using 3 different packages (yay!), but each one as its own problems that I will need to dig into a little more. I like the kableExtra one (except it is annoying that it won’t display when I run the chunk). I like gt(), but I need to work out how to make it take up a little more room on the page. DT() is also nice, but it would be good if it would deal with those decimal places a bit more consistently.</li>
 </ul>
-<p>Let us know and we will make sure you don’t miss out on the content.</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<h1 id="next-steps">Next steps</h1>
+<ul>
+<li>So far I have piped my data into the main table making function for each of these packages and ended up with the default settings. Next I need to look at the documentation a little more closely and work out whether there are arguments I can use to “style” the kableExtra table, customise the width of the gt() one, and fix the decimal places and font in the DT() table.</li>
+</ul>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
 </div>
