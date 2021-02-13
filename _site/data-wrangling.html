@@ -86,33 +86,33 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </style>
 
   <!--radix_placeholder_meta_tags-->
-  <title>PSYC3361: Week 5</title>
+  <title>PSYC3361: Data wrangling</title>
   
-  <meta property="description" itemprop="description" content="why doesn&#39;t everyone do it?"/>
+  <meta property="description" itemprop="description" content="How to work efficiently with data in R"/>
   
   
   <!--  https://schema.org/Article -->
   <meta property="article:published" itemprop="datePublished" content="2021-02-13"/>
   <meta property="article:created" itemprop="dateCreated" content="2021-02-13"/>
-  <meta name="article:author" content="Jenny Richmond"/>
+  <meta name="article:author" content="Danielle Navarro"/>
   
   <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
-  <meta property="og:title" content="PSYC3361: Week 5"/>
+  <meta property="og:title" content="PSYC3361: Data wrangling"/>
   <meta property="og:type" content="article"/>
-  <meta property="og:description" content="why doesn&#39;t everyone do it?"/>
+  <meta property="og:description" content="How to work efficiently with data in R"/>
   <meta property="og:locale" content="en_US"/>
   <meta property="og:site_name" content="PSYC3361"/>
   
   <!--  https://dev.twitter.com/cards/types/summary -->
   <meta property="twitter:card" content="summary"/>
-  <meta property="twitter:title" content="PSYC3361: Week 5"/>
-  <meta property="twitter:description" content="why doesn&#39;t everyone do it?"/>
+  <meta property="twitter:title" content="PSYC3361: Data wrangling"/>
+  <meta property="twitter:description" content="How to work efficiently with data in R"/>
   
   <!--/radix_placeholder_meta_tags-->
   <!--radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output"]}},"value":[{"type":"character","attributes":{},"value":["Week 5"]},{"type":"character","attributes":{},"value":["why doesn't everyone do it?\n"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name"]}},"value":[{"type":"character","attributes":{},"value":["Jenny Richmond"]}]}]},{"type":"character","attributes":{},"value":["2021-02-13"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["toc"]}},"value":[{"type":"logical","attributes":{},"value":[true]}]}]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output"]}},"value":[{"type":"character","attributes":{},"value":["Data wrangling"]},{"type":"character","attributes":{},"value":["How to work efficiently with data in R \n"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name"]}},"value":[{"type":"character","attributes":{},"value":["Danielle Navarro"]}]}]},{"type":"character","attributes":{},"value":["2021-02-13"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["toc"]}},"value":[{"type":"logical","attributes":{},"value":[true]}]}]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
   <!--radix_placeholder_navigation_in_header-->
@@ -2398,7 +2398,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"Week 5","description":"why doesn't everyone do it?","authors":[{"author":"Jenny Richmond","authorURL":"#","affiliation":"&nbsp;","affiliationURL":"#","orcidID":""}],"publishedDate":"2021-02-13T00:00:00.000+11:00","citationText":"Richmond, 2021"}
+{"title":"Data wrangling","description":"How to work efficiently with data in R","authors":[{"author":"Danielle Navarro","authorURL":"#","affiliation":"&nbsp;","affiliationURL":"#","orcidID":""}],"publishedDate":"2021-02-13T00:00:00.000+11:00","citationText":"Navarro, 2021"}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -2451,21 +2451,32 @@ CODING
 <!--/radix_placeholder_site_before_body-->
 
 <div class="d-title">
-<h1>Week 5</h1>
+<h1>Data wrangling</h1>
 <!--radix_placeholder_categories-->
 <!--/radix_placeholder_categories-->
-<p><p>why doesn’t everyone do it?</p></p>
+<p><p>How to work efficiently with data in R</p></p>
 </div>
 
 <div class="d-byline">
-  Jenny Richmond  
+  Danielle Navarro  
   
 <br/>2021-02-13
 </div>
 
 <div class="d-article">
-<p>Distill is a publication format for scientific and technical writing, native to the web.</p>
-<p>Learn more about using Distill for R Markdown at <a href="https://rstudio.github.io/distill" class="uri">https://rstudio.github.io/distill</a>.</p>
+<p>The final section comes in two parts. It discusses reading data from and writing data to a CSV file, and introduces the pipe. Much of this section is devoted to a discussion of calculating descriptive statistics in R.</p>
+<ul>
+<li><a href="https://slides.djnavarro.net/starting-readr">“Hello data” slides</a></li>
+<li><a href="https://rstudio.cloud/project/978818">RStudio Cloud project 978818</a></li>
+<li><a href="https://www.youtube.com/watch?v=lpbqlu_Sk3M&amp;list=PLRPB0ZzEYegPYKRLwJRh4AbWWSiIlzmC7">YouTube playlist</a></li>
+<li><a href="https://robust-tools.djnavarro.net/reasoning/">The reasoning experiment</a></li>
+</ul>
+<p>The second part provides an introduction to data wrangling in R, mostly focusing on dplyr. Topics covered include: extracting a subset of the data, rearranging the data, computing new variables in a data set, merging multiple data sets, and pivoting data between “long” and “wide” forms.</p>
+<ul>
+<li><a href="https://slides.djnavarro.net/starting-dplyr">Data wrangling slides</a></li>
+<li><a href="https://rstudio.cloud/project/1006868">RStudio Cloud project 1006868</a></li>
+<li><a href="https://www.youtube.com/watch?v=_LiB4nUKi3o&amp;list=PLRPB0ZzEYegNFsivhQWTFvKvpEc504EPH">YouTube playlist</a></li>
+</ul>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
