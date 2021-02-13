@@ -27,7 +27,7 @@ PSYC3361 is designed to be a hands-on research experience, but this year we are 
 
 1. be able to explain why it is important that scientists are transparent about their research practices 
 2. be able to use your understanding of structural, ethical and practical barriers to explain describe why some researchers share their data and others don't 
-3. be able to make describe the factors make research analyses more or less difficult to reproduce 
+3. be able to describe the factors make research analyses more or less difficult to reproduce 
 4. be able to apply workflow practices to your own projects in a way that will make transparency and data sharing easy 
 5. know enough R to produce descriptive statistics and visualisations in your honours project
 
@@ -49,8 +49,8 @@ This is the plan.
 
 week <- c(1:10)
 coding <- c('code1','code2','code3','code4','code5', 'flexibility week', 'code6', 'NA', 'NA', 'NA')
-workshop <- c('what is the problem? \n why should we care?','how hard can it be?','project planning', 'NA', 'why doesnt everyone do it?', 'flexibility week', 'NA', 'group gresentations', 'best practices: reproducible research', 'best practices: workflow')
-assessment <- c('','','vr part1 draft', 'peer feedback','vr part2 draft', 'flexibility week', 'peer feedback', 'group presentations','','vr final revision part 1-4')
+workshop <- c('what is the problem? \n why should we care?','how hard can it be?','project planning', 'NA', 'why doesnt everyone do it?', 'flexibility week', 'NA', 'group presentations', 'best practices: reproducible research', 'best practices: workflow')
+assessment <- c('','','vr part1 draft', '','vr part2 draft', 'flexibility week', '', 'group presentations','','vr final revision part 1-4')
 
 schedule <- data.frame(week,coding,workshop,assessment)
 

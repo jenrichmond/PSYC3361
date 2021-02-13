@@ -14,11 +14,26 @@ output:
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-Distill is a publication format for scientific and technical writing, native to the web. 
+This week we are going to look at recent attempts to assess the the "reproducibility" of psychological science. There are 5 papers on our reading list this week. You will be assigned to read 1 of them and to write a [summary and reaction](https://docs.google.com/document/d/1XLi1DrYP9QdGKYYJ3j0Mr905puc8ml_YycB2RXdtlD4/edit?usp=sharing). Bring your S&R to workshop to share with the group who were assigned the same paper as you. 
 
-Learn more about using Distill for R Markdown at <https://rstudio.github.io/distill>.
+In class, you will discuss the paper you have read in groups and then report back to the class. 
 
+## Group 1: *Data availability*
 
+Vanpaemel, W et al (2015) Are We Wasting a Good Crisis? The Availability of Psychological Research Data after the Storm. Collabra, 1(1): 3, pp. 1–5, DOI: http://dx.doi.org/10.1525/collabra.13
 
+## Group 2: *Cognition*
 
+Hardwicke, T. E., Mathur, M. B., MacDonald, K., Nilsonne, G., Banks, G. C., Kidwell, M. C., ... & Frank, M. C. (2018). Data availability, reusability, and analytic reproducibility: Evaluating the impact of a mandatory open data policy at the journal Cognition. Royal Society open science, 5(8), 180448.
 
+## Group 3: *Registered Reports*
+
+Obels, P., Lakens, D., Coles, N. A., Gottfried, J., & Green, S. A. (2020). Analysis of open data and computational reproducibility in registered reports in psychology. Advances in Methods and Practices in Psychological Science, 3(2), 229-237.
+
+## Group 4: *Science*
+
+Stodden, V., Seiler, J., & Ma, Z. (2018). An empirical analysis of journal policy effectiveness for computational reproducibility. Proceedings of the National Academy of Sciences, 115(11), 2584-2589.
+
+## Group 5: *Psychological Science*
+
+Hardwicke, T. E., Bohn, M., MacDonald, K., Hembacher, E., Nuijten, M. B., Peloquin, B., ... & Frank, M. C. (2020). Analytic reproducibility in articles receiving open data badges at Psychological Science: an observational study.

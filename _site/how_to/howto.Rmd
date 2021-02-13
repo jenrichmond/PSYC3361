@@ -1,0 +1,20 @@
+---
+title: "How to..."
+description: |
+  Some "how to" details about working with distill/RMarkdown
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+
+This blog is created using a package called `distill`. It is an R-Markdown based platform specifically designed for science communication. The [package website](https://rstudio.github.io/distill/) is a useful source of information about how to set up and maintain a distill site.  You can see examples of other sites that have been created [using distill here](https://pkgs.rstudio.com/distill/articles/examples.html). 
+
+
+Here are some tips for ...
+
+1. [working in RMarkdown](markdown.html)
+2. [customising your site](customise.html)
+3. [creating new content](create_content.html)
+4. [avoid git drama](git_tips.html)

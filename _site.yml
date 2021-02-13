@@ -8,30 +8,27 @@ navbar:
   right:
     - text: "home"
       href: index.html
-    - text: "how to"
-      href: howto.html
     - text: "blog"
-      href: blog_posts.html 
+      href: blog_posts.html
+    - text: "outline"
+      href: ./scripts/PSYC3361_T1_2021_final.pdf
     - text: "assessment"
       href: assessment.html
-    - text: "outline"
-      href: outline.html
     - text: "WORKSHOPS"
       menu: 
         - text: "week1"
-          href: week1.html
+          href:  week1.html
         - text: "week2"
-          href: week2.html
+          href:  week2.html
         - text: "week3"
-          href: week3.html
+          href:  week3.html
         - text: "week5"
-          href: week5.html
+          href:  week5.html
         - text: "week8"
-          href: week8.html
+          href:  week8.html
         - text: "week9"
-          href: week9.html
+          href:  week9.html
         - text: "week10"
-          href: week10.html
     - text: "CODING"
       menu:
         - text: "R markdown"

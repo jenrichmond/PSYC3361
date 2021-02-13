@@ -1,0 +1,586 @@
+---
+title: "Social facilitation in roaches"
+author: "Jen Richmond"
+date: "26/11/2020"
+output:
+  html_document:
+    toc: yes
+    toc_depth: 2
+    theme: spacelab
+  pdf_document:
+    toc: yes
+    toc_depth: '2'
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Part 1: Summary & Reaction
+
+## Summary
+
+Social psychologists have long studied how the presence of other people can sometimes facilitate our performance and other times be detrimental. In his now famous drive theory, [Zajonc (1965)](https://www.jstor.org/stable/1715944?casa_token=iKRFRv2BnDYAAAAA%3AIlZ7TVXsQ7cO3ZveqnOVzoWMZxhBVTTtXfS6vH1vaE1K1M4jYT8EDjrZCDT7v4zUedqWLRYJiY3af8mBeOr5h1Ounb2uiY_V5eB2kCGZ6PeM0WUMp1Vz&seq=1#metadata_info_tab_contents) argued that task complexity moderates the direction of the social facilitation/inhibition effect. When executing a simple learned response, our performance is typically enhanced by the presence of others, however, when we are learning a new task, having others watch us can put us off our game.  
+
+In a seminal paper, [Zajonc, Heingartner, and Herman (1969)](https://psycnet.apa.org/record/1970-00434-001) reported that the interaction between task complexity and social facilitation was not a uniquely human phenomenon, but also extended to cockroaches. Here they tested cockroaches on a simple runway task or a complex maze task, either in the presence of other cockroaches or alone. Much like in humans, cockroaches ran the simple runway faster when others were watching, but were slower at completing the complex maze in the presence of others. 
+
+While this paper appears in textbooks and is highly cited, researchers have recently noted that the study was likely to be underpowered and that the key interaction between task difficulty and audience presence was never statistically tested. In a registered replication, [Halfmann, Bredehoft, & Hausser (2020)](https://journals.sagepub.com/doi/full/10.1177/0956797620902101) aimed to replicate the original study with a large sample and to determine whether they could find evidence of a difficulty (simple, complex) x audience (present, absent) interaction. 
+
+In the replication study, Halfmann et al., (2020) tested 120 cockroaches, a sample 3 times the size of that used in the original paper. Using a between-subjects design, each roach was tested on either the runway or maze task, either in the presence of others or alone. Each roach completed 10 trials. The results showed that there were significant main effects of both task difficulty and audience presence. Roaches completed the runway task more quicklythan the maze task, and performed more slowly in the presence of others than when running alone. However, the task difficulty by audience interaction was not significant. Contrary to the original published paper, there was a social inhibition effect in both the runway and the maze task.  
+
+
+## Reaction
+
+1. I was surprised that in the original paper there was no information about how many trials each cockroach completed or how many cockroaches needed to be excluded for poor performance. In the replication, the authors needed to abandon the preregistered exclusion criteria (i.e. needing to complete 8/10 trials) and allow a minimum trials of 2/10. Even then, 17 additional cockroaches were tested but did not meet this threshold. 
+
+2. The problem of poorly reported (or missing) exclusion criteria as a barrier to replication reminded me of the [Chalkia et al., (2020) case](https://www.sciencedirect.com/science/article/pii/S0010945220301702case.)  In that case, the PhD student attempting to replicate the fear conditioning effect discovered that she needed to exclude 75% of her participants if she used the exclusion criteria published in the original paper. Her digging uncovered that the original authors had "misrepresented" the criteria that were used to exclude participants, however, misrepresented is a bit of a euphemism here. It seems that the original authors may have cherry picked the participants that showed the effect they were looking for and if you apply more rigourous and consistent criteria (or use all the participants tested in the experiment), the effect in question doesn't come out. In the absence of documented exclusion criteria or numbers, it is possible that the same problem is playing out in the social faciliation replication. 
+
+3. It seems that the next step in this line of research would be to attempt to replicate the effect with the same species of cockroach. It is possible (although unlikely) that the reasons this paper didn't replicate was that they used Death Head cockroaches instead of the Oriental species used in the original paper. Of interest, [Neider and colleagues](https://www.sciencedirect.com/science/article/pii/S0022103119301647?casa_token=jW08t79mHigAAAAA:OlqjS-XqfEZXvcIiUpWCOjyztfIlKyksOnM1OWjKD07qtGEI1kYKb_YvnsXLTDxtLf9cIUp0cQ) are conducting a registered replciation using the same species. I wonder if they are running into the same problem of exclusion criteria and poor performance. 
+
+
+# Part 2: Verification
+
+I obtained the open data from the [OSF repository](https://osf.io/c7t6k) and attempted to reproduce the descriptive statistics reported on page 334.  
+
+> "In line with the descriptive data provided by Zajonc et al., (1969), our data showed that cockroaches needed more time to complete the maze (M = 137.48 s, SD = 121.88), compared with the easier runway (M = 77.00 s,
+SD = 76.16), F(1, 116) = 15.45, p < .001, ηp 2 = .12, BF10 = 20.79. Moreover, in the audience-present condition, cockroaches were slower (M = 164.59 s, SD = 98.84), compared with the audience-absent condition (M = 49.90 s, SD = 77.81), F(1, 116) = 55.58, p < .001, ηp 2 = .32, BF10 = 6.36e+7.)"
+
+I also reproduced the boxplot/scatter plot reported on page 335 of the paper. 
+
+```{r}
+
+knitr::include_graphics(here::here("img", "boxscatter.png"))
+```
+
+
+
+## load packages
+```{r message=FALSE, warning=FALSE}
+library(here) # to help with file paths
+library(haven) # to read files from spss
+library(janitor) # to clean_names and count things
+library(tidyverse) # for dplyr and ggplot
+library(gt) # for nice tables
+library(papaja) # for theme_apa
+library(naniar) # for visualising missing data
+library(ggeasy) # for easy ggplot functions
+```
+
+## read data 
+
+The data in the OSF repo is in .sav format from SPSS. For this reason I need to use the `read_sav()` function from the `haven` package. I am using the `clean_names()` function from the `janitor` package to make the variable names consistently lower case with underscores in any gaps. The `glimpse()` function gives me a preview of the data structure and allows me to see what kind of data is in each variable. 
+
+```{r}
+
+roaches <- read_sav(here("data", "1_Data_Halfmann_replication_Zajonc.sav")) %>%
+  clean_names() 
+
+glimpse(roaches)
+
+```
+
+While the OSF repo did not include a codebook, the variable labels left behind from the SPSS file are somewhat useful in working out what each column contains. 
+
+The experiment involved 120 roaches which were tested in a 2 task difficulty (maze, run) x 2 audience (present, absent) between-subjects design. 
+
+There are 120 observations in the dataset and it looks like the "task" variable and the "audien" variable are the ones we care about. The data type on those two variables is interesting (dbl+lbl); that must be the label leftover from SPSS. Using the `unique()` function here to see what the values are in those columns.
+
+```{r}
+unique(roaches$task)
+
+unique(roaches$audien)
+```
+
+In both task and audience columns we have values of 1 and 2. 
+
+Task 
+- 1 Runway
+- 2 Maze
+
+Audience
+- 1 without audience (absent)
+- 2 with audience (present)
+
+I am never going to remember what 1 and 2 refer to so I am using `mutate()` and `case_when()` to make new columns called audience and difficulty. I am also going to move those new columns using the `relocate()` function. The `names()` function allows me to check that the variables are where you expect them to be.
+
+
+```{r}
+roaches <- roaches %>%
+  mutate(audience = case_when(audien == 1 ~ "absent", 
+                              audien == 2 ~ "present")) %>%
+  mutate(difficulty = case_when(task == 1 ~ "runway", 
+                              task == 2 ~ "maze")) %>%
+  relocate(c(audience, difficulty), .after = audien)
+
+names(roaches)
+```
+
+I am expecting that with 120 roaches in a 2 x 2 design there should be 30 bugs in each group. Here I am using the `tabyl()` function from the `janitor()` package to test that. 
+ 
+```{r}
+
+roaches %>%
+  tabyl(difficulty, audience)
+
+```
+
+In the paper, the authors talk about the problem of poor performance and needing to abandon the preregistered goal of only including roaches that had 8 good trials.  They ending up settling for 2 good trials and even then, 17 roaches had to be excluded for failing to meet that threshold. 
+
+I am curious what the distribution of good trials looks like. Here I am using `tabyl()` and `adorn_totals()` to count how many roaches had 2-10 good trials, assigning that as a new object called valid and then plotting the distribution. 
+
+> NOTE: the authors of the original study didn't report how many trials each roach completed or how many roaches were excluded from analysis. The sample in the original study was also small (N=10 in each group). 
+
+```{r}
+goodtrials <- roaches %>%
+  tabyl(valid_t) %>%
+  adorn_totals()
+
+goodtrials
+```
+ 
+Here I am plotting the distribution of the number of good trials. Using `fct_inseq()` to make the bars ordered and `theme_apa()` from the `papaja()` package to style the plot. Using `scale_y_continuous(expand = c(0,0))` to make the bars sit on the x axis and `easy_remove_legend()` from the `ggeasy()` package to get rid of the duplicate information in the legend. 
+
+```{r}
+goodtrials %>%
+  filter(valid_t %in% c(2:10)) %>%
+  ggplot(aes(x = fct_inseq(valid_t), y = n, fill = fct_inseq(valid_t))) +
+  geom_col() +
+  labs(x = "Number of trials", y = "Number of cockroaches") +
+  scale_y_continuous(expand = c(0,0)) +
+  theme_apa() +
+  easy_remove_legend()
+```
+ 
+ 
+## making sense of the dvs
+
+The key dependent variable in the study is how long it took each roach to run the runway vs. the maze. Each roach ran 10 trials and there are three different DVs in the dataframe for each trial. 
+
+There is no codebook and it is not immediately clear which DV was used in the analysis...
+
+- sl01sek = how long did it take them to start running in trial 1. 
+- rt01sek = total run time
+- rt_sl01 = runtime-startlatency 
+
+I assume the total run time DV was the one analysed, so I will start with that. 
+
+## reproducing descriptives
+
+### run time
+
+Here I am using `select()` to make a new dataframe with only the key variables (subj, audience, difficulty) and the variables starting with "rt", and then dropping those that start with "rt_sl". Then I am using `pivot_longer` to make the data long so that trial is represented in its own column. 
+
+```{r}
+runtime <- roaches %>%
+  select(vp_code, audience, difficulty, starts_with("rt"), -starts_with("rt_sl")) 
+
+runtime_long <- runtime %>%
+  pivot_longer(names_to = "trial", values_to = "run_time", rt01sek:rt10sek)
+
+glimpse(runtime_long)
+
+```
+
+In looking at the structure of the data with `glimpse()`, I can see that the key variables (audience and difficulty) are characters, rather than factors. Here I am converting them to factors to make for easier plotting. 
+
+```{r}
+
+runtime_long$difficulty <- as_factor(runtime_long$difficulty)
+  
+runtime_long$audience <- as_factor(runtime_long$audience)
+
+glimpse(runtime_long)
+```
+
+Because the analysis reported main effects of task difficulty and audience, the descriptive statistics reported are median run times for the runway vs. maze task (averaged across present/absent) and the median run times for audience present vs absent (averaged across runway/maze).  Here I am using `group_by()` and `summarise()` to get a median run times for each condition separately.The values reported in the paper are...
+
+
+> maze (M = 137.48 s, SD = 121.88) vs. runway (M = 77.00 s,SD = 76.16)
+> audience present (M = 164.59 s, SD = 98.84) vs audience absent (M =
+49.90 s, SD = 77.81)
+
+
+
+```{r}
+runtime_long %>%
+  group_by(difficulty) %>%
+  summarise(med_runtime = median(run_time, na.rm = TRUE), 
+              stddev = sd(run_time, na.rm = TRUE)) 
+
+runtime_long %>%
+  group_by(audience) %>%
+  summarise(med_runtime = median(run_time, na.rm = TRUE), 
+              stddev = sd(run_time, na.rm = TRUE)) 
+
+```
+
+Those values don't match. Perhaps they analysed the rt_sl variables? 
+
+### run time - start latency 
+
+As above, selecting just the key variables and making the data long so that trial is represented in a separate column. 
+```{r}
+go_time <- roaches %>%
+  select(vp_code, audience, difficulty, starts_with("rt_sl")) %>%
+  pivot_longer(names_to = "trial", values_to = "go_time", rt_sl01:rt_sl10) 
+```
+
+The values I am trying to reproduce are ...
+
+> maze (M = 137.48 s, SD = 121.88) vs. runway (M = 77.00 s,SD = 76.16)
+> audience present (M = 164.59 s, SD = 98.84) vs audience absent (M =
+49.90 s, SD = 77.81)
+
+```{r}
+go_time %>%
+  group_by(difficulty) %>%
+  summarise(med_gotime = median(go_time, na.rm = TRUE), 
+              stddev = sd(go_time, na.rm = TRUE)) 
+
+go_time %>%
+  group_by(audience) %>%
+  summarise(med_gotime = median(go_time, na.rm = TRUE), 
+              stddev = sd(go_time, na.rm = TRUE)) 
+
+
+```
+
+Those numbers don't match either. Reading the paper again, it may be in the analysis they were using median, but the descriptives are mean and SD? 
+
+The values reported in the paper are...
+
+> maze (M = 137.48 s, SD = 121.88) vs. runway (M = 77.00 s,SD = 76.16)
+> audience present (M = 164.59 s, SD = 98.84) vs audience absent (M =
+49.90 s, SD = 77.81)
+
+```{r}
+go_time %>%
+  group_by(difficulty) %>%
+  summarise(mean_gotime = mean(go_time, na.rm = TRUE), 
+              stddev = sd(go_time, na.rm = TRUE)) 
+
+go_time %>%
+  group_by(audience) %>%
+  summarise(mean_gotime = mean(go_time, na.rm = TRUE), 
+              stddev = sd(go_time, na.rm = TRUE)) 
+```
+
+No, those values also don't match. Maybe what they are doing is getting a median run time for each roach and then reporting the mean of those medians?? 
+
+Here I am grouping by vp_code, audience and difficulty and summarsing the median go time for each roach (individual median), then grouping by audience to get the mean for each condition (group mean). 
+
+```{r}
+audience_M <- go_time %>%
+  group_by(vp_code, audience, difficulty) %>%
+  summarise(med_gotime = median(go_time, na.rm = TRUE)) %>%
+  group_by(audience) %>%
+  summarise(mean = mean(med_gotime), 
+             sd = sd(med_gotime)) %>%
+   arrange(-mean)
+
+audience_M
+
+
+difficulty_M <- go_time %>%
+  group_by(vp_code, audience, difficulty) %>%
+  summarise(med_gotime = median(go_time, na.rm = TRUE)) %>%
+  group_by(difficulty) %>%
+  summarise(mean = mean(med_gotime), 
+            sd = sd(med_gotime)) %>%
+  arrange(-mean)
+
+difficulty_M
+
+```
+
+Finally the numbers match! That is what they are doing. Getting a median runtime for each roach and then averaging those together across conditions. Now that I look at the original data closely, there are actually summary columns called `med_rt_sl`. I wonder if I get the same values if I use that column. 
+
+Here testing whether I get the same values by grouping by audience and diffuclty and getting the mean of the `med_rt_sl` column. 
+
+```{r}
+roaches %>%
+  group_by(audience) %>%
+  summarise(mean = mean(med_rt_sl))
+
+roaches %>%
+  group_by(difficulty) %>%
+  summarise(mean = mean(med_rt_sl))
+```
+
+YES! 
+
+Lets get a nice table of those the M and SD by audience and difficulty. First, I am using bind_rows() to join the dataframes that have audience and difficulty means, then adding a new column using `mutate()` called condition using the `coalsece()` function. The coalence function is cool, it smooshes columns that have compatible values/NAs into a new column. Then I am using select to drop the old columns with NAs.  
+
+```{r}
+
+aud_diff <- bind_rows(audience_M, difficulty_M) 
+
+
+aud_diff_condition <- aud_diff %>%
+  mutate(condition = coalesce(audience, difficulty)) %>%
+  select(condition, mean, sd) 
+
+aud_diff_condition
+```
+
+Now I want to make that dataframe into a nice table format. Here I can pipe the dataframe into `gt()` for a nice table, round the numbers in the mean and sd columns with `fmt_number()` and add a heading with `tab_header()`. 
+```{r}
+
+aud_diff_condition %>%
+  gt()  %>%
+  fmt_number(
+    columns = vars(mean, sd),
+    decimals = 2,
+  ) %>%
+  tab_header(
+    title = "Table 1: Mean cockroach run time by condition") 
+```
+
+
+## reproducing the plot
+
+The boxplot in the paper has 4 boxes, 1 for each combination of audience and difficulty, as well as individual data points for each cockroach. 
+
+```{r}
+
+knitr::include_graphics(here::here("img", "boxscatter.png"))
+```
+
+
+Here I need to average across trial and get median go time for each roach. As earlier, I am using group_by vp_code, audience, and difficulty to get individual medians. To make the labels on my plot work, I am creating a new variable called condition using the `mutate()` and `case_when()` function to create combination condition names. 
+
+```{r}
+go <- go_time %>%
+  group_by(vp_code, audience, difficulty) %>%
+  summarise(medgo = median(go_time, na.rm = TRUE)) %>%
+  mutate(condition = case_when(audience == "absent" & difficulty == "runway" ~ "runway-no audience", 
+                               audience == "absent" & difficulty == "maze" ~ "maze-no audience", 
+                               audience == "present" & difficulty == "runway" ~ "runway-audience", 
+                               audience == "present" & difficulty == "maze" ~ "maze-audience")) 
+
+```
+
+To be able to control the order of the conditions, I am making condition a factor and checking the order of the levels. Here I am using `fct_relevel()` to make them the same order as in the plot. 
+```{r}
+go$condition <- as_factor(go$condition)
+
+levels(go$condition)
+
+go <- go %>%
+  mutate(condition = fct_relevel(condition, c("runway-no audience","maze-no audience","runway-audience","maze-audience"))) 
+ 
+```
+
+Here I am plotting the median go time with both boxplots and points. Adding apa theme. 
+```{r}
+go %>%
+  ggplot(aes(x = condition, y = medgo)) +
+  geom_boxplot() +
+  geom_point() +
+  theme_apa()
+```
+
+To make the plot match that in the paper, I need to get top and bottom bars on the box lines and points with white edges. This took a lot of googling but I eventually worked out that shape = 21 allows you to use colour and fill separately for `geom_point()`. 
+
+```{r}
+go %>%
+  ggplot(aes(x = condition, y = medgo)) +
+  stat_boxplot(geom ='errorbar') + 
+  geom_boxplot() +
+  geom_point(shape = 21, colour = "white", fill = "black", size = 2) +
+  theme_apa() 
+```
+
+Now adding axis labels and removing tick marks to match the plot in the paper. 
+
+```{r}
+go %>%
+  ggplot(aes(x = condition, y = medgo)) +
+  stat_boxplot(geom ='errorbar') + 
+  geom_boxplot() +
+  geom_point(shape = 21, colour = "white", fill = "black", size = 2) +
+  theme_apa() +
+  labs(y = "Running time (s)", x = "Condition") +
+  theme(axis.ticks = element_blank())
+```
+
+**Fig. 1**. Box-and-whisker plots showing running time in each condition of the (audience: present vs. absent) × 2 (task difficulty: runway vs. maze) between-subjects design. In each plot, the central horizontal line indicates the median, and the bottom and top edges of the box indicate the 25th and 75th percentiles, respectively. Whiskers extend to a maximum of 1.5 times the interquartile range from the 25th and 75th percentiles. Each circle is an individual data point.
+
+> NOTE: You can add a figure caption using the chunk settings (fig.cap = ) but it seems that this figure caption is too long for that chunk option. It doesn't work. It works just as well to put the figure text below the chunk.  
+
+
+# Part 3: Exploration
+
+
+## 3a. what is the name of the fastest cockroach? 
+
+I love that the authors included not just subjectID for each cockroach but also their names!
+
+I want to know what the name of the roach that "won" the maze vs. the runway. Here I am using `select()` to make a dataframe of just the names, difficulty and scores. Then filtering for just runway (and then maze) and using `arrange()` to sort from fastest to slowest, and returning the top of the list head(1).
+
+```{r}
+names <- roaches %>%
+  select(name, difficulty, med_rt_sl) 
+
+names %>%
+  filter(difficulty == "runway") %>%
+  arrange(med_rt_sl) %>%
+  head(1)
+
+names %>%
+  filter(difficulty == "maze") %>%
+  arrange(med_rt_sl) %>%
+  head(1)
+  
+  
+```
+
+Leona and Arya are the fastest cockroaches. Game of Thrones reference perhaps? 
+
+## 3b. does temp or humidity make a difference to cockroach performance?
+
+The dataframe also includes variables for colony and lab temperature and humidity. The researchers need to move the roaches from the colony to the lab for testing; maybe they were worried that changing conditions impacted performance? Lets test that. 
+
+Making a new dataframe with just the key variables using `select()`. 
+
+```{r}
+
+env <- roaches %>%
+  select(vp_code, audience, difficulty, med_rt_sl, starts_with("air"), starts_with("temp"))
+
+glimpse(env)
+```
+
+Seems like there is a lot of missed env data.  Using `vis_miss()` from the `naniar` package to visualise possible patterns in missing data. 
+
+```{r}
+ vis_miss(env)
+```
+
+Looks like maybe they only decided to start measuring temperature and humidity part way into the experiment? Add new variables using `mutate()` that calculate the change in temperature and humidity from colony to lab.
+
+```{r}
+env_new <- env %>%
+  mutate(temp_diff = temp_th - temp_lab, 
+         air_diff = air_th - air_lab)
+```
+
+Plot the relation between temperature/humidity change and performance, facetting for task difficulty. 
+
+```{r}
+env_new %>%
+  ggplot(aes(x = temp_diff, y = med_rt_sl, colour = difficulty)) +
+  geom_smooth() +
+  geom_point() +
+  facet_wrap(~difficulty) +
+  labs(title = "Change in temperature from colony to lab and run time by task", 
+       x = "temperature change from colony to lab", 
+       y = "median run time")
+
+
+env_new %>%
+  ggplot(aes(x = air_diff, y = med_rt_sl, colour = difficulty)) +
+  geom_smooth() +
+  geom_point() +
+  facet_wrap(~difficulty) +
+  labs(title = "Change in humidity from colony to lab and run time by task", 
+       x = "humidity change from colony to lab", 
+       y = "median run time")
+```
+
+
+Interesting... looks like for maze performance the greater the change in temperature and humidity the slower the run time, particularly for the maze task. 
+
+## 3c. do the roaches learn?
+
+As a researcher more interested in learning/memory than the social lives of roaches, it is CRAZY to me that this analysis was conducted averaging across trial!  I am super interested in whether the roaches ran the maze (or the runway for that matter) faster on trial 10 than on trial 1. 
+
+First, I am using `mutate()` and `recode()` from `dplyr` to change the trial levels and then checking whether they are in a useful order. 
+
+```{r}
+
+go_time <- go_time %>%
+  mutate(trial = recode(trial, rt_sl01 = "trial1",  rt_sl02= "trial2", rt_sl03= "trial3",rt_sl04="trial4",
+                        rt_sl05= "trial5",  rt_sl06="trial6",rt_sl07= "trial7", rt_sl08 = "trial8",  rt_sl09 ="trial9",
+                        rt_sl10=  "trial10"))
+
+go_time$trial <- as_factor(go_time$trial)
+
+
+levels(go_time$trial)
+```
+
+Plot raw data by trial, separately for runway and maze task. 
+```{r}
+go_time %>%
+  group_by(difficulty) %>%
+  ggplot(aes(x = trial, y = go_time)) +
+  geom_point() +
+  facet_wrap(~difficulty)
+```
+
+Super hard to tell if anything is going on from this plot- there is a lot of variability. 
+
+Might be better to get the mean gotime across cockroaches for each trial and task difficulty and then plot that. Using group_by and summarise to get mean go time by trial and task. 
+
+```{r}
+go_time %>%
+  group_by(trial, difficulty) %>%
+  summarise(meango = mean(go_time, na.rm = TRUE)) %>%
+  ggplot(aes(x = trial , y = meango, group = difficulty)) +
+  geom_point() +
+  geom_line() + 
+  facet_wrap(~difficulty)
+```
+
+Interesting... looks like the cockroaches get slower across trials for the runway task and maze performance is all over the place. Maybe I can smooth that a little by using median instead of mean. I wonder whether the pattern over trials differs for audience present vs. absent. This time including audience in the `group_by()` and calculating median instead. Using `facet_grid()` rather than `facet_wrap()` to get a 2 x 2 plot. 
+
+```{r}
+go_time %>%
+  group_by(trial, difficulty, audience) %>%
+  summarise(medgo = median(go_time, na.rm = TRUE)) %>%
+  ggplot(aes(x = trial , y = medgo, group = difficulty)) +
+  geom_point() +
+  geom_line() + 
+  facet_grid(audience~difficulty)
+```
+
+Cockroach performance is pretty flat for both the maze and runway task when there is no one watching but for both tasks, it looks like they get slower over trials. If they were learning, you would expect run time to get faster. 
+
+## 3d. what do these cockroaches look like? 
+
+The authors used different species of cockroach in the replication compared to the original study and talk about the potential for the failure to replicate to be due to species differences. I'm curious what the different cockroach species look like. 
+
+In the original study, they used Blatta orientalis. 
+
+```{r}
+knitr::include_graphics(here("img", "oriental.jpeg"))
+```
+
+
+In the replication they used Blaberus craniifer. 
+
+```{r}
+knitr::include_graphics(here("img", "death_head.jpeg"))
+```
+
+They are both gross. 
+
+
+<iframe src="https://mfr.osf.io/render?url=https://osf.io/rvq59/?direct%26mode=render%26action=download%26mode=render" width="100%" scrolling="yes" height="150px" marginheight="0" frameborder="0" allowfullscreen webkitallowfullscreen>
+
+
+Here is a video of the cockroaches running the maze from the [OSF repository](https://osf.io/c7t6k). 
+
+
+
+# Part 4 : Recommendations
+
+## 1. include a codebook
+There was no codebook data dictionary included in the OSF repo. While I did work out eventually that for each roach their performance across trials was summarised with a median but then those medians were averaged, it took me a while and because there were 53 variables in the original file, I didn't realise that there were calculated summary variables in the dataset. A data dictionary would have been useful to tell the story of why the authors ended up analysing rt_sl rather than run_time. 
+
+## 2. clear DV descriptions
+It would have been easier to reproduce the analysis had the authors had described the DV more clearly in the paper. They talk about running time and do mention that timing started when the roach left the start box and made it to the goal, but they don't explicitly say that the DV that was analysed was runtime - start latency.
+
+## 3. include analysis code as well as data file
+There was no analysis code in the OSF repo. It is likely that the authors used SPSS to conduct the analysis (the data file was .sav). Even if using software that is not open source, it is a good idea to include syntax as well as data. 

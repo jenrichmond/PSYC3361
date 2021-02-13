@@ -1,0 +1,16 @@
+---
+title: "project"
+description: |
+ a place for group project design thoughts
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+
+# Project Goals
+
+Insert some text here about the paper you are trying to reproduce and what your goals are
+
+

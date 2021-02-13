@@ -1,7 +1,7 @@
 ---
 title: "assessment"
 description: |
-  A new article created using the Distill format.
+  How does assessment work in PSYC3361?
 author:
 date: "`r Sys.Date()`"
 output: distill::distill_article
@@ -11,9 +11,94 @@ output: distill::distill_article
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-Distill is a publication format for scientific and technical writing, native to the web. 
 
-Learn more about using Distill for R Markdown at <https://rstudio.github.io/distill>.
+# 1. Group work (10%)
+
+This term you will work in teams to reproduce the descriptive statistics and plots from a paper published about COVID19 in 2020. This is an opportunity to apply your new-found R skills and to learn about the challenges of open data and reproducible analysis. You will set your own challenge and then work together to complete it. You might not learn the exact functions that you will need to deal with your data problem in coding, so there will be a lot of TROUBLESHOOTING. But many hands make light work. 
+
+We will talk about what makes a team work well in class and this component of the course will be graded by peer and self assessment. You will rate your own and others contribution to the project using criteria that you decide on as a team. 
+
+# 2. Research Skills (10%)
+
+There are 6 weeks of online coding lessons that will set you up well to complete your reproducibility challenge. Danielle will post videos online each week. It will be your responsibility to watch them, follow along with the exercises and think hard about how the functions you are learning about might be useful in your project.  From Week 4 you will start applying the code you are learning to your reproducibility challenge. 
+
+Jenny Sloane, one of the tutors on the course, will run 2 x 1hr Q&A coding sessions each week. You can attend to get help with your code and project. They are not compulsory but we recommend you attend one or both. You will likely learn a lot both from asking about the problems you are having and from seeing the kinds of problems that other students are having. 
+
+For this component of the course, you need to share a learning log to RPubs each week. The learning log should include a reflection of...
+
+- What were your coding goals this week?
+- How did you go achieving your goals (challenges/successes)?
+- What the next steps are in your coding journey?
+
+You can see an example learning log in this blog post. You should include example code/plots in your learning log as a way of sharing your progress with your team and Jenny/Kate/Danielle. Post a link to your RPubs learning to the slack channel by 11:59pm Sunday each week. 
+
+# 3. Presentation (30%)
+
+In Week 8, your group will present the outcome of your verification challenge to the class. You can choose whether you would like to present live or prerecord your talk. Each team member should be involved in the presentation. Your 10 min talk should include...
+
+- some background (what the research was about, what they found)
+- an overview of your plan (what did you intend to reproduce)
+- a discussion of how you went (what were the challenges/triumphs)
+- a take away message (what did you learn about reproducibility, what recommendations would you make to the authors of this paper for next time)
+
+There will be time for Q&A after each talk. 
+
+
+# 4. Verification report (50%)
+
+## Part 1: Reaction
+
+The goal of this section is to demonstrate that you have read and really thought about the paper. Write a short summary explaining the context of the research question, the methodology, the results, and the conclusions. Structure your summary around answering these questions; write in paragraphs (3 or 4 should be sufficient), not in Q and A format. 
+
+- what is the research problem? 
+- why it is important? 
+- what is the gap in the literature that the paper fills?
+- what did the researchers do?
+- what did they find?
+- what does it mean?
+
+Then choose 3 of the following statements to guide your reaction to the paper. For each statement, write 3-4 sentences (150-200 words) explaining your point.
+
+- I was surprised that…
+- I can see that this paper relates to…
+- The paper reminded me of… 
+- I was confused by…
+- It seems that the next step in this area of research would be to…
+- The authors seem to have missed…
+- The most interesting part of this paper was…
+- When I was reading I was excited to learn that…
+- I wonder whether…
+- Future work in this area needs to consider…
+- I wasn’t convinced that…
+- The evidence for the claim that… seemed…
+- The logic of the rationale was [compelling, flawed, confusing, unclear] because…
+- I’m not sure that I understood why…
+- The take home message that I am left with after reading this paper is…
+
+
+
+## Part 2: Verification 
+
+The goal of this section is to try and reproduce the “analysis”. For the purpose of this exercise, “analysis” includes the
+
+1. demographic descriptives 
+2. means/SD reported in the text
+3. figures in the paper 
+
+WARNING: This task is unlikely to be easy but you will work on it in groups. In this section of your report you should document YOUR process and what YOU learned along the way. The writing doesn’t have to be scientific or formal; think of it as notes to your future self or explaining your code to a Rubber Duck (see https://en.wikipedia.org/wiki/Rubber_duck_debugging). Someone who has no idea what your code is trying to do should be able to read your notes and understand what the code is doing and why. 
+
+## Part 3: Exploration
+
+Open data is reusable and can be used to answer research questions that are different to those posed by the researchers who collected it. The goal of this section is allow you to “play” with the data and demonstrate some creativity and critical thinking skills. Now that you have tried to reproduce the analysis in the paper, what questions do you have about the data set? Use your data wrangling/plotting skills to ask and answer 3 additional questions.
+
+## Part 4: Recommendation
+The goal of this section is to give imaginary feedback to the authors of the paper you have tried to reproduce. Use the reproducibility checklist to make recommendations for things they could have done to make your job easier. 
+
+You can use this [example verification report](https://rpubs.com/jenrichmond/roaches) as a model for the style that you should be aiming for. You can see the Rmd file that produced the roaches report [here](./scripts/roaches.Rmd).  
+
+
+
+
 
 
 
