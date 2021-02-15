@@ -16,6 +16,7 @@ knitr::opts_chunk$set(echo = FALSE)
 
 Data visualisation is a fundamental research task that is necessary in almost every field of scientific work. The human visual system is a powerful information processing tool, and in practice scientists rely heavily on figures and graphs to make sense of data they have collected. This section of the coding class provides an introduction to data visualisation using the R statistical programming language.
 
+As before, the resources are all online, and you should feel free to contact me at any time on slack to ask questions about them! That's what I'm here for! 
 
 - [Data visualisation slides](https://slides.djnavarro.net/starting-ggplot2)
 - [RStudio Cloud project 901338](https://rstudio.cloud/project/901338)

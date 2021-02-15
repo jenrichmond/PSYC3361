@@ -16,5 +16,10 @@ knitr::opts_chunk$set(echo = FALSE)
 
 Most of us learn how to write documents using word processing software, such as Microsoft Word or Google Docs. There are some good reasons why people do this, mostly because they are user friendly and convenient tools. However, there are some disadvantages to these tools and in this part of the course I will introduce you to a simple way to write scientific documents in plain text files, using a convention known as "markdown". I'll first explain why markdown is such a useful approach to writing documents, and then introduce an extension called "R markdown" that allows you to incorporate data analysis code into the document itself. As a side benefit, knowledge of R markdown is useful for other professional purposes: this website, for example, is written using R markdown!
 
+The resources for this section are online. There's a set of slides you can browse, and a pre-recorded YouTube playlist that will guide you through them:
+
 - [R markdown slides](https://slides.djnavarro.net/starting-rmarkdown)
-- other resources TBA
+- [YouTube playlist](https://www.youtube.com/playlist?list=PLRPB0ZzEYegM86awo590bP1MJjQbjdR9E)
+
+If you have any questions or if something doesn't work please feel free to message me on the class slack!
+
