@@ -20,6 +20,8 @@ Choose a paper from the option list below and work as a team to reproduce the de
 
 If you want to look at an example of what is possible re open data/code, check out this [paper by Wahlheim](https://journals.sagepub.com/doi/full/10.1177/0956797620952797), [OSF](https://osf.io/89zmj/). It is an A+ example of how to make it easy for other people to work with your data, so is a good exemplar to look at when you are thinking about what your authors could have done differently. 
 
+Have a look at the options below, decide which one you are interested in working on and add your name and RPubs details to [this spreadsheet](https://docs.google.com/spreadsheets/d/15bQvQGFmaHqUlmGXzpkIc-wvhkqZu5pjhXTLKRsG43s/edit?usp=sharing). Read the paper carefully and write a [summary and reaction](https://docs.google.com/document/d/1XLi1DrYP9QdGKYYJ3j0Mr905puc8ml_YycB2RXdtlD4/edit?usp=sharing). Bring your S&R to workshop to share with your group so you can make a quick start on project planning. 
+
 ## Option 1
 
 Carstensen, L. L., Shavit, Y. Z., & Barnes, J. T. (2020). Age Advantages in Emotional Experience Persist Even Under Threat From the COVID-19 Pandemic. *Psychological Science, 31(11)*, 1374–1385. https://doi.org/10.1177/0956797620967261
