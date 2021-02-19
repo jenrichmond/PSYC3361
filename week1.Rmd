@@ -15,3 +15,17 @@ knitr::opts_chunk$set(echo = FALSE)
 ```
 
 
+Some interesting background reading you might like to read this week. 
+
+[Seven easy steps to open science](https://psycnet.apa.org/fulltext/2019-80290-002.html)
+
+[Chalkia- registered report](https://pubmed.ncbi.nlm.nih.gov/32580869/)
+
+[Chalkia- verification report](https://pubmed.ncbi.nlm.nih.gov/32563517/)
+
+[Cortex editorial re verification reports](https://www.sciencedirect.com/science/article/pii/S0010945220301738)
+
+
+
+
+Slides for today [LINK](https://jenrichmond.github.io/slides/w1interns/#1)
