@@ -29,7 +29,9 @@ promotes eating in the absence of energy need. *Psychological Science, 27*, 354â
 The data is available to download from [this OSF repo](https://osf
 .io/x8q4j/).
 
-> NOTE: JennyS might use this data as an example in Q&A sessions, you can download the [csv file here](/data/eating_correlational.csv)
+> NOTE: JennyS might use this data as an example in Q&A sessions, you can download the [csv file here](/data/eating_correlational.csv). 
+
+> NOTE: If you would like to download this .Rmd file to use as a template, you can [download it here](https://github.com/jenrichmond/PSYC3361/blob/master/_posts/2021-03-05-example-reproducibility-plan/example-reproducibility-plan.Rmd)
 
 
 # Plan
