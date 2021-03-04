@@ -52,7 +52,7 @@ For each study the authors report...
 The goal is to reproduce the demographic descriptives in the Participants section here. 
 
 ```{r out.width = "50%"}
-knitr::include_graphics(here::here("img", "study1_demo.png"))
+knitr::include_graphics("img/study1_demo.png")
 ```
 
 
@@ -61,7 +61,7 @@ knitr::include_graphics(here::here("img", "study1_demo.png"))
 The goal is to reproduce the demographic descriptives in the Participants section here. 
 
 ```{r out.width = "50%"}
-knitr::include_graphics(here::here("img", "study2_demo.png"))
+knitr::include_graphics("img/study2_demo.png")
 ```
 
 ## Study 3
@@ -69,7 +69,7 @@ knitr::include_graphics(here::here("img", "study2_demo.png"))
 The goal is to reproduce the demographic descriptives in the Participants section here. 
 
 ```{r out.width = "50%"}
-knitr::include_graphics(here::here("img", "study3_demo.png"))
+knitr::include_graphics("img/study3_demo.png")
 ```
 
 
@@ -82,7 +82,7 @@ knitr::include_graphics(here::here("img", "study3_demo.png"))
 The goal is to reproduce this column graph.
 
 ```{r out.width = "50%"}
-knitr::include_graphics(here::here("img", "paper1_fig1.png"))
+knitr::include_graphics("img/paper1_fig1.png")
 ```
 
 
@@ -92,7 +92,7 @@ knitr::include_graphics(here::here("img", "paper1_fig1.png"))
 The goal is to reproduce this column graph.
 
 ```{r out.width = "50%"}
-knitr::include_graphics(here::here("img", "paper1_fig2.png"))
+knitr::include_graphics("img/paper1_fig2.png")
 ```
 
 
@@ -101,7 +101,7 @@ knitr::include_graphics(here::here("img", "paper1_fig2.png"))
 The goal is to reproduce this column graph.
 
 ```{r out.width = "50%"}
-knitr::include_graphics(here::here("img", "paper1_fig4.png"))
+knitr::include_graphics("img/paper1_fig4.png")
 ```
 
 # Tables
@@ -111,7 +111,7 @@ knitr::include_graphics(here::here("img", "paper1_fig4.png"))
 The goal is to reproduce the values and formatting in this table. 
 
 ```{r out.width = "50%"}
-knitr::include_graphics(here::here("img","paper1_table1.png"))
+knitr::include_graphics("img/paper1_table1.png")
 ```
 
 ## Study 2
@@ -119,7 +119,7 @@ knitr::include_graphics(here::here("img","paper1_table1.png"))
 The goal is to reproduce the values and formatting in this table.
 
 ```{r out.width = "50%"}
-knitr::include_graphics(here::here("img", "paper1_table2.png"))
+knitr::include_graphics("img/paper1_table2.png")
 ```
 
 
@@ -128,7 +128,7 @@ knitr::include_graphics(here::here("img", "paper1_table2.png"))
 The goal is to reproduce the values and formatting in this table.
 
 ```{r out.width = "50%"}
-knitr::include_graphics(here::here("img", "paper1_table3.png"))
+knitr::include_graphics("img/paper1_table3.png")
 ```
 
 
