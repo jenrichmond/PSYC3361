@@ -85,26 +85,29 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </style>
 
   <!--radix_placeholder_meta_tags-->
-  <title>PSYC3361: welcome to our blog</title>
+  <title>PSYC3361: plan example</title>
 
+  <meta property="description" itemprop="description" content="this is an example of what your reproducibility plan should look like"/>
 
 
 
   <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
-  <meta property="og:title" content="PSYC3361: welcome to our blog"/>
+  <meta property="og:title" content="PSYC3361: plan example"/>
   <meta property="og:type" content="article"/>
+  <meta property="og:description" content="this is an example of what your reproducibility plan should look like"/>
   <meta property="og:locale" content="en_US"/>
   <meta property="og:site_name" content="PSYC3361"/>
 
   <!--  https://dev.twitter.com/cards/types/summary -->
   <meta property="twitter:card" content="summary"/>
-  <meta property="twitter:title" content="PSYC3361: welcome to our blog"/>
+  <meta property="twitter:title" content="PSYC3361: plan example"/>
+  <meta property="twitter:description" content="this is an example of what your reproducibility plan should look like"/>
 
   <!--/radix_placeholder_meta_tags-->
   <!--radix_placeholder_rmarkdown_metadata-->
 
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","site","listing"]}},"value":[{"type":"character","attributes":{},"value":["welcome to our blog"]},{"type":"character","attributes":{},"value":["distill::distill_website"]},{"type":"character","attributes":{},"value":["posts"]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description"]}},"value":[{"type":"character","attributes":{},"value":["plan example"]},{"type":"character","attributes":{},"value":["this is an example of what your reproducibility plan should look like"]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
   <!--radix_placeholder_navigation_in_header-->
@@ -2395,12 +2398,12 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
 </head>
 
-<body class="layout-listing">
+<body>
 
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"welcome to our blog","authors":[]}
+{"title":"plan example","description":"this is an example of what your reproducibility plan should look like","authors":[]}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -2451,223 +2454,125 @@ CODING
 <!--/radix_placeholder_navigation_before_body-->
 <!--radix_placeholder_site_before_body-->
 <!--/radix_placeholder_site_before_body-->
-<!--radix_placeholder_article_listing-->
-
-
-<script type="application/javascript">
-
-function init_posts_list() {
-
-  function load_image(img) {
-    var src = $(img).attr('data-src');
-    if (src) {
-      $(img).attr('src', src);
-      $(img).load(function() {
-        img.removeAttribute('data-src');
-      });
-    }
-  }
-
-  function set_posts_visible(posts, visible) {
-    if (visible) {
-
-      // show bottom border by default
-      $(posts).removeClass('post-preview-last');
-
-      // apply limits if need be
-      var max_posts = 25;
-      var apply_limits = $('.posts-container').hasClass('posts-apply-limit');
-      if (apply_limits && posts.length > max_posts) {
-        posts = $(posts).slice(0, max_posts);
-      } else {
-        $('.posts-more a').addClass('hidden');
-      }
-
-      // apply last style
-      $(posts.slice(-1)[0]).addClass('post-preview-last');
-
-      $(posts).removeClass('hidden');
-      $(posts).find('img[data-src]').each(function(i, img) {
-        load_image(img);
-      });
-    } else {
-      $(posts).addClass('hidden');
-    }
-  }
-
-  function apply_hash_filter() {
-
-    // clear active state
-    $('.categories .active').removeClass('active');
-
-    // mark all posts invisible to start
-    set_posts_visible($('.posts-list').children('a'), false);
-
-    // if we have a hash filter
-    if (window.location.hash && window.location.hash.startsWith("#category:")) {
-
-      // mark posts that match the category visible
-      var page_category = window.location.hash.replace(/^#category:/, "");
-      var posts = $('.post-metadata').map(function(idx, script) {
-        var metadata = $.parseJSON($(script).html());
-        var post = null;
-        $.each(metadata.categories, function(idx, category) {
-          category = category.replace(/ /g,"_");
-          if ((page_category || '').toLowerCase() === "articles" || category === page_category) {
-            post = $(script).parent().get();
-            return false;
-          }
-        });
-        return post;
-      });
-      set_posts_visible(posts, true);
-
-      // mark the hash active
-      $('.categories li>a[href="' + window.location.hash + '"]').addClass('active');
-
-      // update the list_caption
-      var list_caption = $('.posts-list-caption');
-      var caption = (page_category || '').toLowerCase() === "articles"
-        ? list_caption.attr('data-caption')
-        : ('Category: ' + page_category.replace(/_/g," "));
-      list_caption.text(caption);
-
-    } else {
-
-      // no hash filter, make all posts visible (subject to max display)
-      set_posts_visible($('.posts-list').children(), true);
-
-      // reset list caption
-      var list_caption = $('.posts-list-caption');
-      list_caption.text(list_caption.attr('data-caption'));
-
-
-    }
-  }
-
-  // more articles
-  function apply_post_limits(apply) {
-    if (apply) {
-      $('.posts-container').addClass('posts-apply-limit');
-      $('.posts-more a').removeClass('hidden');
-    } else {
-      $('.posts-container').removeClass('posts-apply-limit');
-      $('.posts-more a').addClass('hidden');
-    }
-  }
-
-  // click handling for tags
-  $('.dt-tag').click(function(ev) {
-    window.location.hash = '#category:' + $(this).text().replace(/ /g, "_");
-    return false;
-  })
-
-  // hash filter handling
-  apply_hash_filter();
-  $(window).on('hashchange',function() {
-    apply_post_limits(true);
-    apply_hash_filter();
-  });
-
-  // more articles link
-  $('.posts-more a').click(function(e) {
-    e.preventDefault();
-    apply_post_limits(false);
-    apply_hash_filter();
-    return false;
-  });
-
-}
-
-</script>
-
-
-
-<div class="posts-container posts-apply-limit l-page">
-<div class="posts-list">
-<h1 class="posts-list-caption" data-caption="welcome to our blog">welcome to our blog</h1>
-<a href="posts/2021-03-05-example-reproducibility-plan/" class="post-preview">
-<script class="post-metadata" type="text/json">{"categories":[]}</script>
-<div class="metadata">
-<div class="publishedDate">March 5, 2021</div>
-<div class="dt-authors">
-<div class="dt-author">Jenny Richmond</div>
-</div>
-</div>
-<div class="thumbnail"></div>
-<div class="description">
-<h2>plan example</h2>
-<div class="dt-tags"></div>
-<p>this is an example of what your reproducibility plan should look like</p>
-</div>
-</a>
-<a href="posts/2021-02-13-learning-log-example/" class="post-preview">
-<script class="post-metadata" type="text/json">{"categories":[]}</script>
-<div class="metadata">
-<div class="publishedDate">Feb. 13, 2021</div>
-<div class="dt-authors">
-<div class="dt-author">Jenny Richmond</div>
-</div>
-</div>
-<div class="thumbnail">
-<img src="posts/2021-02-13-learning-log-example/learning-log-example_files/figure-html5/plot-1.png"/>
-</div>
-<div class="description">
-<h2>learning log example</h2>
-<div class="dt-tags"></div>
-<p>This week I have been playing with tables</p>
-</div>
-</a>
-<a href="posts/2020-11-30-intro-babynames/" class="post-preview">
-<script class="post-metadata" type="text/json">{"categories":[]}</script>
-<div class="metadata">
-<div class="publishedDate">Jan. 6, 2021</div>
-<div class="dt-authors">
-<div class="dt-author">Jenny Richmond</div>
-</div>
-</div>
-<div class="thumbnail">
-<img src="posts/2020-11-30-intro-babynames/intro_babynames_files/figure-html5/unnamed-chunk-4-1.png"/>
-</div>
-<div class="description">
-<h2>babynames post</h2>
-<div class="dt-tags"></div>
-<p>play with baby names data</p>
-</div>
-</a>
-<a href="posts/2021-01-06-no-numbers/" class="post-preview">
-<script class="post-metadata" type="text/json">{"categories":[]}</script>
-<div class="metadata">
-<div class="publishedDate">Jan. 6, 2021</div>
-<div class="dt-authors">
-<div class="dt-author">Jenny Richmond</div>
-</div>
-</div>
-<div class="thumbnail">
-<img src="posts/2021-01-06-no-numbers/richard.png"/>
-</div>
-<div class="description">
-<h2>what do you mean no numbers?</h2>
-<div class="dt-tags"></div>
-<p></p>
-</div>
-</a>
-</div>
-<div class="posts-more">
-<a href="#">More articles &raquo;</a>
-</div>
-</div>
-<!--/radix_placeholder_article_listing-->
 
 <div class="d-title">
-<h1>welcome to our blog</h1>
+<h1>plan example</h1>
 <!--radix_placeholder_categories-->
 <!--/radix_placeholder_categories-->
-
+<p><p>this is an example of what your reproducibility plan should look like</p></p>
 </div>
 
 
 <div class="d-article">
+<p>The paper we are planning to reproduce is…</p>
+<p><a href="https://pubmed.ncbi.nlm.nih.gov/26842316/">Hill, S. E., Prokosch, M. L., DelPriore, D. J., Griskevicius, V., &amp; Kramer, A. (2016). Low childhood socioeconomic status promotes eating in the absence of energy need. <em>Psychological Science, 27</em>, 354–364</a>.</p>
+<p>The data is available to download from <a href="https://osf%20.io/x8q4j/">this OSF repo</a>.</p>
+<blockquote>
+<p>NOTE: JennyS might use this data as an example in Q&amp;A sessions, you can download the <a href="/data/eating_correlational.csv">csv file here</a></p>
+</blockquote>
+<h1 id="plan">Plan</h1>
+<p>There are 3 studies reported in this paper. For each study, the goal is to reproduce the …</p>
+<ol type="1">
+<li>demographic descriptives (reported in Participants)</li>
+<li>figures (column graphs reporting total calories as a function of SES and energy need/condition/glucose)</li>
+<li>tables of descriptive statistics (M, SD, Range)</li>
+</ol>
+<h1 id="demographics">Demographics</h1>
+<p>For each study the authors report…</p>
+<ul>
+<li>how many students participated</li>
+<li>mean, SD, range age</li>
+</ul>
+<h2 id="study-1">Study 1</h2>
+<p>The goal is to reproduce the demographic descriptives in the Participants section here.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'>knitr</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/knitr/man/include_graphics.html'>include_graphics</a></span><span class='op'>(</span><span class='fu'>here</span><span class='fu'>::</span><span class='fu'><a href='https://here.r-lib.org//reference/here.html'>here</a></span><span class='op'>(</span><span class='st'>"img"</span>, <span class='st'>"study1_demo.png"</span><span class='op'>)</span><span class='op'>)</span>
+</code></pre>
+</div>
+<p><img src="img/study1_demo.png" width="50%" /></p>
+</div>
+<h2 id="study-2">Study 2</h2>
+<p>The goal is to reproduce the demographic descriptives in the Participants section here.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'>knitr</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/knitr/man/include_graphics.html'>include_graphics</a></span><span class='op'>(</span><span class='fu'>here</span><span class='fu'>::</span><span class='fu'><a href='https://here.r-lib.org//reference/here.html'>here</a></span><span class='op'>(</span><span class='st'>"img"</span>, <span class='st'>"study2_demo.png"</span><span class='op'>)</span><span class='op'>)</span>
+</code></pre>
+</div>
+<p><img src="img/study2_demo.png" width="50%" /></p>
+</div>
+<h2 id="study-3">Study 3</h2>
+<p>The goal is to reproduce the demographic descriptives in the Participants section here.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'>knitr</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/knitr/man/include_graphics.html'>include_graphics</a></span><span class='op'>(</span><span class='fu'>here</span><span class='fu'>::</span><span class='fu'><a href='https://here.r-lib.org//reference/here.html'>here</a></span><span class='op'>(</span><span class='st'>"img"</span>, <span class='st'>"study3_demo.png"</span><span class='op'>)</span><span class='op'>)</span>
+</code></pre>
+</div>
+<p><img src="img/study3_demo.png" width="50%" /></p>
+</div>
+<h1 id="figures">Figures</h1>
+<h2 id="study-1-1">Study 1</h2>
+<p>The goal is to reproduce this column graph.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'>knitr</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/knitr/man/include_graphics.html'>include_graphics</a></span><span class='op'>(</span><span class='fu'>here</span><span class='fu'>::</span><span class='fu'><a href='https://here.r-lib.org//reference/here.html'>here</a></span><span class='op'>(</span><span class='st'>"img"</span>, <span class='st'>"paper1_fig1.png"</span><span class='op'>)</span><span class='op'>)</span>
+</code></pre>
+</div>
+<p><img src="img/paper1_fig1.png" width="50%" /></p>
+</div>
+<h2 id="study-2-1">Study 2</h2>
+<p>The goal is to reproduce this column graph.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'>knitr</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/knitr/man/include_graphics.html'>include_graphics</a></span><span class='op'>(</span><span class='fu'>here</span><span class='fu'>::</span><span class='fu'><a href='https://here.r-lib.org//reference/here.html'>here</a></span><span class='op'>(</span><span class='st'>"img"</span>, <span class='st'>"paper1_fig2.png"</span><span class='op'>)</span><span class='op'>)</span>
+</code></pre>
+</div>
+<p><img src="img/paper1_fig2.png" width="50%" /></p>
+</div>
+<h2 id="study-3-1">Study 3</h2>
+<p>The goal is to reproduce this column graph.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'>knitr</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/knitr/man/include_graphics.html'>include_graphics</a></span><span class='op'>(</span><span class='fu'>here</span><span class='fu'>::</span><span class='fu'><a href='https://here.r-lib.org//reference/here.html'>here</a></span><span class='op'>(</span><span class='st'>"img"</span>, <span class='st'>"paper1_fig4.png"</span><span class='op'>)</span><span class='op'>)</span>
+</code></pre>
+</div>
+<p><img src="img/paper1_fig4.png" width="50%" /></p>
+</div>
+<h1 id="tables">Tables</h1>
+<h2 id="study-1-2">Study 1</h2>
+<p>The goal is to reproduce the values and formatting in this table.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'>knitr</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/knitr/man/include_graphics.html'>include_graphics</a></span><span class='op'>(</span><span class='fu'>here</span><span class='fu'>::</span><span class='fu'><a href='https://here.r-lib.org//reference/here.html'>here</a></span><span class='op'>(</span><span class='st'>"img"</span>,<span class='st'>"paper1_table1.png"</span><span class='op'>)</span><span class='op'>)</span>
+</code></pre>
+</div>
+<p><img src="img/paper1_table1.png" width="50%" /></p>
+</div>
+<h2 id="study-2-2">Study 2</h2>
+<p>The goal is to reproduce the values and formatting in this table.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'>knitr</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/knitr/man/include_graphics.html'>include_graphics</a></span><span class='op'>(</span><span class='fu'>here</span><span class='fu'>::</span><span class='fu'><a href='https://here.r-lib.org//reference/here.html'>here</a></span><span class='op'>(</span><span class='st'>"img"</span>, <span class='st'>"paper1_table2.png"</span><span class='op'>)</span><span class='op'>)</span>
+</code></pre>
+</div>
+<p><img src="img/paper1_table2.png" width="50%" /></p>
+</div>
+<h2 id="study-3-2">Study 3</h2>
+<p>The goal is to reproduce the values and formatting in this table.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'>knitr</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/knitr/man/include_graphics.html'>include_graphics</a></span><span class='op'>(</span><span class='fu'>here</span><span class='fu'>::</span><span class='fu'><a href='https://here.r-lib.org//reference/here.html'>here</a></span><span class='op'>(</span><span class='st'>"img"</span>, <span class='st'>"paper1_table3.png"</span><span class='op'>)</span><span class='op'>)</span>
+</code></pre>
+</div>
+<p><img src="img/paper1_table3.png" width="50%" /></p>
+</div>
+<h1 id="first-steps">First steps</h1>
+<p>To get started we need to…</p>
+<ul>
+<li>download the csv for each study from OSF</li>
+<li>locate a codebook (if there is one) to work out which variables contain demographic information</li>
+<li>work out how to count participants by gender/condition and calculate the mean, SD, and range of ages in each sample</li>
+</ul>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
