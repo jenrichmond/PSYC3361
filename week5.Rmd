@@ -14,11 +14,27 @@ output:
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-Distill is a publication format for scientific and technical writing, native to the web. 
+This week at workshop we are going to talk about the risks and benefits of sharing research data. Choose one of the following papers, read it carefully and write a Summary and Reaction. Bring your notes to workshop so that you can contribute to the debate. 
 
-Learn more about using Distill for R Markdown at <https://rstudio.github.io/distill>.
+# Option 1
+
+Houtkoop, B. L., Chambers, C., Macleod, M., Bishop, D. V., Nichols, T. E., & Wagenmakers, E. J. (2018). Data sharing in psychology: A survey on barriers and preconditions. Advances in methods and practices in psychological science, 1(1), 70-85.
+
+# Option 2
+
+Levenstein, M. C., & Lyle, J. A. (2018). Data: Sharing is caring. Advances in Methods and Practices in Psychological Science, 1(1), 95-103.
 
 
 
+# Option 3
+
+Meyer, M. N. (2018). Practical tips for ethical data sharing. Advances in methods and practices in psychological science, 1(1), 131-144.
 
 
+# Option 4
+
+Dunn, B. D., O'Mahen, H., Wright, K., & Brown, G. (2019). A commentary on research rigour in clinical psychological science: How to avoid throwing out the innovation baby with the research credibility bath water in the depression field. Behaviour research and therapy, 120, 103417.
+
+# Option 5
+
+Tackett, J. L., Brandes, C. M., King, K. M., & Markon, K. E. (2019). Psychology's replication crisis and clinical psychological science. Annual review of clinical psychology, 15, 579-604.
