@@ -160,7 +160,7 @@
     {
       "path": "week9.html",
       "title": "Week 9",
-      "description": "best practice I: reproducible research\n",
+      "description": "workflow for reproducible research\n",
       "author": [
         {
           "name": "Jenny Richmond",
@@ -168,8 +168,8 @@
         }
       ],
       "date": "`r Sys.Date()`",
-      "contents": "\nDistill is a publication format for scientific and technical writing, native to the web.\nLearn more about using Distill for R Markdown at https://rstudio.github.io/distill.\n\n\n\n",
-      "last_modified": "2021-03-14T15:10:51+11:00"
+      "contents": "\n\nContents\nOption 1 Danielle Navarro Save your sanity workflow\nOption 2 Sharla Gelfand Don’t repeat yourself talk to yourself\nOption 3 Julia Stewart Lowndes R for better science in less time\nOption 4 Erin Buchanan using papaja to write reproducible report\nOption 5 Greg Wilson Good enough practices in scientific computering\nOption 6 Jenny Bryan Excuse me to you have a moment to talk about version control\nOption 7 Karl Broman & Kara woo Data organization in spreadsheets\n\nIn Week 9 workshops we are going to talk about workflows for reproducibility. I had a super hard time narrowing down the list of resources I wanted you to be exposed to so we are going to work in smaller groups.\nChoose which of the following talks you want to watch/papers you want to read. and add your name to this spreadsheet.\nOption 1 Danielle Navarro Save your sanity workflow\nOption 2 Sharla Gelfand Don’t repeat yourself talk to yourself\nOption 3 Julia Stewart Lowndes R for better science in less time\nOption 4 Erin Buchanan using papaja to write reproducible report\nOption 5 Greg Wilson Good enough practices in scientific computering\nOption 6 Jenny Bryan Excuse me to you have a moment to talk about version control\nOption 7 Karl Broman & Kara woo Data organization in spreadsheets\n\n\n\n",
+      "last_modified": "2021-04-10T20:30:06+10:00"
     }
   ],
   "collections": ["posts/posts.json"]

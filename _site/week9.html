@@ -87,31 +87,31 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <!--radix_placeholder_meta_tags-->
   <title>PSYC3361: Week 9</title>
 
-  <meta property="description" itemprop="description" content="best practice I: reproducible research"/>
+  <meta property="description" itemprop="description" content="workflow for reproducible research"/>
 
 
   <!--  https://schema.org/Article -->
-  <meta property="article:published" itemprop="datePublished" content="2021-03-14"/>
-  <meta property="article:created" itemprop="dateCreated" content="2021-03-14"/>
+  <meta property="article:published" itemprop="datePublished" content="2021-04-10"/>
+  <meta property="article:created" itemprop="dateCreated" content="2021-04-10"/>
   <meta name="article:author" content="Jenny Richmond"/>
 
   <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
   <meta property="og:title" content="PSYC3361: Week 9"/>
   <meta property="og:type" content="article"/>
-  <meta property="og:description" content="best practice I: reproducible research"/>
+  <meta property="og:description" content="workflow for reproducible research"/>
   <meta property="og:locale" content="en_US"/>
   <meta property="og:site_name" content="PSYC3361"/>
 
   <!--  https://dev.twitter.com/cards/types/summary -->
   <meta property="twitter:card" content="summary"/>
   <meta property="twitter:title" content="PSYC3361: Week 9"/>
-  <meta property="twitter:description" content="best practice I: reproducible research"/>
+  <meta property="twitter:description" content="workflow for reproducible research"/>
 
   <!--/radix_placeholder_meta_tags-->
   <!--radix_placeholder_rmarkdown_metadata-->
 
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output"]}},"value":[{"type":"character","attributes":{},"value":["Week 9"]},{"type":"character","attributes":{},"value":["best practice I: reproducible research\n"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name"]}},"value":[{"type":"character","attributes":{},"value":["Jenny Richmond"]}]}]},{"type":"character","attributes":{},"value":["2021-03-14"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["toc"]}},"value":[{"type":"logical","attributes":{},"value":[true]}]}]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output"]}},"value":[{"type":"character","attributes":{},"value":["Week 9"]},{"type":"character","attributes":{},"value":["workflow for reproducible research\n"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name"]}},"value":[{"type":"character","attributes":{},"value":["Jenny Richmond"]}]}]},{"type":"character","attributes":{},"value":["2021-04-10"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["toc"]}},"value":[{"type":"logical","attributes":{},"value":[true]}]}]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
   <!--radix_placeholder_navigation_in_header-->
@@ -2407,7 +2407,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"Week 9","description":"best practice I: reproducible research","authors":[{"author":"Jenny Richmond","authorURL":"#","affiliation":"&nbsp;","affiliationURL":"#","orcidID":""}],"publishedDate":"2021-03-14T00:00:00.000+00:00","citationText":"Richmond, 2021"}
+{"title":"Week 9","description":"workflow for reproducible research","authors":[{"author":"Jenny Richmond","authorURL":"#","affiliation":"&nbsp;","affiliationURL":"#","orcidID":""}],"publishedDate":"2021-04-10T00:00:00.000+00:00","citationText":"Richmond, 2021"}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -2463,18 +2463,39 @@ CODING
 <h1>Week 9</h1>
 <!--radix_placeholder_categories-->
 <!--/radix_placeholder_categories-->
-<p><p>best practice I: reproducible research</p></p>
+<p><p>workflow for reproducible research</p></p>
 </div>
 
 <div class="d-byline">
   Jenny Richmond  
   
-<br/>2021-03-14
+<br/>2021-04-10
 </div>
 
 <div class="d-article">
-<p>Distill is a publication format for scientific and technical writing, native to the web.</p>
-<p>Learn more about using Distill for R Markdown at <a href="https://rstudio.github.io/distill" class="uri">https://rstudio.github.io/distill</a>.</p>
+<div class="d-contents d-contents-float">
+<nav class="l-text toc figcaption" id="TOC">
+<h3>Contents</h3>
+<ul>
+<li><a href="#option-1-danielle-navarro-save-your-sanity-workflow">Option 1 Danielle Navarro <span>Save your sanity workflow</span></a></li>
+<li><a href="#option-2-sharla-gelfand-dont-repeat-yourself-talk-to-yourself">Option 2 Sharla Gelfand <span>Don’t repeat yourself talk to yourself</span></a></li>
+<li><a href="#option-3-julia-stewart-lowndes-r-for-better-science-in-less-time">Option 3 Julia Stewart Lowndes <span>R for better science in less time</span></a></li>
+<li><a href="#option-4-erin-buchanan-using-papaja-to-write-reproducible-report">Option 4 Erin Buchanan <span>using papaja to write reproducible report</span></a></li>
+<li><a href="#option-5-greg-wilson-good-enough-practices-in-scientific-computering">Option 5 Greg Wilson <span>Good enough practices in scientific computering</span></a></li>
+<li><a href="#option-6-jenny-bryan-excuse-me-to-you-have-a-moment-to-talk-about-version-control">Option 6 Jenny Bryan <span>Excuse me to you have a moment to talk about version control</span></a></li>
+<li><a href="#option-7-karl-broman-kara-woo-data-organization-in-spreadsheets">Option 7 Karl Broman &amp; Kara woo <span>Data organization in spreadsheets</span></a></li>
+</ul>
+</nav>
+</div>
+<p>In Week 9 workshops we are going to talk about workflows for reproducibility. I had a super hard time narrowing down the list of resources I wanted you to be exposed to so we are going to work in smaller groups.</p>
+<p>Choose which of the following talks you want to watch/papers you want to read. and add your name to <a href="https://docs.google.com/spreadsheets/d/15bQvQGFmaHqUlmGXzpkIc-wvhkqZu5pjhXTLKRsG43s/edit?usp=sharing">this spreadsheet</a>.</p>
+<h3 id="option-1-danielle-navarro-save-your-sanity-workflow">Option 1 Danielle Navarro <a href="https://thebox.unsw.edu.au/92F645F0-1184-11EA-918EDA956A25D116">Save your sanity workflow</a></h3>
+<h3 id="option-2-sharla-gelfand-dont-repeat-yourself-talk-to-yourself">Option 2 Sharla Gelfand <a href="https://www.rstudio.com/resources/rstudioconf-2020/don-t-repeat-yourself-talk-to-yourself-repeated-reporting-in-the-r-universe/">Don’t repeat yourself talk to yourself</a></h3>
+<h3 id="option-3-julia-stewart-lowndes-r-for-better-science-in-less-time">Option 3 Julia Stewart Lowndes <a href="https://www.youtube.com/watch?v=Z8PqwFPqn6Y">R for better science in less time</a></h3>
+<h3 id="option-4-erin-buchanan-using-papaja-to-write-reproducible-report">Option 4 Erin Buchanan <a href="https://youtu.be/I_HW5Rraqg8">using papaja to write reproducible report</a></h3>
+<h3 id="option-5-greg-wilson-good-enough-practices-in-scientific-computering">Option 5 Greg Wilson <a href="https://drive.google.com/open?id=1UYeGaalYXIA2fuMN_q_BIoP0mqypoO56">Good enough practices in scientific computering</a></h3>
+<h3 id="option-6-jenny-bryan-excuse-me-to-you-have-a-moment-to-talk-about-version-control">Option 6 Jenny Bryan <a href="https://drive.google.com/file/d/1FENix84Mc6QjhNsR5ukNDY5Q3GY66GKE/view?usp=sharing">Excuse me to you have a moment to talk about version control</a></h3>
+<h3 id="option-7-karl-broman-kara-woo-data-organization-in-spreadsheets">Option 7 Karl Broman &amp; Kara woo <a href="https://drive.google.com/open?id=1wSlp4IVsmCvs20OtJuZIR-8NL_BP6oIE">Data organization in spreadsheets</a></h3>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
