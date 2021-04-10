@@ -1,0 +1,38 @@
+---
+title: "Other useful R resources"
+description: |
+  A collection of other R videos that might be useful
+date: "`r Sys.Date()`"
+output: distill::distill_article
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+
+# Tidyverse videos
+
+An RLadies Sydney course that walks you through basics, cleaning, visualisation and RMarkdown while dealing with data about enterocci bacteria at Sydney Beaches. You may not swim at Malabar ever again. Access the [RYouWithMe course here](https://rladiessydney.org/courses/ryouwithme/01-basicbasics-0/)
+
+Kelly Bodwin teaches stats at CalPoly and had a great [playlist of R videos on youtube](https://www.youtube.com/watch?v=svRvp8QSvXI&list=PLHvvd9og7B97OPl-cawR5_uGo7fqGA8fw).
+
+David Robinson live streams himself attempting the Tidy Tuesday challenge each week. You can [access the Tidy Tuesday data here](https://github.com/rfordatascience/tidytuesday) and watch David wrangle and visualise the [data each week here](https://www.youtube.com/user/safe4democracy/videos). 
+
+
+# Basic statistics videos
+
+There are a few great stats in R teachers who put their course videos on youtube. I particularly like these ones in particular. 
+
+- [Statistics of Doom from Erin Buchanan](https://www.youtube.com/watch?v=oV0SBUbmnmg&list=PLw93TUuxrFAaWI0U21z4XgvKzh1V4a6GT&index=1)
+
+- Andy Field is a lecturer and textbook author called Discovering Statistics using R) and last year put his [stats lectures on youtube](https://youtube.com/playlist?list=PLEzw67WWDg81n3N3yfr_MW7f6cEl_XibX)
+
+- Lisa Debruine and Emily Nordmann teach stats in R at Glasgow; they put their [videos on youtube here](https://www.youtube.com/watch?v=90IdULVGmYY&list=PLA2iRWVwbpTIweEBHD2dOKjZHK1atRmXt) and [here](https://www.youtube.com/watch?v=5sRkrEw4F0s&list=PLMGjq7JynlJmBbomo-_lIqJ4qWcuHcy_z)
+
+# Workflow videos
+
+Dani put together series of videos about how to structure a project and name things in ways that are more consistent and reproducible. You can access the [Project Structure playlist here](https://youtu.be/u6MiDFvAs9w). 
+
+
+

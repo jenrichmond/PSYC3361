@@ -52,6 +52,15 @@
       "last_modified": "2021-03-14T15:10:40+11:00"
     },
     {
+      "path": "other.html",
+      "title": "Other useful R resources",
+      "description": "A collection of other R videos that might be useful\n",
+      "author": [],
+      "date": "`r Sys.Date()`",
+      "contents": "\nTidyverse videos\nAn RLadies Sydney course that walks you through basics, cleaning, visualisation and RMarkdown while dealing with data about enterocci bacteria at Sydney Beaches. You may not swim at Malabar ever again. Access the RYouWithMe course here\nKelly Bodwin teaches stats at CalPoly and had a great playlist of R videos on youtube.\nDavid Robinson live streams himself attempting the Tidy Tuesday challenge each week. You can access the Tidy Tuesday data here and watch David wrangle and visualise the data each week here.\nBasic statistics videos\nThere are a few great stats in R teachers who put their course videos on youtube. I particularly like these ones in particular.\nStatistics of Doom from Erin Buchanan\nAndy Field is a lecturer and textbook author called Discovering Statistics using R) and last year put his stats lectures on youtube\nLisa Debruine and Emily Nordmann teach stats in R at Glasgow; they put their videos on youtube here and here\nWorkflow videos\nDani put together series of videos about how to structure a project and name things in ways that are more consistent and reproducible. You can access the Project Structure playlist here.\n\n\n\n",
+      "last_modified": "2021-04-10T23:08:47+10:00"
+    },
+    {
       "path": "plan.html",
       "title": "plan example",
       "description": "this is an example of what your reproducibility plan should look like",
