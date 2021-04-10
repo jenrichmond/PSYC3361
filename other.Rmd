@@ -1,5 +1,5 @@
 ---
-title: "Other useful R resources"
+title: "Other learning resources"
 description: |
   A collection of other R videos that might be useful
 date: "`r Sys.Date()`"
@@ -13,7 +13,7 @@ knitr::opts_chunk$set(echo = FALSE)
 
 # Tidyverse videos
 
-An RLadies Sydney course that walks you through basics, cleaning, visualisation and RMarkdown while dealing with data about enterocci bacteria at Sydney Beaches. You may not swim at Malabar ever again. Access the [RYouWithMe course here](https://rladiessydney.org/courses/ryouwithme/01-basicbasics-0/)
+The RLadies Sydney course walks you through basics, cleaning, visualisation and RMarkdown while dealing with data about enterococci bacteria at Sydney Beaches. You may not swim at Malabar ever again. Access the [RYouWithMe course here](https://rladiessydney.org/courses/ryouwithme/01-basicbasics-0/)
 
 Kelly Bodwin teaches stats at CalPoly and had a great [playlist of R videos on youtube](https://www.youtube.com/watch?v=svRvp8QSvXI&list=PLHvvd9og7B97OPl-cawR5_uGo7fqGA8fw).
 
