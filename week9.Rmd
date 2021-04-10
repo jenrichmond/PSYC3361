@@ -14,7 +14,9 @@ output:
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-In Week 9 workshops we are going to talk about workflows for reproducibility. I had a super hard time narrowing down the list of resources I wanted you to be exposed to so we are going to work in smaller groups. 
+In Week 9 workshops we are going to talk about workflows for reproducibility. 
+
+I had a super hard time narrowing down the list so we are going to work in smaller groups. 
 
 Choose which of the following talks you want to watch/papers you want to read. and add your name to [this spreadsheet](https://docs.google.com/spreadsheets/d/15bQvQGFmaHqUlmGXzpkIc-wvhkqZu5pjhXTLKRsG43s/edit?usp=sharing).
 
