@@ -35,7 +35,7 @@ It is a bit of a an experiment so we want you to let us know how it is going as 
 
 ### There will be lots of feedback but no marks (until the end)
 
-The assessment for this course is designed to allow you to engage in activities that research students and academics consider part of their “job” (reading critically, writing code, dealing with data, presenting their work, writing reports, giving feedback to peers, reflecting on their research process). We will give you all Ds and HDs (provided you complete all components and give your best effort), so the numbers don't actually matter. You can read more about the grading philosophy for the course in this [blog post](). 
+The assessment for this course is designed to allow you to engage in activities that research students and academics consider part of their “job” (reading critically, writing code, dealing with data, presenting their work, writing reports, giving feedback to peers, reflecting on their research process). We will give you all Ds and HDs (provided you complete all components and give your best effort), so the numbers don't actually matter. You can read more about the grading philosophy for the course in this [blog post](https://internship3361.netlify.app/posts/2021-01-06-no-numbers/). 
 
 ### Please come prepared... it doesn't work if you don't
 
@@ -48,8 +48,8 @@ This is the plan.
 ```{r}
 
 week <- c(1:10)
-coding <- c('code1','code2','code3','code4','code5', 'flexibility week', 'code6', 'NA', 'NA', 'NA')
-workshop <- c('what is the problem? \n why should we care?','how hard can it be?','project planning', 'NA', 'why doesnt everyone do it?', 'flexibility week', 'NA', 'group presentations', 'best practices: reproducible research', 'best practices: workflow')
+coding <- c('online1','online2','online3','q&a1','q&a2', 'flexibility week', 'q&a3', 'q&a4', 'q&a5', 'q&a6')
+workshop <- c('what is the problem? \n why should we care?','how hard can it be?','project planning', 'NA', 'why doesnt everyone do it?', 'flexibility week', 'NA', 'group presentations', 'best practices: reproducible research', 'best practices: learning new things')
 assessment <- c('','','vr part1 draft', '','vr part2 draft', 'flexibility week', '', 'group presentations','','vr final revision part 1-4')
 
 schedule <- data.frame(week,coding,workshop,assessment)
@@ -61,7 +61,7 @@ schedule %>%
 
 Of course plans can change. We don't know how long group projects will take and the timeframe might change as we go along. The nice thing about this course is that we have ultimate flexibility; we can push deadlines back if we need more time than we thought. 
 
-At this stage workshops will run in person but we may have to switch to online only at any moment. Either way, the workshops will streamed on zoom for those who are unable to make it to class. 
+At this stage workshops and Q&A sessions will run in person but we may have to switch to online only at any moment. Either way, the workshops will streamed on zoom for those who are unable to make it to class. 
 
 There are two reasons not to come to class. 
 
