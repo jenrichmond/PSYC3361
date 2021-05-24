@@ -11,7 +11,7 @@ navbar:
     - text: "blog"
       href: blog_posts.html
     - text: "outline"
-      href: ./scripts/PSYC3361_T1_2021_final.pdf
+      href: ./scripts/PSYC3361_T2_2021_final.pdf
     - text: "assessment"
       href: assessment.html
     - text: "WORKSHOPS"
