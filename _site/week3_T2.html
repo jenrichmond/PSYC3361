@@ -85,26 +85,33 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </style>
 
   <!--radix_placeholder_meta_tags-->
-  <title>PSYC3361: Welcome to PSYC3361</title>
+  <title>PSYC3361: Week 3</title>
+
+  <meta property="description" itemprop="description" content="reproducibility project planning"/>
 
 
-
+  <!--  https://schema.org/Article -->
+  <meta property="article:published" itemprop="datePublished" content="2021-05-24"/>
+  <meta property="article:created" itemprop="dateCreated" content="2021-05-24"/>
+  <meta name="article:author" content="Jenny Richmond"/>
 
   <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
-  <meta property="og:title" content="PSYC3361: Welcome to PSYC3361"/>
+  <meta property="og:title" content="PSYC3361: Week 3"/>
   <meta property="og:type" content="article"/>
+  <meta property="og:description" content="reproducibility project planning"/>
   <meta property="og:locale" content="en_US"/>
   <meta property="og:site_name" content="PSYC3361"/>
 
   <!--  https://dev.twitter.com/cards/types/summary -->
   <meta property="twitter:card" content="summary"/>
-  <meta property="twitter:title" content="PSYC3361: Welcome to PSYC3361"/>
+  <meta property="twitter:title" content="PSYC3361: Week 3"/>
+  <meta property="twitter:description" content="reproducibility project planning"/>
 
   <!--/radix_placeholder_meta_tags-->
   <!--radix_placeholder_rmarkdown_metadata-->
 
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","site"]}},"value":[{"type":"character","attributes":{},"value":["Welcome to PSYC3361"]},{"type":"character","attributes":{},"value":["distill::distill_website"]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output"]}},"value":[{"type":"character","attributes":{},"value":["Week 3"]},{"type":"character","attributes":{},"value":["reproducibility project planning\n"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name"]}},"value":[{"type":"character","attributes":{},"value":["Jenny Richmond"]}]}]},{"type":"character","attributes":{},"value":["2021-05-24"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["toc"]}},"value":[{"type":"logical","attributes":{},"value":[true]}]}]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
   <!--radix_placeholder_navigation_in_header-->
@@ -2400,7 +2407,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"Welcome to PSYC3361","authors":[]}
+{"title":"Week 3","description":"reproducibility project planning","authors":[{"author":"Jenny Richmond","authorURL":"#","affiliation":"&nbsp;","affiliationURL":"#","orcidID":""}],"publishedDate":"2021-05-24T00:00:00.000+00:00","citationText":"Richmond, 2021"}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -2454,474 +2461,63 @@ CODING
 <!--/radix_placeholder_site_before_body-->
 
 <div class="d-title">
-<h1>Welcome to PSYC3361</h1>
+<h1>Week 3</h1>
 <!--radix_placeholder_categories-->
 <!--/radix_placeholder_categories-->
-
+<p><p>reproducibility project planning</p></p>
 </div>
 
+<div class="d-byline">
+  Jenny Richmond  
+  
+<br/>2021-05-24
+</div>
 
 <div class="d-article">
-<div class="layout-chunk" data-layout="l-body">
-<p><img src="avatar.jpg" width="80%" /></p>
-</div>
-<p><span>Photo by <a href="https://unsplash.com/@jessemartini?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Jesse Martini</a> on <a href="https://unsplash.com/s/photos/brain?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span></p>
-<h1 id="about-the-course">About the course</h1>
-<p>The Psychology Research Internship is different from other courses you have taken thus far in your university career. There are no lectures, no tutorials, and no exam. There is no “content” for you to know by the end of the session. You are entirely responsible for your own learning; the more you put in, the more you will get out of this experience. It is a unique opportunity to really <em>use your brain</em>.</p>
-<p>PSYC3361 is designed to be a hands-on research experience, but this year we are not going to do that in the lab. We are going to build the course around open data, giving you the opportunity to learn skills that are critical for conducting reproducible research.</p>
-<h1 id="by-the-end-of-the-course-you-will">By the end of the course you will…</h1>
-<ol type="1">
-<li>be able to explain why it is important that scientists are transparent about their research practices</li>
-<li>be able to use your understanding of structural, ethical and practical barriers to explain describe why some researchers share their data and others don’t</li>
-<li>be able to describe the factors make research analyses more or less difficult to reproduce</li>
-<li>be able to apply workflow practices to your own projects in a way that will make transparency and data sharing easy</li>
-<li>know enough R to produce descriptive statistics and visualisations in your honours project</li>
-</ol>
-<p>It is a bit of a an experiment so we want you to let us know how it is going as we go along. Use this <a href="https://docs.google.com/document/d/1m8-lfQ7qabHaV6fpdodEaZLgtAE-oqwoGs-ERPv2olE/edit?usp=sharing">anonymous/editable document</a> at any time to let us know what is working and what is not working.</p>
-<h3 id="there-will-be-lots-of-feedback-but-no-marks-until-the-end">There will be lots of feedback but no marks (until the end)</h3>
-<p>The assessment for this course is designed to allow you to engage in activities that research students and academics consider part of their “job” (reading critically, writing code, dealing with data, presenting their work, writing reports, giving feedback to peers, reflecting on their research process). We will give you all Ds and HDs (provided you complete all components and give your best effort), so the numbers don’t actually matter. You can read more about the grading philosophy for the course in this <a href="https://internship3361.netlify.app/posts/2021-01-06-no-numbers/">blog post</a>.</p>
-<h3 id="please-come-prepared-it-doesnt-work-if-you-dont">Please come prepared… it doesn’t work if you don’t</h3>
-<p>The workshops run in flipped mode, much like elective classes in honours. In the first workshop of the term, Kate and I will do most of the talking, but after that the rest of the workshops will be run by you. There will be prep work to do (something to read, watch and/or write) before you arrive. If you do the work, you will be able to contribute to the discussion and engage in the activities. If you haven’t done what has been assigned for that week, you will let your classmates down.</p>
-<h3 id="the-schedule">The Schedule</h3>
-<p>This is the plan.</p>
-<div class="layout-chunk" data-layout="l-body">
-<div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>week</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>1</span><span class='op'>:</span><span class='fl'>10</span><span class='op'>)</span>
-<span class='va'>coding</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>'online1'</span>,<span class='st'>'online2'</span>,<span class='st'>'online3'</span>,<span class='st'>'q&amp;a1'</span>,<span class='st'>'q&amp;a2'</span>, <span class='st'>'flexibility week'</span>, <span class='st'>'q&amp;a3'</span>, <span class='st'>'q&amp;a4'</span>, <span class='st'>'q&amp;a5'</span>, <span class='st'>'q&amp;a6'</span><span class='op'>)</span>
-<span class='va'>workshop</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>'what is the problem? \n why should we care?'</span>,<span class='st'>'how hard can it be?'</span>,<span class='st'>'project planning'</span>, <span class='st'>'NA'</span>, <span class='st'>'why doesnt everyone do it?'</span>, <span class='st'>'flexibility week'</span>, <span class='st'>'NA'</span>, <span class='st'>'group presentations'</span>, <span class='st'>'best practices: reproducible research'</span>, <span class='st'>'best practices: learning new things'</span><span class='op'>)</span>
-<span class='va'>assessment</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>''</span>,<span class='st'>''</span>,<span class='st'>'vr part1 draft'</span>, <span class='st'>''</span>,<span class='st'>'vr part2 draft'</span>, <span class='st'>'flexibility week'</span>, <span class='st'>''</span>, <span class='st'>'group presentations'</span>,<span class='st'>''</span>,<span class='st'>'vr final revision part 1-4'</span><span class='op'>)</span>
-
-<span class='va'>schedule</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/data.frame.html'>data.frame</a></span><span class='op'>(</span><span class='va'>week</span>,<span class='va'>coding</span>,<span class='va'>workshop</span>,<span class='va'>assessment</span><span class='op'>)</span>
-
-<span class='va'>schedule</span> <span class='op'>%&gt;%</span>
-  <span class='fu'>gt</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/gt/man/gt.html'>gt</a></span><span class='op'>(</span><span class='op'>)</span>
-</code></pre>
-</div>
-<style>html {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
-}
-
-#wnfvgflayz .gt_table {
-  display: table;
-  border-collapse: collapse;
-  margin-left: auto;
-  margin-right: auto;
-  color: #333333;
-  font-size: 16px;
-  font-weight: normal;
-  font-style: normal;
-  background-color: #FFFFFF;
-  width: auto;
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #A8A8A8;
-  border-right-style: none;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #A8A8A8;
-  border-left-style: none;
-  border-left-width: 2px;
-  border-left-color: #D3D3D3;
-}
-
-#wnfvgflayz .gt_heading {
-  background-color: #FFFFFF;
-  text-align: center;
-  border-bottom-color: #FFFFFF;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-}
-
-#wnfvgflayz .gt_title {
-  color: #333333;
-  font-size: 125%;
-  font-weight: initial;
-  padding-top: 4px;
-  padding-bottom: 4px;
-  border-bottom-color: #FFFFFF;
-  border-bottom-width: 0;
-}
-
-#wnfvgflayz .gt_subtitle {
-  color: #333333;
-  font-size: 85%;
-  font-weight: initial;
-  padding-top: 0;
-  padding-bottom: 4px;
-  border-top-color: #FFFFFF;
-  border-top-width: 0;
-}
-
-#wnfvgflayz .gt_bottom_border {
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-}
-
-#wnfvgflayz .gt_col_headings {
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-}
-
-#wnfvgflayz .gt_col_heading {
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: normal;
-  text-transform: inherit;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-  vertical-align: bottom;
-  padding-top: 5px;
-  padding-bottom: 6px;
-  padding-left: 5px;
-  padding-right: 5px;
-  overflow-x: hidden;
-}
-
-#wnfvgflayz .gt_column_spanner_outer {
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: normal;
-  text-transform: inherit;
-  padding-top: 0;
-  padding-bottom: 0;
-  padding-left: 4px;
-  padding-right: 4px;
-}
-
-#wnfvgflayz .gt_column_spanner_outer:first-child {
-  padding-left: 0;
-}
-
-#wnfvgflayz .gt_column_spanner_outer:last-child {
-  padding-right: 0;
-}
-
-#wnfvgflayz .gt_column_spanner {
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  vertical-align: bottom;
-  padding-top: 5px;
-  padding-bottom: 6px;
-  overflow-x: hidden;
-  display: inline-block;
-  width: 100%;
-}
-
-#wnfvgflayz .gt_group_heading {
-  padding: 8px;
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: initial;
-  text-transform: inherit;
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-  vertical-align: middle;
-}
-
-#wnfvgflayz .gt_empty_group_heading {
-  padding: 0.5px;
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: initial;
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  vertical-align: middle;
-}
-
-#wnfvgflayz .gt_from_md > :first-child {
-  margin-top: 0;
-}
-
-#wnfvgflayz .gt_from_md > :last-child {
-  margin-bottom: 0;
-}
-
-#wnfvgflayz .gt_row {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-  margin: 10px;
-  border-top-style: solid;
-  border-top-width: 1px;
-  border-top-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-  vertical-align: middle;
-  overflow-x: hidden;
-}
-
-#wnfvgflayz .gt_stub {
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: initial;
-  text-transform: inherit;
-  border-right-style: solid;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-  padding-left: 12px;
-}
-
-#wnfvgflayz .gt_summary_row {
-  color: #333333;
-  background-color: #FFFFFF;
-  text-transform: inherit;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-#wnfvgflayz .gt_first_summary_row {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #D3D3D3;
-}
-
-#wnfvgflayz .gt_grand_summary_row {
-  color: #333333;
-  background-color: #FFFFFF;
-  text-transform: inherit;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-#wnfvgflayz .gt_first_grand_summary_row {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-top-style: double;
-  border-top-width: 6px;
-  border-top-color: #D3D3D3;
-}
-
-#wnfvgflayz .gt_striped {
-  background-color: rgba(128, 128, 128, 0.05);
-}
-
-#wnfvgflayz .gt_table_body {
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-}
-
-#wnfvgflayz .gt_footnotes {
-  color: #333333;
-  background-color: #FFFFFF;
-  border-bottom-style: none;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 2px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-}
-
-#wnfvgflayz .gt_footnote {
-  margin: 0px;
-  font-size: 90%;
-  padding: 4px;
-}
-
-#wnfvgflayz .gt_sourcenotes {
-  color: #333333;
-  background-color: #FFFFFF;
-  border-bottom-style: none;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 2px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-}
-
-#wnfvgflayz .gt_sourcenote {
-  font-size: 90%;
-  padding: 4px;
-}
-
-#wnfvgflayz .gt_left {
-  text-align: left;
-}
-
-#wnfvgflayz .gt_center {
-  text-align: center;
-}
-
-#wnfvgflayz .gt_right {
-  text-align: right;
-  font-variant-numeric: tabular-nums;
-}
-
-#wnfvgflayz .gt_font_normal {
-  font-weight: normal;
-}
-
-#wnfvgflayz .gt_font_bold {
-  font-weight: bold;
-}
-
-#wnfvgflayz .gt_font_italic {
-  font-style: italic;
-}
-
-#wnfvgflayz .gt_super {
-  font-size: 65%;
-}
-
-#wnfvgflayz .gt_footnote_marks {
-  font-style: italic;
-  font-size: 65%;
-}
-</style>
-<div id="wnfvgflayz" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;"><table class="gt_table">
-  
-  <thead class="gt_col_headings">
-    <tr>
-      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1">week</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1">coding</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1">workshop</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1">assessment</th>
-    </tr>
-  </thead>
-  <tbody class="gt_table_body">
-    <tr>
-      <td class="gt_row gt_center">1</td>
-      <td class="gt_row gt_left">online1</td>
-      <td class="gt_row gt_left">what is the problem? 
- why should we care?</td>
-      <td class="gt_row gt_left"></td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_center">2</td>
-      <td class="gt_row gt_left">online2</td>
-      <td class="gt_row gt_left">how hard can it be?</td>
-      <td class="gt_row gt_left"></td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_center">3</td>
-      <td class="gt_row gt_left">online3</td>
-      <td class="gt_row gt_left">project planning</td>
-      <td class="gt_row gt_left">vr part1 draft</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_center">4</td>
-      <td class="gt_row gt_left">q&amp;a1</td>
-      <td class="gt_row gt_left">NA</td>
-      <td class="gt_row gt_left"></td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_center">5</td>
-      <td class="gt_row gt_left">q&amp;a2</td>
-      <td class="gt_row gt_left">why doesnt everyone do it?</td>
-      <td class="gt_row gt_left">vr part2 draft</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_center">6</td>
-      <td class="gt_row gt_left">flexibility week</td>
-      <td class="gt_row gt_left">flexibility week</td>
-      <td class="gt_row gt_left">flexibility week</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_center">7</td>
-      <td class="gt_row gt_left">q&amp;a3</td>
-      <td class="gt_row gt_left">NA</td>
-      <td class="gt_row gt_left"></td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_center">8</td>
-      <td class="gt_row gt_left">q&amp;a4</td>
-      <td class="gt_row gt_left">group presentations</td>
-      <td class="gt_row gt_left">group presentations</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_center">9</td>
-      <td class="gt_row gt_left">q&amp;a5</td>
-      <td class="gt_row gt_left">best practices: reproducible research</td>
-      <td class="gt_row gt_left"></td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_center">10</td>
-      <td class="gt_row gt_left">q&amp;a6</td>
-      <td class="gt_row gt_left">best practices: learning new things</td>
-      <td class="gt_row gt_left">vr final revision part 1-4</td>
-    </tr>
-  </tbody>
-  
-  
-</table></div>
-</div>
-<p>Of course plans can change. We don’t know how long group projects will take and the timeframe might change as we go along. The nice thing about this course is that we have ultimate flexibility; we can push deadlines back if we need more time than we thought.</p>
-<p>At this stage workshops and Q&amp;A sessions will run in person but we may have to switch to online only at any moment. Either way, the workshops will streamed on zoom for those who are unable to make it to class.</p>
-<p>There are two reasons not to come to class.</p>
-<ol type="1">
-<li>if you are overseas and studying remotely</li>
-<li>if attending class in person would pose a health risk to everyone</li>
-</ol>
+<div class="d-contents d-contents-float">
+<nav class="l-text toc figcaption" id="TOC">
+<h3>Contents</h3>
 <ul>
-<li>if you have been identified as a contact of someone with COVID</li>
-<li>OR if you have the slightest sniffle, please don’t come (go get a test instead).</li>
+<li><a href="#your-task">Your task</a>
+<ul>
+<li><a href="#option-1">Option 1</a></li>
+<li><a href="#option-2">Option 2</a></li>
+<li><a href="#option-3">Option 3</a></li>
+<li><a href="#option-4">Option 4</a></li>
+<li><a href="#option-5">Option 5</a></li>
+</ul></li>
 </ul>
-<p>Let us know and we will make sure you don’t miss out on the content.</p>
+</nav>
+</div>
+<h1 id="your-task">Your task</h1>
+<p>Choose a paper from the option list below and work as a team to reproduce the descriptive statistics and plots. For each of the papers we have checked that the task is possible and that the data are interesting. The task is NOT EASY though. You will probably not learn all the functions you need from Danielle so get comfortable with googling and asking for help when you need it.</p>
+<p>If you want to look at an example of what is possible re open data/code, check out this <a href="https://journals.sagepub.com/doi/full/10.1177/0956797620952797">paper by Wahlheim</a>, <a href="https://osf.io/89zmj/">OSF</a>. It is an A+ example of how to make it easy for other people to work with your data, so is a good exemplar to look at when you are thinking about what your authors could have done differently.</p>
+<p>Have a look at the options below, decide which one you are interested in working on and add your name and RPubs details to <a href="https://docs.google.com/spreadsheets/d/15bQvQGFmaHqUlmGXzpkIc-wvhkqZu5pjhXTLKRsG43s/edit?usp=sharing">this spreadsheet</a>. Read the paper carefully and write a <a href="https://docs.google.com/document/d/1XLi1DrYP9QdGKYYJ3j0Mr905puc8ml_YycB2RXdtlD4/edit?usp=sharing">summary and reaction</a>. Bring your S&amp;R to workshop to share with your group so you can make a quick start on project planning.</p>
+<h2 id="option-1">Option 1</h2>
+<p>Brick, C., Fillon, A., Yeung, S. K., Wang, M., Lyu, H., Ho, J. Y. J., Wong, S. C., &amp; Feldman, G. (2021). Self-interest Is Overestimated: Two Successful Pre-registered Replications and Extensions of Miller and Ratner (1998). <em>Collabra: Psychology, 7(1)</em>.</p>
+<ul>
+<li><a href="https://online.ucpress.edu/collabra/article/7/1/23443/117009/Self-interest-Is-Overestimated-Two-Successful-Pre?searchresult=1">paper</a></li>
+</ul>
+<h2 id="option-2">Option 2</h2>
+<p>Harris, E. A., &amp; Van Bavel, J. J. (2021). Preregistered Replication of “Feeling superior is a bipartisan issue: Extremity (not direction) of political views predicts perceived belief superiority”. Psychological Science, 32(3), 451-458.</p>
+<ul>
+<li><a href="https://journals.sagepub.com/doi/full/10.1177/0956797620968792">paper</a></li>
+</ul>
+<h2 id="option-3">Option 3</h2>
+<p>Humiston GB, Wamsley EJ (2019) Unlearning implicit social biases during sleep: A failure to replicate. <em>PLoS ONE 14(1): e0211416</em>.</p>
+<ul>
+<li><a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0211416">paper</a></li>
+</ul>
+<h2 id="option-4">Option 4</h2>
+<p>Nichols AD, Lang M, Kavanagh C, Kundt R, Yamada J, Ariely D, et al. (2020) Replicating and extending the effects of auditory religious cues on dishonest behavior. <em>PLoS ONE 15(8): e0237007</em>.</p>
+<ul>
+<li><a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0237007">paper</a></li>
+</ul>
+<h2 id="option-5">Option 5</h2>
+<p>Walter, K. V., Conroy-Beam, D., Buss, D. M., Asao, K., Sorokowska, A., Sorokowski, P., … &amp; Zupančič, M. (2020). Sex differences in mate preferences across 45 countries: A large-scale replication. <em>Psychological science, 31(4)</em>, 408-423.</p>
+<ul>
+<li><a href="https://journals.sagepub.com/doi/full/10.1177/0956797620904154">paper</a></li>
+</ul>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->

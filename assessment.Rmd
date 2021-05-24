@@ -14,7 +14,7 @@ knitr::opts_chunk$set(echo = FALSE)
 
 # 1. Group work (10%)
 
-This term you will work in teams to reproduce the descriptive statistics and plots from a paper published about COVID19 in 2020. This is an opportunity to apply your new-found R skills and to learn about the challenges of open data and reproducible analysis. You will set your own challenge and then work together to complete it. You might not learn the exact functions that you will need to deal with your data problem in coding, so there will be a lot of TROUBLESHOOTING. But many hands make light work and learning R together works a little bit like these caterpillars. 
+This term you will work in teams to reproduce the descriptive statistics and plots from recently published replicationpapers. This is an opportunity to apply your new-found R skills and to learn about the challenges of open data and reproducible analysis. You will set your own challenge and then work together to complete it. You might not learn the exact functions that you will need to deal with your data problem in coding, so there will be a lot of TROUBLESHOOTING. But many hands make light work and learning R together works a little bit like these caterpillars. 
 
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">A group of caterpillars, moving in a formation known as a rolling swarm. This rolling swarm of caterpillars moves faster than any single caterpillar. 🐛 <a href="https://t.co/sn3J3CDYmE">pic.twitter.com/sn3J3CDYmE</a></p>&mdash; Theo Shantonas (@TheoShantonas) <a href="https://twitter.com/TheoShantonas/status/1380536139954655237?ref_src=twsrc%5Etfw">April 9, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
@@ -22,9 +22,11 @@ We will talk about what makes a team work well in class and this component of th
 
 # 2. Research Skills (10%)
 
-There are 6 weeks of online coding lessons that will set you up well to complete your reproducibility challenge. Danielle will post videos online each week. It will be your responsibility to watch them, follow along with the exercises and think hard about how the functions you are learning about might be useful in your project.  From Week 4 you will start applying the code you are learning to your reproducibility challenge. 
+In the first 3 weeks of term, you will work through online coding lessons that will set you up well to complete your reproducibility challenge. Danielle has set up a RStudioCloud workspace and posted YouTube videos talk you through the basics of RMarkdown, Data Visualisation, and Data Wrangling. 
 
-Jenny Sloane, one of the tutors on the course, will run 2 x 1hr Q&A coding sessions each week. You can attend to get help with your code and project. They are not compulsory but we recommend you attend one or both. You will likely learn a lot both from asking about the problems you are having and from seeing the kinds of problems that other students are having. 
+It will be your responsibility to watch them, follow along with the exercises and think hard about how the functions you are learning about might be useful in your project. From Week 4 you will start applying the code you are learning to your reproducibility challenge. 
+
+From Week 4, there will be two Q&A sessions each week. These are an opportunity to work together with your team in a computer lab, with course staff there to answer your questions.  We recommend you attend one or both Q&A sessions. You will likely learn a lot both from asking about the problems you are having and from seeing the kinds of problems that other students are having. 
 
 For this component of the course, you need to share a learning log to RPubs each week. The learning log should include a reflection of...
 
@@ -32,7 +34,7 @@ For this component of the course, you need to share a learning log to RPubs each
 - How did you go achieving your goals (challenges/successes)?
 - What the next steps are in your coding journey?
 
-You can see an example learning log in this blog post. You should include example code/plots in your learning log as a way of sharing your progress with your team and Jenny/Kate/Danielle. Post a link to your RPubs learning to the slack channel by 11:59pm Sunday each week. 
+You can see an example learning log in [this blog post](https://internship3361.netlify.app/posts/2021-02-13-learning-log-example/). You should include example code/plots in your learning log as a way of sharing your progress with your team and Jenny/Kate/Danielle. Post a link to your RPubs learning to the slack channel by 11:59pm Sunday each week. 
 
 # 3. Presentation (30%)
 
@@ -96,7 +98,9 @@ Open data is reusable and can be used to answer research questions that are diff
 ## Part 4: Recommendation
 The goal of this section is to give imaginary feedback to the authors of the paper you have tried to reproduce. Use the reproducibility checklist to make recommendations for things they could have done to make your job easier. 
 
-You can use this [example verification report](https://rpubs.com/jenrichmond/roaches) as a model for the style that you should be aiming for. You can see the Rmd file that produced the roaches report [here](./scripts/roaches.Rmd).  
+You can use this [example verification report](https://rpubs.com/jenrichmond/roaches) as a model for the style that you should be aiming for. You can see the Rmd file that produced the roaches report [here](./scripts/roaches.Rmd). 
+
+
 
 
 
