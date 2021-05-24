@@ -19,7 +19,7 @@ Most of us learn how to write documents using word processing software, such as 
 The resources for this section are online. There's a set of slides you can browse, and a pre-recorded YouTube playlist that will guide you through them:
 
 - [R markdown slides](https://slides.djnavarro.net/starting-rmarkdown)
-- [YouTube playlist](https://www.youtube.com/playlist?list=PLRPB0ZzEYegM86awo590bP1MJjQbjdR9E)
+- [YouTube playlist 85 min](https://www.youtube.com/playlist?list=PLRPB0ZzEYegM86awo590bP1MJjQbjdR9E)
 
 If you have any questions or if something doesn't work please feel free to message me on the class slack!
 

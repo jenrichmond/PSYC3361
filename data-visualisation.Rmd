@@ -20,7 +20,7 @@ As before, the resources are all online, and you should feel free to contact me 
 
 - [Data visualisation slides](https://slides.djnavarro.net/starting-ggplot2)
 - [RStudio Cloud project 901338](https://rstudio.cloud/project/901338)
-- [YouTube playlist](https://www.youtube.com/watch?v=6vdHGnD51F8&list=PLRPB0ZzEYegPa4uvvAVJnr6loSKbN4wLb&index=2)
+- [YouTube playlist 125 min](https://www.youtube.com/watch?v=6vdHGnD51F8&list=PLRPB0ZzEYegPa4uvvAVJnr6loSKbN4wLb&index=2)
 
 
 
