@@ -24,14 +24,14 @@ Have a look at the options below, decide which one you are interested in working
 
 ## Option 1
 
-Brick, C., Fillon, A., Yeung, S. K., Wang, M., Lyu, H., Ho, J. Y. J., Wong, S. C., & Feldman, G. (2021). Self-interest Is Overestimated: Two Successful Pre-registered Replications and Extensions of Miller and Ratner (1998). *Collabra: Psychology, 7(1)*.
+Haigh, M., & Birch, H. A. (2021). When ‘Scientists Say’ Coffee Is Good for You One Day and Bad for You the Next: Do Generic Attributions to ‘Scientists’ and ‘Experts’ Amplify Perceived Conflict? *Collabra: Psychology, 7(1)*.
 
-- [paper](https://online.ucpress.edu/collabra/article/7/1/23443/117009/Self-interest-Is-Overestimated-Two-Successful-Pre?searchresult=1)
+- [paper](https://online.ucpress.edu/collabra/article/7/1/23447/116975/When-Scientists-Say-Coffee-Is-Good-for-You-One-Day)
 
 
 ## Option 2
 
-Harris, E. A., & Van Bavel, J. J. (2021). Preregistered Replication of “Feeling superior is a bipartisan issue: Extremity (not direction) of political views predicts perceived belief superiority”. Psychological Science, 32(3), 451-458.
+Harris, E. A., & Van Bavel, J. J. (2021). Preregistered Replication of “Feeling superior is a bipartisan issue: Extremity (not direction) of political views predicts perceived belief superiority”. *Psychological Science, 32(3)*, 451-458.
 
 - [paper](https://journals.sagepub.com/doi/full/10.1177/0956797620968792)
 
