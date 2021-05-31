@@ -48,7 +48,7 @@ This is the plan.
 ```{r}
 
 week <- c(1:10)
-coding <- c('online1','online2','online3','q&a1','q&a2', 'flexibility week', 'q&a3', 'q&a4', 'q&a5', 'q&a6')
+coding <- c('online1','online2','online3 + q&a1','q&a2','q&a3', 'flexibility week', 'q&a4', 'q&a5', 'q&a6', 'q&a7')
 workshop <- c('what is the problem? \n why should we care?','how hard can it be?','project planning', 'NA', 'why doesnt everyone do it?', 'flexibility week', 'NA', 'group presentations', 'best practices: reproducible research', 'best practices: learning new things')
 assessment <- c('','','vr part1 draft', '','vr part2 draft', 'flexibility week', '', 'group presentations','','vr final revision part 1-4')
 
