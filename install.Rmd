@@ -1,0 +1,17 @@
+---
+title: "installing R and RStudio"
+description: |
+  upgrade from RStudio Cloud to working on your own machine
+date: "`r Sys.Date()`"
+output: distill::distill_article
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+We use RStudio Cloud in the first few weeks of this course because it is the fastest and most pain-free way to get started with R. All you need is internet connection and you can get an RStudio interface that has a functional project set up with packages preinstalled. 
+
+If you are really practicing your coding though, sometime in Week 2 or 3 you will run out of free hours on your RStudio Cloud. Congratulations! It is time to upgrade to working in RStudio on your own machine. 
+
+Danielle has made a [series of videos here](https://www.youtube.com/playlist?list=PLRPB0ZzEYegOZivdelOuEn-R-XUN-DOjd) that walk you through the process of installing R and RStudio, no matter your machine set up. 

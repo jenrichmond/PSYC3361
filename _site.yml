@@ -38,6 +38,8 @@ navbar:
           href: data-visualisation.html
         - text: "w3: Data wrangling"
           href: data-wrangling.html
+        - text: "install R and RStudio"
+          href:  install.html
         - text: "Other handy resources"
           href: other.html
 output: distill::distill_article
