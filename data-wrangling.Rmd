@@ -29,3 +29,11 @@ The second part provides an introduction to data wrangling in R, mostly focusing
 
 Good luck! And as always, please get in touch with me on slack if you have any questions!
 
+
+> NOTE: if you have run out of RStudio Cloud time and need to download the Cloud projects to work on your machine, you can use the zip files linked below. 
+
+
+[Hello Data](/hellodata_978818.zip)
+
+[A Dance with Data](/dance_1006868.zip)
+
