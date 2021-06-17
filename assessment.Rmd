@@ -98,7 +98,15 @@ Open data is reusable and can be used to answer research questions that are diff
 ## Part 4: Recommendation
 The goal of this section is to give imaginary feedback to the authors of the paper you have tried to reproduce. Use the reproducibility checklist to make recommendations for things they could have done to make your job easier. 
 
-You can use this [example verification report](https://rpubs.com/jenrichmond/roaches) as a model for the style that you should be aiming for. You can see the Rmd file that produced the roaches report [here](./scripts/roaches.Rmd). 
+
+## Some useful resources
+
+1. [example verification report](https://rpubs.com/jenrichmond/roaches) - you can use this report as a model for the style that you should be aiming for. You can see the Rmd file that produced the roaches report [here](./scripts/roaches.Rmd). And a video of Jenny walking through the example [here](https://youtu.be/4pWpZ6HBUzM).  
+
+2. [marking rubric/guidelines](https://docs.google.com/spreadsheets/d/1tBIaYLxUdWCQX9GzsL_xfwxX4n_z7hY4ZnvbLp0OGi8/edit?usp=sharing)
+
+
+
 
 
 
