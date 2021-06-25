@@ -147,6 +147,9 @@ knitr::include_graphics("push.png")
 Check your github repo to make sure that your changes have appeared. 
 
 
+Watch Jenny do Option A and B in [this youtube video](https://youtu.be/pDSZcvziNW00)
+
+
 # Need help?
 
 Jenny Bryan who works for R-Studio has written a great site called [happygitwithr](www.happygitwithr.com) which has lots of good tips and tricks if you are looking for more. 
