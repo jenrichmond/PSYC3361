@@ -1,0 +1,152 @@
+---
+title: "happy git"
+description: |
+  how to collaborate via git and github
+author:
+  - name: Jenny Richmond
+    url: {}
+date: 06-25-2021
+output:
+  distill::distill_article:
+    self_contained: false
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+# why git?
+
+Using git and  github to collaborate on code and writing is common in research teams that are trying to work reproducibly. Github is really good at version control and allows different people to work on the same project at the same time while avoiding the accumulation of duplicate versions of things that people on the team are too scared to delete. 
+
+```{r out.width=4, out.height=6}
+
+knitr::include_graphics("final.png")
+
+```
+
+But... collaborating via github is not like google docs, where you and your collaborators are making changes on a document in real time. Because everyone will be working independently and every so often "pushing" your changes to github, there is the potential for your changes to conflict. To avoid this happening,  follow the golden rule of git:
+
+> Always "pull" before you "push"
+
+# how to git
+
+As you are learning git, you might like to use the git tab within RStudio (Option A), but as you become more familiar with the process you might find it faster to type commands in the terminal (Option B).
+
+```{r}
+knitr::include_graphics("options.png")
+```
+
+## Option A git for beginners 
+### using the git tab
+
+
+#### Step 1: git pull
+
+When you are working on a repo with someone else, it is possible that your collaborator has pushed their changes to your repo since the last time you were working.  Whenever you sit down to work on your project/site, it is good practice to "pull" before you "push".
+
+
+```{r}
+knitr::include_graphics("gitpull.png")
+```
+
+
+It is a good idea to use git pull before you think about pushing new content, because by getting the latest version of the repo from git onto your local machine you are much less likely to create merge conflicts (aka clashes with your collaborators).
+
+
+#### Step 2-4: git add - commit - push
+
+When you have made some changes and want to push those changes to git, just knit your documents and then tell github that you have some content to add.  
+
+First press the commit button. 
+
+```{r}
+knitr::include_graphics("button.png")
+```
+
+In the popup window...
+
+1. add: check the box next to each of the files you are ready to commit. This "stages" the files ready for the commit. 
+2. commit: on the right side of a the popup window, write a message explaining to your collaborators (or your future self) what changes have been made in this commit 3. click the commit button. Close out the popup box. 
+4. push: press the "up" button to push your changes to github
+
+
+```{r}
+knitr::include_graphics("add commit push.png")
+```
+
+Check your github repo to make sure that your changes have appeared. 
+
+## Option B git for experts 
+### using the terminal
+
+Once you get a bit more familiar with the process of pulling, committing and pushing your changes to github, you might like to speed up the process by typing commands into the terminal. 
+
+First, does your RStudio have a Terminal tab? If not, choose Tools-Terminal-New Terminal to get one. 
+
+```{r}
+knitr::include_graphics("terminal.png")
+```
+
+
+
+#### Step 1: git pull
+
+You want to pull the most up-to-date version of your project from git. Type... 
+
+> git pull
+
+... into the terminal. If you already have the most recent version, it will let you know that you are Already up to date. 
+
+```{r}
+knitr::include_graphics("pull.png")
+```
+
+
+#### Step 2: git add
+
+Then let github know which files you want to add. Type... 
+
+> git add . 
+
+... into the terminal. This one won't give you any feedback. This says hey git, I want to add some stuff, in fact all things that have changed (aka .) This is the same as "staging" all the files that have changed. 
+
+```{r}
+knitr::include_graphics("add.png")
+```
+
+#### Step 3: git commit
+
+Commit your files with a message that lets your collaborators (or your future self) know what has changed. Type... 
+
+> git commit -m "a message that makes sense"
+
+
+... into the terminal. This one will give you a list of files that have been changed as feedback. 
+
+```{r}
+knitr::include_graphics("commit.png")
+```
+
+
+
+#### Step 4: git push 
+
+And finally, push your changes to github. Type... 
+
+> git push
+
+
+... into the terminal. Wait for it to chug and complete the push. 
+
+```{r}
+knitr::include_graphics("push.png")
+```
+
+Check your github repo to make sure that your changes have appeared. 
+
+
+# Need help?
+
+Jenny Bryan who works for R-Studio has written a great site called [happygitwithr](www.happygitwithr.com) which has lots of good tips and tricks if you are looking for more. 
