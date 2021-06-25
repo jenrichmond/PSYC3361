@@ -20,7 +20,7 @@ knitr::opts_chunk$set(echo = FALSE)
 
 Using git and  github to collaborate on code and writing is common in research teams that are trying to work reproducibly. Github is really good at version control and allows different people to work on the same project at the same time while avoiding the accumulation of duplicate versions of things that people on the team are too scared to delete. 
 
-```{r out.width=4, out.height=6}
+```{r}
 
 knitr::include_graphics("final.png")
 
