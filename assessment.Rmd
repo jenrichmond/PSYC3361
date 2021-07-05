@@ -43,9 +43,11 @@ In Week 8, your group will present the outcome of your verification challenge to
 - some background (what the research was about, what they found)
 - an overview of your plan (what did you intend to reproduce)
 - a discussion of how you went (what were the challenges/triumphs)
-- a take away message (what did you learn about reproducibility, what recommendations would you make to the authors of this paper for next time)
+- a take away message (what did you learn about learning R, reproducibility, and working as a team)
 
 There will be time for Q&A after each talk. 
+
+You can find more detailed guidelines/tips in [this document](https://docs.google.com/document/d/1PqLZFK0oSk6P0BmuO41ZqH1KQ9rUPwxYDT5COMfdCl0/edit?usp=sharing). 
 
 
 # 4. Verification report (50%)
